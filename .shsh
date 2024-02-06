@@ -1,0 +1,18 @@
+#!/bin/bash
+# START: Tue 06 Feb 2024 15:00
+
+WEEK="00"
+POINT="3"
+
+HEADER1="#       +------- AAA"
+HEADER2="#       | +----- BBB"
+HEADER3="#       | | +--- CCC"
+HEADER4="#       | | |       "
+echo "$HEADER1"
+echo "$HEADER2"
+echo "$HEADER3"
+echo "$HEADER4"
+
+for II in * ; do
+  [ -f $II/ATTENDANCE/W$WEEK.txt ] && echo $II $POINT
+done
