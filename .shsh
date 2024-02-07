@@ -2,7 +2,7 @@
 # START: Tue 06 Feb 2024 15:00
 
 WEEK="00"
-POINT="3"
+POINT="5"
 
 HEADER1="#       +------- AAA"
 HEADER2="#       | +----- BBB"
