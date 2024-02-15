@@ -13,9 +13,9 @@ uint32_t djb2_hash(const char *str) {
 }
 
 int main() {
-    char input[] = "Hello World";
+    char input[] = "The DJBX33A result with C and Bash should be the same";
     uint32_t result = djb2_hash(input);
-    printf("Value for string 'Hello World' is : %u\n", result);
+    printf("Value for string 'The DJBX33A result with C and Bash should be the same' using C is : %u\n", result);
     return 0;
 }
 
