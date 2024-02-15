@@ -6,4 +6,4 @@ for (( i=0; i<${#text}; i++ )); do
   ascii=$(printf "%d" "'$charr")
   hash_num=$((hash_num*33+ascii))
 done
-printf "Hash value of '%s' using DJBX33A is %s" "$text" "$hash_num" 
+printf "Hash value of '%s' using DJBX33A is %s" "$text" "$((hash_num & 0x7FFFFFFF))" 
