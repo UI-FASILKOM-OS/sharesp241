@@ -16,6 +16,6 @@ unsigned long djbx33a(char *str)
 int main() {
     char *str = "The DJBX33A result with C and Bash should be the same";
     unsigned long hash = djbx33a(str);
-    printf("Hash: %lx\n", hash);
+    printf("Hash: %u\n", hash);
     return 0;
 }
