@@ -2,7 +2,7 @@
 #include <stdint.h>
 
 uint32_t djb_hash(const char *data) {
-    uint32_t hash_value = 5381; // Arbitrary initial value
+    uint32_t hash_value = 5381; 
     unsigned char c;
     while ((c = *data++)) {
         hash_value = ((hash_value << 5) + hash_value) + c;

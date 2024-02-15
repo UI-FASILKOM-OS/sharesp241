@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 // https://github.com/mkirchner/stutter/blob/main/src/djb2.c
-unsigned long djb2(char *str) {
+unsigned long djb2(const char *str) {
     unsigned char *s = (unsigned char *) str;
     unsigned long hash = 5381;
     int c;
