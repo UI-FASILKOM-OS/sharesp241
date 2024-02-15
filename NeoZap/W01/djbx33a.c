@@ -15,7 +15,7 @@ unsigned long djb2(const char *str) {
 
 int main() {
     const char *input = "The DJBX33A result with C and Bash should be the same";
-    int result = djb2(input);
+    unsigned int result = djb2(input);
 
     printf("DJBX33A hash result: %u\n", result);
 
