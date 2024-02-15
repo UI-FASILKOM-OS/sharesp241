@@ -1,7 +1,7 @@
 #!/bin/bash
 # START: Thu 15 Feb 2024 13:00
 
-#!/bin/bash
+
 
 # DJBX33A hash function implementation in Bash
 
@@ -12,8 +12,8 @@ djb_x33a_hash() {
     local c
 
     while [ $i -lt ${#str} ]; do
-        c="${str:$i:1}"
-        (( hash = ((hash << 5) + hash) + $(printf '%d' "'$c") ))  # hash * 33 + c
+        c=$(printf '%d' "'${str:i:1}")
+        (( hash = ((hash << 5) + hash) + c ))  # hash * 33 + c
         (( i++ ))
     done
 
