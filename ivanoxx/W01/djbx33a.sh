@@ -10,11 +10,13 @@ djb2() {
         hash=$(( (hash << 5) + hash + c )) # hash * 33 + c
     done
 
-    printf "%x\n" $hash
+    # Convert unsigned long to signed integer
+    hash=$(( hash & (2**31-1) ))
+
+    printf "%d\n" $hash
 }
 
 # Main script
 str="The DJBX33A result with C and Bash should be the same"
 hash=$(djb2 "$str")
 echo "Hash: $hash"
-
