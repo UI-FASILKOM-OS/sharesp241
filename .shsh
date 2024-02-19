@@ -1,5 +1,5 @@
 #!/bin/bash
-# REV01: Mon 19 Feb 2024 15:00
+# REV01: Mon 19 Feb 2024 16:00
 # START: Tue 06 Feb 2024 15:00
 
 WEEK="W01"
@@ -13,3 +13,25 @@ for II in * ; do
     }
   }
 done
+
+echo "======================================================"
+for II in * ; do
+  [ -f $II/ATTENDANCE/$WEEK.txt ] && {
+    echo -n "$II --- "
+    git log $II/ATTENDANCE/$WEEK.txt | grep '^Date: ' | head -1
+  }
+done
+
+echo "======================="
+for II in * ; do
+  if [ -f $II/ATTENDANCE/$WEEK.txt ] ; then
+    echo "$II 3"
+  elif [ -d $II/ATTENDANCE/ ] ; then
+    echo "$II 0"
+  fi
+done
+
+exit
+# exit # ##############################
+
+
