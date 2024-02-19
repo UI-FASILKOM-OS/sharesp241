@@ -2,11 +2,14 @@
 # REV01: Mon 19 Feb 2024 15:00
 # START: Tue 06 Feb 2024 15:00
 
-WEEK="00"
-POINT="5"
+WEEK="W01"
 
 for II in * ; do
   [ -d $II/ATTENDANCE/ ] && {
-    echo $II
+    [ -d $II/$WEEK/ ] && {
+      echo "==== ==== ==== $II/$WEEK/"
+      git log --pretty=format:'%ad' --date=format:'%Y%m%d %H%M' $II/$WEEK/ 
+      echo ""
+    }
   }
 done
