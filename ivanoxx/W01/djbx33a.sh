@@ -11,7 +11,7 @@ djb2() {
     done
 
     # Convert unsigned long to signed integer
-    hash=$(( hash & (2**31-1) ))
+    hash=$(( hash & (2**32-1) ))
 
     printf "%d\n" $hash
 }
