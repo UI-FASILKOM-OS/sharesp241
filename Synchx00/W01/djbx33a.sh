@@ -8,7 +8,7 @@ djbX33A_hash() {
         hash=$(( (hash << 5) + hash + ${str:i:1} )) # hash * 33 + c
     done
 
-    echo "$hash"
+    echo $((hash & 0x7FFFFFFF))
 }
 
 input="The DJBX33A result with C and Bash should be the same"
