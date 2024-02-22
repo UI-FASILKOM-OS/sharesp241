@@ -6,6 +6,9 @@ LFS Chapter 4. Final Preparations
 REV02: Thu 22 Feb 2024 14:06
 LFS Chapter 4.4. Setting Up the Environment
 
+REV03: Thu 22 Feb 2024 14:14
+LFS III. Building the LFS Cross Toolchain and Temporary Tools
+
 
 
 
