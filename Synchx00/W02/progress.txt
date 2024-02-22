@@ -6,8 +6,11 @@ Week 02 Assignment #1: Assignment Script - DONE
 REV02: Thu 22 Feb 2024 13:53
 Week 02 Assignment #2: sdb partition done
 
-REV03: Thu 22 Feb 2024 13:43
+REV03: Thu 22 Feb 2024 14:43
 Week 02 Assignment #2: ch 2
 
-REV04: Thu 22 Feb 2024 13:58
+REV04: Thu 22 Feb 2024 14:58
 Week 02 Assignment #2: ch 2
+
+REV05: Thu 22 Feb 2024 15:18
+Week 02 Assignment #2: fix full storage 
