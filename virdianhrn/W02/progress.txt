@@ -11,3 +11,6 @@ Working on Chapter 3.1 of LFS
 
 REV04: Thu 22 Feb 2024 14:38
 Downloading files in Chapter 3.1 of LFS
+
+REV05: Thu 22 Feb 2024 14:38
+Finished downloading in Chapter 3.1 of LFS
