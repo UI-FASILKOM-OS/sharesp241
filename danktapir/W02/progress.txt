@@ -4,3 +4,4 @@ Log:
 - Assignment #1 done @ 13:40
 - Adding a disk (WIP) @ 14:05
 - Finished adding a disk @ 14:25
+- Assignment #2 done @ 14:33
