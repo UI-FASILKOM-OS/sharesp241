@@ -6,5 +6,14 @@ Week 02 Assignment #1 Done
 REV02: Thu 22 Feb 2024 14:04
 Week 02 Assignment #2, Preparation (add 32GB disk) done.
 
-REV02: Thu 22 Feb 2024 14:23
+REV03: Thu 22 Feb 2024 14:23
 Week 02 Assignment #2, currently on LFS Chapter 3.1
+
+REV04: Thu 22 Feb 2024 14:41
+Week 02 Assignment #2, currently on LFS Chapter 4.2
+
+REV05: Thu 22 Feb 2024 14:58
+Week 02 Assignment #2, currently on LFS Chapter 5.1
+
+REV06: Thu 22 Feb 2024 15:14
+Week 02 Assignment #2, currently on LFS Chapter 5.3
