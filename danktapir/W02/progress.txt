@@ -3,5 +3,5 @@ START: Thu 22 Feb 2024 12:00
 Log:
 - Assignment #1 done @ 13:40
 - Adding a disk (WIP) @ 14:05
-- Finished adding a disk @ 14:25
-- Assignment #2 done @ 14:33
+- Setup adding a disk on VirtualBox @ 14:25
+- Finished adding a disk @ 14:33

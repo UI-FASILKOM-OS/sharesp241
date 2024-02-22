@@ -2,3 +2,4 @@ Thu 22 Feb
 13.40 Done Week 02 Assignment #1: Assignment Script
 14.04 Done Chapter 01-02 of LFS 12.0
 14.22 In progress installing list of packages that need to be downloaded in order to build a basic Linux system
+14.38 Finish installing list of packages that need to be downloaded in order to build a basic Linux system
