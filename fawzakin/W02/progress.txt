@@ -1,1 +1,2 @@
 1. Checking version for toolchain on my Debian install (01-SP-Version-Check.sh)
+2. Downloaded all 93 packages for intiating LFS (Chapter 3.1)
