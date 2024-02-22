@@ -1,4 +1,4 @@
 w02 Assigntment 1 extract tarball sudah selesai
 
-REV02: Thu 22 Feb 2024 14:32
-LFS Chapter 3.1
+REV03: Thu 22 Feb 2024 14:53
+still LFS Chapter 3.1 (download is very slow)
