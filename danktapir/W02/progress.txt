@@ -6,3 +6,4 @@ Log:
 - Setup adding a disk on VirtualBox @ 14:25
 - Finished adding a disk @ 14:33
 - Progress on LFS (1) @ 14:58
+- Progress on LFS (2) @ 15:14
