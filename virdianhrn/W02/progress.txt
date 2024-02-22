@@ -8,3 +8,6 @@ Finished adding 32GB disk space
 
 REV03: Thu 22 Feb 2024 14:19
 Working on Chapter 3.1 of LFS
+
+REV04: Thu 22 Feb 2024 14:38
+Downloading files in Chapter 3.1 of LFS
