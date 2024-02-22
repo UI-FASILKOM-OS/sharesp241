@@ -1,4 +1,4 @@
 w02 Assigntment 1 extract tarball sudah selesai
 
-REV01: Thu 22 Feb 2024 14:02
-mount new vdi for lft
+REV02: Thu 22 Feb 2024 14:32
+LFS Chapter 3.1
