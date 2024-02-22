@@ -1,4 +1,4 @@
 START: 22/02/2024 13:30
 
-REV 04: Thu 22 Feb 2024 15:01:50 WIB
-I have downloaded all packages and patches from chapter 3, md5sum OK
+REV 05: Thu 22 Feb 2024 15:18:26 WIB
+I have finished setup enviroment for chapter 4.4
