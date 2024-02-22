@@ -1,4 +1,5 @@
 START: Thu 22 Feb 2024 12:00
 
 Log:
-- Assignment #1 done
+- Assignment #1 done @ 13:40
+- Adding a disk (WIP) @ 14:05
