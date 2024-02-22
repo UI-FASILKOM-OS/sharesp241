@@ -12,5 +12,8 @@ LFS III. Building the LFS Cross Toolchain and Temporary Tools
 REV04: Thu 22 Feb 2024 14:17
 LFS Chapter 5. Compiling a Cross-Toolchain
 
+REV05: Thu 22 Feb 2024 14:36
+LFS Chapter 5.3. GCC-13.2.0 - Pass 1
+
 
 
