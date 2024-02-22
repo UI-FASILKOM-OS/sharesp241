@@ -5,3 +5,6 @@ Finished Assignment #1
 
 REV02: Thu 22 Feb 2024 14:03
 Finished adding 32GB disk space
+
+REV03: Thu 22 Feb 2024 14:19
+Working on Chapter 3.1 of LFS
