@@ -18,6 +18,9 @@ LFS Chapter 5.3. GCC-13.2.0 - Pass 1
 REV06: Thu 22 Feb 2024 14:52
 LFS Chapter 5.6. Libstdc++ from GCC-13.2.0
 
+REV07: Thu 22 Feb 2024 15:01
+LFS Chapter 6. Cross Compiling Temporary Tools
 
-LFS Chapter 
+REV08: Thu 22 Feb 2024 15:17
+LFS Chapter 6.9. Gawk-5.2.2
 
