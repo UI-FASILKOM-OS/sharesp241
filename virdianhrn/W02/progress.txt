@@ -1,1 +1,7 @@
 START: Thu 22 Feb 2024 13.30
+
+REV01: Thu 22 Feb 2024 13:50
+Finished Assignment #1
+
+REV02: Thu 22 Feb 2024 14:03
+Finished adding 32GB disk space
