@@ -1,4 +1,4 @@
 START: 22/02/2024 13:34
 
-REV 02: 22/02/2024 14:39
-I have done W2 Assignment #1, and now doing Assignment #2 (LFS chapter 3.1)
+REV 02: 22/02/2024 15:02
+I have done W2 Assignment #1, and now doing Assignment #2 (LFS chapter 5.1)
