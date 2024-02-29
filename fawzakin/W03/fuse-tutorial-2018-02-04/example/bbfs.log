@@ -1,0 +1,506 @@
+
+bb_init()
+    conn:
+    proto_major = 7
+    proto_minor = 37
+    async_read = 1
+    max_write = 131072
+    max_readahead = 131072
+    capable = 00000ffb
+    want = 00000010
+    max_background = 0
+    congestion_threshold = 0
+    context:
+    fuse = 98eee810
+    uid = 0
+    gid = 0
+    pid = 0
+    private_data = 98eee2a0
+    logfile = 98eee320
+    rootdir = /home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir
+    umask = 00000
+
+bb_getattr(path="/", statbuf=0xa5678bf0)
+    bb_fullpath:  rootdir = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 65026
+    st_ino = 1309231
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e026e6
+    st_mtime = 0x65e026b4
+    st_ctime = 0x65e026b4
+
+bb_getattr(path="/", statbuf=0xa5e9bbf0)
+    bb_fullpath:  rootdir = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 65026
+    st_ino = 1309231
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e026e6
+    st_mtime = 0x65e026b4
+    st_ctime = 0x65e026b4
+
+bb_opendir(path="/", fi=0xa5678c10)
+    bb_fullpath:  rootdir = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    opendir returned 0x0x7fc098000e60
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fc098000e60
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0x98000de0, filler=0xa60ada90, offset=0, fi=0xa5e9bc10)
+    readdir returned 0x0x7fc098000e90
+calling filler with name .
+calling filler with name ..
+calling filler with name bogus.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fc098000e60
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fc098000e60
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/bogus.txt", statbuf=0xa5678c20)
+    bb_fullpath:  rootdir = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 65026
+    st_ino = 1309232
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e026b4
+    st_mtime = 0x65e026b4
+    st_ctime = 0x65e026b4
+
+bb_releasedir(path="/", fi=0xa5678c10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fc098000e60
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fc098000e60
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xa5e9bbf0)
+    bb_fullpath:  rootdir = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 65026
+    st_ino = 1309231
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e026e6
+    st_mtime = 0x65e026b4
+    st_ctime = 0x65e026b4
+
+bb_getattr(path="/fawzakin.txt", statbuf=0xa5678c20)
+    bb_fullpath:  rootdir = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/fawzakin.txt", fpath = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir/fawzakin.txt"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_mknod(path="/fawzakin.txt", mode=0100644, dev=0)
+    bb_fullpath:  rootdir = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/fawzakin.txt", fpath = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir/fawzakin.txt"
+    open returned 5
+    close returned 0
+
+bb_getattr(path="/fawzakin.txt", statbuf=0xa5678c20)
+    bb_fullpath:  rootdir = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/fawzakin.txt", fpath = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir/fawzakin.txt"
+    lstat returned 0
+    si:
+    st_dev = 65026
+    st_ino = 1309245
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x65e02734
+    st_mtime = 0x65e02734
+    st_ctime = 0x65e02734
+
+bb_open(path"/fawzakin.txt", fi=0xa5e9bcd0)
+    bb_fullpath:  rootdir = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/fawzakin.txt", fpath = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir/fawzakin.txt"
+    open returned 5
+    fi:
+    flags = 0x00008801
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_flush(path="/fawzakin.txt", fi=0xa5678cd0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x13e172df9a29175b
+
+bb_utime(path="/fawzakin.txt", ubuf=0xa5e9ba80)
+    bb_fullpath:  rootdir = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/fawzakin.txt", fpath = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir/fawzakin.txt"
+    utime returned 0
+
+bb_getattr(path="/fawzakin.txt", statbuf=0xa5e9bb50)
+    bb_fullpath:  rootdir = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/fawzakin.txt", fpath = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir/fawzakin.txt"
+    lstat returned 0
+    si:
+    st_dev = 65026
+    st_ino = 1309245
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x65e02734
+    st_mtime = 0x65e02734
+    st_ctime = 0x65e02734
+
+bb_flush(path="/fawzakin.txt", fi=0xa5678cd0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x13e172df9a29175b
+
+bb_release(path="/fawzakin.txt", fi=0xa5e9bcd0)
+    fi:
+    flags = 0x00008801
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    close returned 0
+
+bb_getattr(path="/", statbuf=0xa5678bf0)
+    bb_fullpath:  rootdir = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 65026
+    st_ino = 1309231
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e026e6
+    st_mtime = 0x65e02734
+    st_ctime = 0x65e02734
+
+bb_opendir(path="/", fi=0xa5e9bc10)
+    bb_fullpath:  rootdir = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    opendir returned 0x0x7fc0a0002740
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fc0a0002740
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xa00026c0, filler=0xa60ada90, offset=0, fi=0xa5678c10)
+    readdir returned 0x0x7fc0a0002770
+calling filler with name .
+calling filler with name ..
+calling filler with name fawzakin.txt
+calling filler with name bogus.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fc0a0002740
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fc0a0002740
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/fawzakin.txt", statbuf=0xa5e9bc20)
+    bb_fullpath:  rootdir = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/fawzakin.txt", fpath = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir/fawzakin.txt"
+    lstat returned 0
+    si:
+    st_dev = 65026
+    st_ino = 1309245
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x65e02734
+    st_mtime = 0x65e02734
+    st_ctime = 0x65e02734
+
+bb_getattr(path="/bogus.txt", statbuf=0xa5678c20)
+    bb_fullpath:  rootdir = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 65026
+    st_ino = 1309232
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e026b4
+    st_mtime = 0x65e026b4
+    st_ctime = 0x65e026b4
+
+bb_releasedir(path="/", fi=0xa5678c10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fc0a0002740
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fc0a0002740
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xa5e9bbf0)
+    bb_fullpath:  rootdir = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 65026
+    st_ino = 1309231
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e02739
+    st_mtime = 0x65e02734
+    st_ctime = 0x65e02734
+
+bb_getattr(path="/", statbuf=0xa5678bf0)
+    bb_fullpath:  rootdir = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 65026
+    st_ino = 1309231
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e02739
+    st_mtime = 0x65e02734
+    st_ctime = 0x65e02734
+
+bb_getxattr(path = "/", name = "security.selinux", value = 0xa0001e40, size = 255)
+    bb_fullpath:  rootdir = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/", name = "system.posix_acl_access", value = 0x00000000, size = 0)
+    bb_fullpath:  rootdir = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/", name = "system.posix_acl_default", value = 0x00000000, size = 0)
+    bb_fullpath:  rootdir = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getattr(path="/", statbuf=0xa5678bf0)
+    bb_fullpath:  rootdir = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 65026
+    st_ino = 1309231
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e02739
+    st_mtime = 0x65e02734
+    st_ctime = 0x65e02734
+
+bb_getxattr(path = "/", name = "security.selinux", value = 0xa0001e40, size = 255)
+    bb_fullpath:  rootdir = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/", name = "system.posix_acl_access", value = 0x00000000, size = 0)
+    bb_fullpath:  rootdir = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/", name = "system.posix_acl_default", value = 0x00000000, size = 0)
+    bb_fullpath:  rootdir = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_opendir(path="/", fi=0xa5678c10)
+    bb_fullpath:  rootdir = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    opendir returned 0x0x7fc098008fc0
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fc098008fc0
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0x980010a0, filler=0xa60ada90, offset=0, fi=0xa5e9bc10)
+    readdir returned 0x0x7fc098008ff0
+calling filler with name .
+calling filler with name ..
+calling filler with name fawzakin.txt
+calling filler with name bogus.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fc098008fc0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fc098008fc0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/fawzakin.txt", statbuf=0xa5678c20)
+    bb_fullpath:  rootdir = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/fawzakin.txt", fpath = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir/fawzakin.txt"
+    lstat returned 0
+    si:
+    st_dev = 65026
+    st_ino = 1309245
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x65e02734
+    st_mtime = 0x65e02734
+    st_ctime = 0x65e02734
+
+bb_getxattr(path = "/fawzakin.txt", name = "security.selinux", value = 0xa0001e40, size = 255)
+    bb_fullpath:  rootdir = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/fawzakin.txt", fpath = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir/fawzakin.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/fawzakin.txt", name = "system.posix_acl_access", value = 0x00000000, size = 0)
+    bb_fullpath:  rootdir = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/fawzakin.txt", fpath = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir/fawzakin.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getattr(path="/bogus.txt", statbuf=0xa5e9bc20)
+    bb_fullpath:  rootdir = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 65026
+    st_ino = 1309232
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e026b4
+    st_mtime = 0x65e026b4
+    st_ctime = 0x65e026b4
+
+bb_getxattr(path = "/bogus.txt", name = "security.selinux", value = 0x98000c40, size = 255)
+    bb_fullpath:  rootdir = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/bogus.txt", name = "system.posix_acl_access", value = 0x00000000, size = 0)
+    bb_fullpath:  rootdir = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/fawzakin/git/sharesp241/fawzakin/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_releasedir(path="/", fi=0xa5e9bc10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fc098008fc0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fc098008fc0
+    lock_owner = 0x0000000000000000
+
+bb_destroy(userdata=0x98eee2a0)

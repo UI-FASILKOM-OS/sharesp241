@@ -1,1 +1,4 @@
 Changing content of hello.c
+Adding helloworld-fuse
+Downloading wget tarball
+playing around with bbfs and add fawzakin.txt to mountdir
