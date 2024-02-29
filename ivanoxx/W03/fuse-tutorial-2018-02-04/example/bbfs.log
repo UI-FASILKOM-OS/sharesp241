@@ -1,0 +1,274 @@
+
+bb_init()
+    conn:
+    proto_major = 7
+    proto_minor = 39
+    async_read = 1
+    max_write = 131072
+    max_readahead = 131072
+    capable = 00000ffb
+    want = 00000010
+    max_background = 0
+    congestion_threshold = 0
+    context:
+    fuse = dc72f800
+    uid = 0
+    gid = 0
+    pid = 0
+    private_data = dc72f2a0
+    logfile = dc72f320
+    rootdir = /home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir
+    umask = 00000
+
+bb_getattr(path="/", statbuf=0x456f7bf0)
+    bb_fullpath:  rootdir = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 709159
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e02d8c
+    st_mtime = 0x65e02d1a
+    st_ctime = 0x65e02d1a
+
+bb_getattr(path="/ivanoxx.txt", statbuf=0x44ed4c20)
+    bb_fullpath:  rootdir = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/ivanoxx.txt", fpath = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir/ivanoxx.txt"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_mknod(path="/ivanoxx.txt", mode=0100644, dev=0)
+    bb_fullpath:  rootdir = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/ivanoxx.txt", fpath = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir/ivanoxx.txt"
+    open returned 5
+    close returned 0
+
+bb_getattr(path="/ivanoxx.txt", statbuf=0x44ed4c20)
+    bb_fullpath:  rootdir = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/ivanoxx.txt", fpath = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir/ivanoxx.txt"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 709257
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x65e02e36
+    st_mtime = 0x65e02e36
+    st_ctime = 0x65e02e36
+
+bb_open(path"/ivanoxx.txt", fi=0x456f7cd0)
+    bb_fullpath:  rootdir = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/ivanoxx.txt", fpath = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir/ivanoxx.txt"
+    open returned 5
+    fi:
+    flags = 0x00008801
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_flush(path="/ivanoxx.txt", fi=0x44ed4cd0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x4aa0b797ec6b1042
+
+bb_utime(path="/ivanoxx.txt", ubuf=0x456f7a80)
+    bb_fullpath:  rootdir = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/ivanoxx.txt", fpath = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir/ivanoxx.txt"
+    utime returned 0
+
+bb_getattr(path="/ivanoxx.txt", statbuf=0x456f7b50)
+    bb_fullpath:  rootdir = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/ivanoxx.txt", fpath = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir/ivanoxx.txt"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 709257
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x65e02e36
+    st_mtime = 0x65e02e36
+    st_ctime = 0x65e02e36
+
+bb_flush(path="/ivanoxx.txt", fi=0x44ed4cd0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x4aa0b797ec6b1042
+
+bb_release(path="/ivanoxx.txt", fi=0x456f7cd0)
+    fi:
+    flags = 0x00008801
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    close returned 0
+
+bb_getattr(path="/", statbuf=0x44ed4bf0)
+    bb_fullpath:  rootdir = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 709159
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e02d8c
+    st_mtime = 0x65e02e36
+    st_ctime = 0x65e02e36
+
+bb_getxattr(path = "/", name = "security.selinux", value = 0x40001e40, size = 255)
+    bb_fullpath:  rootdir = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/", name = "system.posix_acl_access", value = 0x38001020, size = 4096)
+    bb_fullpath:  rootdir = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/", name = "system.posix_acl_default", value = 0x380010b0, size = 4096)
+    bb_fullpath:  rootdir = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_opendir(path="/", fi=0x44ed4c10)
+    bb_fullpath:  rootdir = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    opendir returned 0x0x7f45380011c0
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f45380011c0
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0x38001140, filler=0x45909a90, offset=0, fi=0x456f7c10)
+    readdir returned 0x0x7f45380011f0
+calling filler with name ivanoxx.txt
+calling filler with name ..
+calling filler with name bogus.txt
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f45380011c0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f45380011c0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/ivanoxx.txt", statbuf=0x44ed4c20)
+    bb_fullpath:  rootdir = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/ivanoxx.txt", fpath = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir/ivanoxx.txt"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 709257
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x65e02e36
+    st_mtime = 0x65e02e36
+    st_ctime = 0x65e02e36
+
+bb_getxattr(path = "/ivanoxx.txt", name = "security.selinux", value = 0x40001e40, size = 255)
+    bb_fullpath:  rootdir = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/ivanoxx.txt", fpath = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir/ivanoxx.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/ivanoxx.txt", name = "system.posix_acl_access", value = 0x400027d0, size = 4096)
+    bb_fullpath:  rootdir = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/ivanoxx.txt", fpath = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir/ivanoxx.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getattr(path="/bogus.txt", statbuf=0x44ed4c20)
+    bb_fullpath:  rootdir = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 709160
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e02d1a
+    st_mtime = 0x65e02d6c
+    st_ctime = 0x65e02d6c
+
+bb_getxattr(path = "/bogus.txt", name = "security.selinux", value = 0x40001e40, size = 255)
+    bb_fullpath:  rootdir = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/bogus.txt", name = "system.posix_acl_access", value = 0x38009200, size = 4096)
+    bb_fullpath:  rootdir = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/ivanoxx/git/sharesp241/ivanoxx/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_releasedir(path="/", fi=0x44ed4c10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f45380011c0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f45380011c0
+    lock_owner = 0x0000000000000000
+
+bb_destroy(userdata=0xdc72f2a0)
