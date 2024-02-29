@@ -18,6 +18,9 @@ for II in * ; do
   }
 done
 
+exit
+# exit # ##############################
+
 echo "======================================================"
 for II in * ; do
   [ -f $II/ATTENDANCE/$WEEK.txt ] && {
