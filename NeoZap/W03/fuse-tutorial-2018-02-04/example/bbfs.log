@@ -1,0 +1,205 @@
+
+bb_init()
+    conn:
+    proto_major = 7
+    proto_minor = 39
+    async_read = 1
+    max_write = 131072
+    max_readahead = 131072
+    capable = 00000ffb
+    want = 00000010
+    max_background = 0
+    congestion_threshold = 0
+    context:
+    fuse = c14ca800
+    uid = 0
+    gid = 0
+    pid = 0
+    private_data = c14ca2a0
+    logfile = c14ca320
+    rootdir = /home/NeoZap/git/sharesp241/NeoZap/W03/fuse-tutorial-2018-02-04/example/rootdir
+    umask = 00000
+
+bb_getattr(path="/", statbuf=0x6eabfbf0)
+    bb_fullpath:  rootdir = "/home/NeoZap/git/sharesp241/NeoZap/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/NeoZap/git/sharesp241/NeoZap/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 315137
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1001
+    st_gid = 1001
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e026a2
+    st_mtime = 0x65e025cb
+    st_ctime = 0x65e025cb
+
+bb_getattr(path="/", statbuf=0x6e29cbf0)
+    bb_fullpath:  rootdir = "/home/NeoZap/git/sharesp241/NeoZap/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/NeoZap/git/sharesp241/NeoZap/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 315137
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1001
+    st_gid = 1001
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e026a2
+    st_mtime = 0x65e025cb
+    st_ctime = 0x65e025cb
+
+bb_access(path="/", mask=01)
+    bb_fullpath:  rootdir = "/home/NeoZap/git/sharesp241/NeoZap/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/NeoZap/git/sharesp241/NeoZap/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+
+bb_getattr(path="/NeoZap.txt", statbuf=0x6e29cc20)
+    bb_fullpath:  rootdir = "/home/NeoZap/git/sharesp241/NeoZap/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/NeoZap.txt", fpath = "/home/NeoZap/git/sharesp241/NeoZap/W03/fuse-tutorial-2018-02-04/example/rootdir/NeoZap.txt"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_mknod(path="/NeoZap.txt", mode=0100644, dev=0)
+    bb_fullpath:  rootdir = "/home/NeoZap/git/sharesp241/NeoZap/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/NeoZap.txt", fpath = "/home/NeoZap/git/sharesp241/NeoZap/W03/fuse-tutorial-2018-02-04/example/rootdir/NeoZap.txt"
+    open returned 5
+    close returned 0
+
+bb_getattr(path="/NeoZap.txt", statbuf=0x6e29cc20)
+    bb_fullpath:  rootdir = "/home/NeoZap/git/sharesp241/NeoZap/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/NeoZap.txt", fpath = "/home/NeoZap/git/sharesp241/NeoZap/W03/fuse-tutorial-2018-02-04/example/rootdir/NeoZap.txt"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 315150
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1001
+    st_gid = 1001
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x65e026d3
+    st_mtime = 0x65e026d3
+    st_ctime = 0x65e026d3
+
+bb_open(path"/NeoZap.txt", fi=0x6eabfcd0)
+    bb_fullpath:  rootdir = "/home/NeoZap/git/sharesp241/NeoZap/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/NeoZap.txt", fpath = "/home/NeoZap/git/sharesp241/NeoZap/W03/fuse-tutorial-2018-02-04/example/rootdir/NeoZap.txt"
+    open returned 5
+    fi:
+    flags = 0x00008801
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_flush(path="/NeoZap.txt", fi=0x6e29ccd0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x1e3bf00a03a691a7
+
+bb_utime(path="/NeoZap.txt", ubuf=0x6eabfa80)
+    bb_fullpath:  rootdir = "/home/NeoZap/git/sharesp241/NeoZap/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/NeoZap.txt", fpath = "/home/NeoZap/git/sharesp241/NeoZap/W03/fuse-tutorial-2018-02-04/example/rootdir/NeoZap.txt"
+    utime returned 0
+
+bb_getattr(path="/NeoZap.txt", statbuf=0x6eabfb50)
+    bb_fullpath:  rootdir = "/home/NeoZap/git/sharesp241/NeoZap/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/NeoZap.txt", fpath = "/home/NeoZap/git/sharesp241/NeoZap/W03/fuse-tutorial-2018-02-04/example/rootdir/NeoZap.txt"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 315150
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1001
+    st_gid = 1001
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x65e026d3
+    st_mtime = 0x65e026d3
+    st_ctime = 0x65e026d3
+
+bb_flush(path="/NeoZap.txt", fi=0x6e29ccd0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x1e3bf00a03a691a7
+
+bb_release(path="/NeoZap.txt", fi=0x6eabfcd0)
+    fi:
+    flags = 0x00008801
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    close returned 0
+
+bb_getattr(path="/", statbuf=0x6e29cbf0)
+    bb_fullpath:  rootdir = "/home/NeoZap/git/sharesp241/NeoZap/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/NeoZap/git/sharesp241/NeoZap/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 315137
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1001
+    st_gid = 1001
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e026a2
+    st_mtime = 0x65e026d3
+    st_ctime = 0x65e026d3
+
+bb_getattr(path="/", statbuf=0x6eabfbf0)
+    bb_fullpath:  rootdir = "/home/NeoZap/git/sharesp241/NeoZap/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/NeoZap/git/sharesp241/NeoZap/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 315137
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1001
+    st_gid = 1001
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e026a2
+    st_mtime = 0x65e026d3
+    st_ctime = 0x65e026d3
+
+bb_destroy(userdata=0xc14ca2a0)
