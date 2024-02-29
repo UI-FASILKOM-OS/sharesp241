@@ -1,8 +1,8 @@
 START: Thu 29 Feb 2024 13:15
-POPQUIZ W03-1:   Thu 29 Feb 2024 13:15 (done)
-POPQUIZ W03-2:   Thu 29 Feb 2024 13:30 (done)
-POPQUIZ W03-3:   Thu 29 Feb 2024 13:32 (done)
-POPQUIZ W03-4:   Thu 29 Feb 2024 13:38 (done)
-helloworld-fuse: Thu 29 Feb 2024 13:55 (done)
-
+POPQUIZ W03-1:            Thu 29 Feb 2024 13:15 (done)
+POPQUIZ W03-2:            Thu 29 Feb 2024 13:30 (done)
+POPQUIZ W03-3:            Thu 29 Feb 2024 13:32 (done)
+POPQUIZ W03-4:            Thu 29 Feb 2024 13:38 (done)
+helloworld-fuse:          Thu 29 Feb 2024 13:55 (done)
+fuse-tutorial-2018-02-04: Thu 29 Feb 2024 14:03 (done)
 
