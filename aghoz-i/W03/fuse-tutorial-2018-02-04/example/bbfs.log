@@ -1,0 +1,540 @@
+
+bb_init()
+    conn:
+    proto_major = 7
+    proto_minor = 39
+    async_read = 1
+    max_write = 131072
+    max_readahead = 131072
+    capable = 00000ffb
+    want = 00000010
+    max_background = 0
+    congestion_threshold = 0
+    context:
+    fuse = 5cdf9800
+    uid = 0
+    gid = 0
+    pid = 0
+    private_data = 5cdf92a0
+    logfile = 5cdf9320
+    rootdir = /home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir
+    umask = 00000
+
+bb_getattr(path="/", statbuf=0x327e8bf0)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 540283
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e02749
+    st_mtime = 0x65e0271c
+    st_ctime = 0x65e0271c
+
+bb_getxattr(path = "/", name = "security.selinux", value = 0x24000c40, size = 255)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/", name = "system.posix_acl_access", value = 0x2c001fe0, size = 4096)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/", name = "system.posix_acl_default", value = 0x24000ef0, size = 4096)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getattr(path="/", statbuf=0x327e8bf0)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 540283
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e02749
+    st_mtime = 0x65e0271c
+    st_ctime = 0x65e0271c
+
+bb_getxattr(path = "/", name = "security.selinux", value = 0x2c001e40, size = 255)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/", name = "system.posix_acl_access", value = 0x24000f80, size = 4096)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/", name = "system.posix_acl_default", value = 0x2c0022a0, size = 4096)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_opendir(path="/", fi=0x31fc5c10)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    opendir returned 0x0x7f4124001090
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f4124001090
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0x24001010, filler=0x329faa90, offset=0, fi=0x327e8c10)
+    readdir returned 0x0x7f41240010c0
+calling filler with name ..
+calling filler with name .
+calling filler with name bogus.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f4124001090
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f4124001090
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/bogus.txt", statbuf=0x31fc5c20)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 540284
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e0271c
+    st_mtime = 0x65e0271c
+    st_ctime = 0x65e0271c
+
+bb_getxattr(path = "/bogus.txt", name = "security.selinux", value = 0x2c001e40, size = 255)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/bogus.txt", name = "system.posix_acl_access", value = 0x240091f0, size = 4096)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_releasedir(path="/", fi=0x31fc5c10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f4124001090
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f4124001090
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x327e8bf0)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 540283
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e02749
+    st_mtime = 0x65e0271c
+    st_ctime = 0x65e0271c
+
+bb_access(path="/", mask=01)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+
+bb_opendir(path="/", fi=0x327e8c10)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    opendir returned 0x0x7f412c002850
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f412c002850
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x31fc5bf0)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 540283
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e02749
+    st_mtime = 0x65e0271c
+    st_ctime = 0x65e0271c
+
+bb_readdir(path="/", buf=0x2c0027d0, filler=0x329faa90, offset=0, fi=0x31fc5c10)
+    readdir returned 0x0x7f412c002880
+calling filler with name ..
+calling filler with name .
+calling filler with name bogus.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f412c002850
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f412c002850
+    lock_owner = 0x0000000000000000
+
+bb_getxattr(path = "/", name = "security.selinux", value = 0x24000c40, size = 255)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/", name = "system.posix_acl_access", value = 0x2c00a890, size = 4096)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/", name = "system.posix_acl_default", value = 0x24001120, size = 4096)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getattr(path="/bogus.txt", statbuf=0x327e8c20)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 540284
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e0271c
+    st_mtime = 0x65e0271c
+    st_ctime = 0x65e0271c
+
+bb_getxattr(path = "/bogus.txt", name = "security.selinux", value = 0x24000c40, size = 255)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/bogus.txt", name = "system.posix_acl_access", value = 0x2c00a890, size = 4096)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_releasedir(path="/", fi=0x327e8c10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f412c002850
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f412c002850
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x31fc5bf0)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 540283
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e02749
+    st_mtime = 0x65e0271c
+    st_ctime = 0x65e0271c
+
+bb_getattr(path="/aghoz-i.txt", statbuf=0x327e8c20)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/aghoz-i.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/aghoz-i.txt"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_mknod(path="/aghoz-i.txt", mode=0100644, dev=0)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/aghoz-i.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/aghoz-i.txt"
+    open returned 5
+    close returned 0
+
+bb_getattr(path="/aghoz-i.txt", statbuf=0x327e8c20)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/aghoz-i.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/aghoz-i.txt"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 540424
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x65e027e1
+    st_mtime = 0x65e027e1
+    st_ctime = 0x65e027e1
+
+bb_open(path"/aghoz-i.txt", fi=0x31fc5cd0)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/aghoz-i.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/aghoz-i.txt"
+    open returned 5
+    fi:
+    flags = 0x00008801
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_flush(path="/aghoz-i.txt", fi=0x327e8cd0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x66b55ea9fe2a255d
+
+bb_utime(path="/aghoz-i.txt", ubuf=0x31fc5a80)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/aghoz-i.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/aghoz-i.txt"
+    utime returned 0
+
+bb_getattr(path="/aghoz-i.txt", statbuf=0x31fc5b50)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/aghoz-i.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/aghoz-i.txt"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 540424
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x65e027e1
+    st_mtime = 0x65e027e1
+    st_ctime = 0x65e027e1
+
+bb_flush(path="/aghoz-i.txt", fi=0x31fc5cd0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x66b55ea9fe2a255d
+
+bb_release(path="/aghoz-i.txt", fi=0x31fc5cd0)
+    fi:
+    flags = 0x00008801
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    close returned 0
+
+bb_opendir(path="/", fi=0x327e8c10)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    opendir returned 0x0x7f412c0028d0
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f412c0028d0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x31fc5bf0)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 540283
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e02749
+    st_mtime = 0x65e027e1
+    st_ctime = 0x65e027e1
+
+bb_readdir(path="/", buf=0x2c002850, filler=0x329faa90, offset=0, fi=0x31fc5c10)
+    readdir returned 0x0x7f412c002900
+calling filler with name aghoz-i.txt
+calling filler with name ..
+calling filler with name .
+calling filler with name bogus.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f412c0028d0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f412c0028d0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/aghoz-i.txt", statbuf=0x327e8c20)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/aghoz-i.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/aghoz-i.txt"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 540424
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x65e027e1
+    st_mtime = 0x65e027e1
+    st_ctime = 0x65e027e1
+
+bb_getxattr(path = "/aghoz-i.txt", name = "security.selinux", value = 0x24000c40, size = 255)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/aghoz-i.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/aghoz-i.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/aghoz-i.txt", name = "system.posix_acl_access", value = 0x2c00a910, size = 4096)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/aghoz-i.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/aghoz-i.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/", name = "security.selinux", value = 0x24000c40, size = 255)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/", name = "system.posix_acl_access", value = 0x24001530, size = 4096)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/", name = "system.posix_acl_default", value = 0x24001530, size = 4096)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getattr(path="/bogus.txt", statbuf=0x327e8c20)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 540284
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e0271c
+    st_mtime = 0x65e0271c
+    st_ctime = 0x65e0271c
+
+bb_getxattr(path = "/bogus.txt", name = "security.selinux", value = 0x24000c40, size = 255)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/bogus.txt", name = "system.posix_acl_access", value = 0x24001530, size = 4096)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_releasedir(path="/", fi=0x31fc5c10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f412c0028d0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f412c0028d0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x327e8bf0)
+    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 540283
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e027e2
+    st_mtime = 0x65e027e1
+    st_ctime = 0x65e027e1
+
+bb_destroy(userdata=0x5cdf92a0)
