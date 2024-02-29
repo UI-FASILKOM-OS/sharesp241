@@ -17,3 +17,6 @@ Waiting on kernel being compiled
 
 REV06: Thu 29 Feb 2024 14:50
 Still waiting on kernel being compiled
+
+REV07: Thu 29 Feb 2024 15:08
+Finished compiling & moved wrong dir place
