@@ -2,3 +2,4 @@
 13:18 Reading Week 03 Assignment #1: Readings
 13:59 Do Week 03 Assignment #2: FUSE
 14:30 Try make index.html with lynx
+15:00 Do Mount the BBFS
