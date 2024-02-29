@@ -12,7 +12,7 @@
 #include <errno.h>
 #include <fcntl.h>
 
-static const char *hello_str = "Hello World!\n";
+static const char *hello_str = "Hello syifaafra\n";
 static const char *hello_path = "/hello";
 
 static int hello_getattr(const char *path, struct stat *stbuf)
