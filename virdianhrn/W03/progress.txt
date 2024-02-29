@@ -8,3 +8,6 @@ Finished Assignment #2
 
 REV03: Thu 29 Feb 2024 14:01
 Finished Assignment #3 & Popquiz 2
+
+REV04: Thu 29 Feb 2024 14:18
+Finished Popquiz 3 & 4, working on Popquiz 1
