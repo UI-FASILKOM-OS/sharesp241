@@ -4,3 +4,4 @@ W03: progress.txt ver3
 W03: progress.txt ver4
 W03: progress.txt ver5
 W03: progress.txt ver6
+W03: progress.txt ver7
