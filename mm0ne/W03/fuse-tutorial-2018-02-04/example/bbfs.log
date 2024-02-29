@@ -1,0 +1,424 @@
+
+bb_init()
+    conn:
+    proto_major = 7
+    proto_minor = 39
+    async_read = 1
+    max_write = 131072
+    max_readahead = 131072
+    capable = 00000ffb
+    want = 00000010
+    max_background = 0
+    congestion_threshold = 0
+    context:
+    fuse = 014f3800
+    uid = 0
+    gid = 0
+    pid = 0
+    private_data = 014f32a0
+    logfile = 014f3320
+    rootdir = /home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir
+    umask = 00000
+
+bb_getattr(path="/", statbuf=0xcbae3bf0)
+    bb_fullpath:  rootdir = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 440293
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e02813
+    st_mtime = 0x65e02755
+    st_ctime = 0x65e02755
+
+bb_access(path="/", mask=01)
+    bb_fullpath:  rootdir = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+
+bb_opendir(path="/", fi=0xcbae3c10)
+    bb_fullpath:  rootdir = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    opendir returned 0x0x7f4ac4002060
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f4ac4002060
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xc4001fe0, filler=0xcbcf5a90, offset=0, fi=0xcb2c0c10)
+    readdir returned 0x0x7f4ac4002090
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f4ac4002060
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f4ac4002060
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/bogus.txt", statbuf=0xcbae3c20)
+    bb_fullpath:  rootdir = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 440294
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e02755
+    st_mtime = 0x65e02755
+    st_ctime = 0x65e02755
+
+bb_releasedir(path="/", fi=0xcbae3c10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f4ac4002060
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f4ac4002060
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcb2c0bf0)
+    bb_fullpath:  rootdir = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 440293
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e02813
+    st_mtime = 0x65e02755
+    st_ctime = 0x65e02755
+
+bb_getattr(path="/", statbuf=0xcbae3bf0)
+    bb_fullpath:  rootdir = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 440293
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e02813
+    st_mtime = 0x65e02755
+    st_ctime = 0x65e02755
+
+bb_opendir(path="/", fi=0xcb2c0c10)
+    bb_fullpath:  rootdir = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    opendir returned 0x0x7f4abc001420
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f4abc001420
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xbc0013a0, filler=0xcbcf5a90, offset=0, fi=0xcbae3c10)
+    readdir returned 0x0x7f4abc001450
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f4abc001420
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f4abc001420
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/bogus.txt", statbuf=0xcb2c0c20)
+    bb_fullpath:  rootdir = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 440294
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e02755
+    st_mtime = 0x65e02755
+    st_ctime = 0x65e02755
+
+bb_releasedir(path="/", fi=0xcb2c0c10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f4abc001420
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f4abc001420
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcbae3bf0)
+    bb_fullpath:  rootdir = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 440293
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e02813
+    st_mtime = 0x65e02755
+    st_ctime = 0x65e02755
+
+bb_getattr(path="/", statbuf=0xcb2c0bf0)
+    bb_fullpath:  rootdir = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 440293
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e02813
+    st_mtime = 0x65e02755
+    st_ctime = 0x65e02755
+
+bb_access(path="/", mask=01)
+    bb_fullpath:  rootdir = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+
+bb_opendir(path="/", fi=0xcb2c0c10)
+    bb_fullpath:  rootdir = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    opendir returned 0x0x7f4abc009580
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f4abc009580
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xbc0014b0, filler=0xcbcf5a90, offset=0, fi=0xcbae3c10)
+    readdir returned 0x0x7f4abc0095b0
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f4abc009580
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f4abc009580
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/bogus.txt", statbuf=0xcb2c0c20)
+    bb_fullpath:  rootdir = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 440294
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e02755
+    st_mtime = 0x65e02755
+    st_ctime = 0x65e02755
+
+bb_releasedir(path="/", fi=0xcb2c0c10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f4abc009580
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f4abc009580
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/mm0ne.txt", statbuf=0xcbae3c20)
+    bb_fullpath:  rootdir = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/mm0ne.txt", fpath = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir/mm0ne.txt"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_mknod(path="/mm0ne.txt", mode=0100644, dev=0)
+    bb_fullpath:  rootdir = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/mm0ne.txt", fpath = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir/mm0ne.txt"
+    open returned 5
+    close returned 0
+
+bb_getattr(path="/mm0ne.txt", statbuf=0xcbae3c20)
+    bb_fullpath:  rootdir = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/mm0ne.txt", fpath = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir/mm0ne.txt"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 440307
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x65e028f8
+    st_mtime = 0x65e028f8
+    st_ctime = 0x65e028f8
+
+bb_open(path"/mm0ne.txt", fi=0xcb2c0cd0)
+    bb_fullpath:  rootdir = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/mm0ne.txt", fpath = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir/mm0ne.txt"
+    open returned 5
+    fi:
+    flags = 0x00008801
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_flush(path="/mm0ne.txt", fi=0xcbae3cd0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x7255a7a348799d5d
+
+bb_utime(path="/mm0ne.txt", ubuf=0xcb2c0a80)
+    bb_fullpath:  rootdir = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/mm0ne.txt", fpath = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir/mm0ne.txt"
+    utime returned 0
+
+bb_getattr(path="/mm0ne.txt", statbuf=0xcb2c0b50)
+    bb_fullpath:  rootdir = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/mm0ne.txt", fpath = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir/mm0ne.txt"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 440307
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x65e028f8
+    st_mtime = 0x65e028f8
+    st_ctime = 0x65e028f8
+
+bb_flush(path="/mm0ne.txt", fi=0xcbae3cd0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x7255a7a348799d5d
+
+bb_release(path="/mm0ne.txt", fi=0xcb2c0cd0)
+    fi:
+    flags = 0x00008801
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    close returned 0
+
+bb_getattr(path="/", statbuf=0xcbae3bf0)
+    bb_fullpath:  rootdir = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 440293
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e02813
+    st_mtime = 0x65e028f8
+    st_ctime = 0x65e028f8
+
+bb_getattr(path="/", statbuf=0xcb2c0bf0)
+    bb_fullpath:  rootdir = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/mm0ne/git/sharesp241/mm0ne/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 440293
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e028fb
+    st_mtime = 0x65e028f8
+    st_ctime = 0x65e028f8
+
+bb_destroy(userdata=0x014f32a0)
