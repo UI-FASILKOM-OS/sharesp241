@@ -1,0 +1,6 @@
+Thu 22 Feb
+
+13.30 On progress Assignment #1: Readings ETC
+13.55 Copy helloworld-fuse for Assignment #2: FUSE
+14.10 Edit output, make clean helloworld-fuse & extract tarball for Assignment #2: FUSE
+14.38 Lynx tutorial for Assignment #2: FUSE
