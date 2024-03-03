@@ -4,7 +4,7 @@
 # REV01: Mon 19 Feb 2024 16:00
 # START: Tue 06 Feb 2024 15:00
 
-WEEK="W03"
+WEEK="W02"
 
 git pull
 
@@ -18,7 +18,6 @@ for II in * ; do
   }
 done
 
-exit
 # exit # ##############################
 
 echo "======================================================"
@@ -32,7 +31,7 @@ done
 echo "======================="
 for II in * ; do
   if [ -f $II/ATTENDANCE/$WEEK.txt ] ; then
-    echo "$II 3"
+    echo "$II 1"
   elif [ -d $II/ATTENDANCE/ ] ; then
     echo "$II 0"
   fi
