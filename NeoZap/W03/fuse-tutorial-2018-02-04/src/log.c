@@ -19,6 +19,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <time.h>
 
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -43,17 +44,24 @@ FILE *log_open()
     return logfile;
 }
 
-void log_msg(const char *format, ...)
-{
+void log_msg(const char *format, ...) {
     va_list ap;
     time_t rawtime;
     struct tm *timeinfo;
-    char timestamp[20];
+    char timestamp[32];
+    struct timespec ts;
 
     va_start(ap, format);
     time(&rawtime);
     timeinfo = localtime(&rawtime);
-    strftime(timestamp, sizeof(timestamp), "%y%m%d-%H:%M:%S", timeinfo);
+    clock_gettime(CLOCK_MONOTONIC, &ts);
+
+    strftime(timestamp, sizeof(timestamp), "%d %b %Y %H:%M:%S", timeinfo);
+    
+    char millisec[8];
+    snprintf(millisec, sizeof(millisec), ".%03ld", ts.tv_nsec / 1000000);
+    strcat(timestamp, millisec);
+
     fprintf(BB_DATA->logfile, "%s ", timestamp);
     vfprintf(BB_DATA->logfile, format, ap);
 }
