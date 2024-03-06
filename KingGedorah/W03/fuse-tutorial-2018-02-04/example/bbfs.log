@@ -1,0 +1,646 @@
+
+bb_init()
+    conn:
+    proto_major = 7
+    proto_minor = 39
+    async_read = 1
+    max_write = 131072
+    max_readahead = 131072
+    capable = 00000ffb
+    want = 00000010
+    max_background = 0
+    congestion_threshold = 0
+    context:
+    fuse = 31e02810
+    uid = 0
+    gid = 0
+    pid = 0
+    private_data = 31e022a0
+    logfile = 31e02320
+    rootdir = /home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir
+    umask = 00000
+
+bb_getattr(path="/", statbuf=0x95dedbf0)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 1441044
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e7ec0d
+    st_mtime = 0x65e7b011
+    st_ctime = 0x65e7b011
+
+bb_getxattr(path = "/", name = "security.selinux", value = 0x88000c40, size = 255)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/", name = "system.posix_acl_access", value = 0x90001fe0, size = 4096)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/", name = "system.posix_acl_default", value = 0x90002070, size = 4096)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_opendir(path="/", fi=0x95dedc10)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    opendir returned 0x0x7f5a90002180
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f5a90002180
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0x90002100, filler=0x95fffa90, offset=0, fi=0x955cac10)
+    readdir returned 0x0x7f5a900021b0
+calling filler with name ..
+calling filler with name .
+calling filler with name bogus.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f5a90002180
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f5a90002180
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/bogus.txt", statbuf=0x94da7c20)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 1441045
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e7b011
+    st_mtime = 0x65e7eba8
+    st_ctime = 0x65e7eba8
+
+bb_getxattr(path = "/bogus.txt", name = "security.selinux", value = 0x88000c40, size = 255)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/bogus.txt", name = "system.posix_acl_access", value = 0x88001580, size = 4096)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_releasedir(path="/", fi=0x94da7c10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f5a90002180
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f5a90002180
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x95dedbf0)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 1441044
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e7ec0d
+    st_mtime = 0x65e7b011
+    st_ctime = 0x65e7b011
+
+bb_getxattr(path = "/", name = "security.selinux", value = 0x88000c40, size = 255)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/", name = "system.posix_acl_access", value = 0x8c000e70, size = 4096)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/", name = "system.posix_acl_default", value = 0x900022a0, size = 4096)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_opendir(path="/", fi=0x955cac10)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    opendir returned 0x0x7f5a880017b0
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f5a880017b0
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0x88001730, filler=0x95fffa90, offset=0, fi=0x94da7c10)
+    readdir returned 0x0x7f5a880017e0
+calling filler with name ..
+calling filler with name .
+calling filler with name bogus.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f5a880017b0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f5a880017b0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/bogus.txt", statbuf=0x95dedc20)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 1441045
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e7b011
+    st_mtime = 0x65e7eba8
+    st_ctime = 0x65e7eba8
+
+bb_getxattr(path = "/bogus.txt", name = "security.selinux", value = 0x88000c40, size = 255)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/bogus.txt", name = "system.posix_acl_access", value = 0x8c000f90, size = 4096)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_releasedir(path="/", fi=0x955cac10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f5a880017b0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f5a880017b0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x94da7bf0)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 1441044
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e7ec0d
+    st_mtime = 0x65e7b011
+    st_ctime = 0x65e7b011
+
+bb_access(path="/", mask=01)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+
+bb_opendir(path="/", fi=0x955cac10)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    opendir returned 0x0x7f5a880018c0
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f5a880018c0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x94da7bf0)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 1441044
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e7ec0d
+    st_mtime = 0x65e7b011
+    st_ctime = 0x65e7b011
+
+bb_readdir(path="/", buf=0x88001840, filler=0x95fffa90, offset=0, fi=0x95dedc10)
+    readdir returned 0x0x7f5a880018f0
+calling filler with name ..
+calling filler with name .
+calling filler with name bogus.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f5a880018c0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f5a880018c0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/bogus.txt", statbuf=0x955cac20)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 1441045
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e7b011
+    st_mtime = 0x65e7eba8
+    st_ctime = 0x65e7eba8
+
+bb_releasedir(path="/", fi=0x95dedc10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f5a880018c0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f5a880018c0
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0x955cac10)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    opendir returned 0x0x7f5a88001940
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f5a88001940
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x94da7bf0)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 1441044
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e7ec0d
+    st_mtime = 0x65e7b011
+    st_ctime = 0x65e7b011
+
+bb_readdir(path="/", buf=0x880018c0, filler=0x95fffa90, offset=0, fi=0x94da7c10)
+    readdir returned 0x0x7f5a88001970
+calling filler with name ..
+calling filler with name .
+calling filler with name bogus.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f5a88001940
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f5a88001940
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/bogus.txt", statbuf=0x955cac20)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 1441045
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e7b011
+    st_mtime = 0x65e7eba8
+    st_ctime = 0x65e7eba8
+
+bb_getxattr(path = "/bogus.txt", name = "security.selinux", value = 0x8c000c40, size = 255)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/bogus.txt", name = "system.posix_acl_access", value = 0x8c001660, size = 4096)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_releasedir(path="/", fi=0x94da7c10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f5a88001940
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f5a88001940
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x95dedbf0)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 1441044
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e7ec0d
+    st_mtime = 0x65e7b011
+    st_ctime = 0x65e7b011
+
+bb_getattr(path="/KingGedorah.txt", statbuf=0x955cac20)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/KingGedorah.txt", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/KingGedorah.txt"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_mknod(path="/KingGedorah.txt", mode=0100644, dev=0)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/KingGedorah.txt", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/KingGedorah.txt"
+    open returned 5
+    close returned 0
+
+bb_getattr(path="/KingGedorah.txt", statbuf=0x95dedc20)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/KingGedorah.txt", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/KingGedorah.txt"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 1441048
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x65e7ed54
+    st_mtime = 0x65e7ed54
+    st_ctime = 0x65e7ed54
+
+bb_open(path"/KingGedorah.txt", fi=0x955cacd0)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/KingGedorah.txt", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/KingGedorah.txt"
+    open returned 5
+    fi:
+    flags = 0x00008801
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_flush(path="/KingGedorah.txt", fi=0x94da7cd0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x2ccf9b1c85be7b3c
+
+bb_utime(path="/KingGedorah.txt", ubuf=0x95deda80)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/KingGedorah.txt", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/KingGedorah.txt"
+    utime returned 0
+
+bb_getattr(path="/KingGedorah.txt", statbuf=0x95dedb50)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/KingGedorah.txt", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/KingGedorah.txt"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 1441048
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x65e7ed54
+    st_mtime = 0x65e7ed54
+    st_ctime = 0x65e7ed54
+
+bb_flush(path="/KingGedorah.txt", fi=0x955cacd0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x2ccf9b1c85be7b3c
+
+bb_release(path="/KingGedorah.txt", fi=0x94da7cd0)
+    fi:
+    flags = 0x00008801
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    close returned 0
+
+bb_opendir(path="/", fi=0x95dedc10)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    opendir returned 0x0x7f5a900027c0
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f5a900027c0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x955cabf0)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 1441044
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e7ec0d
+    st_mtime = 0x65e7ed54
+    st_ctime = 0x65e7ed54
+
+bb_readdir(path="/", buf=0x90002740, filler=0x95fffa90, offset=0, fi=0x94da7c10)
+    readdir returned 0x0x7f5a900027f0
+calling filler with name ..
+calling filler with name .
+calling filler with name bogus.txt
+calling filler with name KingGedorah.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f5a900027c0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f5a900027c0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/bogus.txt", statbuf=0x95dedc20)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 1441045
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e7b011
+    st_mtime = 0x65e7eba8
+    st_ctime = 0x65e7eba8
+
+bb_getxattr(path = "/bogus.txt", name = "security.selinux", value = 0x88000c40, size = 255)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/bogus.txt", name = "system.posix_acl_access", value = 0x8c001660, size = 4096)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getattr(path="/KingGedorah.txt", statbuf=0x95dedc20)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/KingGedorah.txt", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/KingGedorah.txt"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 1441048
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x65e7ed54
+    st_mtime = 0x65e7ed54
+    st_ctime = 0x65e7ed54
+
+bb_getxattr(path = "/KingGedorah.txt", name = "security.selinux", value = 0x88000c40, size = 255)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/KingGedorah.txt", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/KingGedorah.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/KingGedorah.txt", name = "system.posix_acl_access", value = 0x8c001660, size = 4096)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/KingGedorah.txt", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/KingGedorah.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_releasedir(path="/", fi=0x955cac10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f5a900027c0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f5a900027c0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x94da7bf0)
+    bb_fullpath:  rootdir = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/naufalzz/git/sharesp241/KingGedorah/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2049
+    st_ino = 1441044
+    st_mode = 040755
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65e7ed58
+    st_mtime = 0x65e7ed54
+    st_ctime = 0x65e7ed54
+
+bb_destroy(userdata=0x31e022a0)
