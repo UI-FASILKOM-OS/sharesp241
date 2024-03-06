@@ -19,6 +19,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <time.h>
 
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -45,9 +46,25 @@ FILE *log_open()
 
 void log_msg(const char *format, ...)
 {
+    // menyontek NeoZap
     va_list ap;
-    va_start(ap, format);
+    time_t rawtime;
+    struct tm *timeinfo;
+    char timestamp[32];
+    struct timespec ts;
 
+    va_start(ap, format);
+    time(&rawtime);
+    timeinfo = localtime(&rawtime);
+    clock_gettime(CLOCK_MONOTONIC, &ts);
+
+    strftime(timestamp, sizeof(timestamp), "%d %b %Y %H:%M:%S", timeinfo);
+    
+    char millisec[8];
+    snprintf(millisec, sizeof(millisec), ".%03ld", ts.tv_nsec / 1000000);
+    strcat(timestamp, millisec);
+
+    fprintf(BB_DATA->logfile, "%s ", timestamp);
     vfprintf(BB_DATA->logfile, format, ap);
 }
 

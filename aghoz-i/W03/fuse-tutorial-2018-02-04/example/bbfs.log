@@ -1,540 +1,381 @@
-
+06 Mar 2024 15:04:53.250 
 bb_init()
-    conn:
-    proto_major = 7
-    proto_minor = 39
-    async_read = 1
-    max_write = 131072
-    max_readahead = 131072
-    capable = 00000ffb
-    want = 00000010
-    max_background = 0
-    congestion_threshold = 0
-    context:
-    fuse = 5cdf9800
-    uid = 0
-    gid = 0
-    pid = 0
-    private_data = 5cdf92a0
-    logfile = 5cdf9320
-    rootdir = /home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir
-    umask = 00000
-
-bb_getattr(path="/", statbuf=0x327e8bf0)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lstat returned 0
-    si:
-    st_dev = 2049
-    st_ino = 540283
-    st_mode = 040755
-    st_nlink = 2
-    st_uid = 1000
-    st_gid = 1000
-    st_rdev = 0
-    st_size = 4096
-    st_blksize = 4096
-    st_blocks = 8
-    st_atime = 0x65e02749
-    st_mtime = 0x65e0271c
-    st_ctime = 0x65e0271c
-
-bb_getxattr(path = "/", name = "security.selinux", value = 0x24000c40, size = 255)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_getxattr(path = "/", name = "system.posix_acl_access", value = 0x2c001fe0, size = 4096)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_getxattr(path = "/", name = "system.posix_acl_default", value = 0x24000ef0, size = 4096)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_getattr(path="/", statbuf=0x327e8bf0)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lstat returned 0
-    si:
-    st_dev = 2049
-    st_ino = 540283
-    st_mode = 040755
-    st_nlink = 2
-    st_uid = 1000
-    st_gid = 1000
-    st_rdev = 0
-    st_size = 4096
-    st_blksize = 4096
-    st_blocks = 8
-    st_atime = 0x65e02749
-    st_mtime = 0x65e0271c
-    st_ctime = 0x65e0271c
-
-bb_getxattr(path = "/", name = "security.selinux", value = 0x2c001e40, size = 255)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_getxattr(path = "/", name = "system.posix_acl_access", value = 0x24000f80, size = 4096)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_getxattr(path = "/", name = "system.posix_acl_default", value = 0x2c0022a0, size = 4096)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_opendir(path="/", fi=0x31fc5c10)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    opendir returned 0x0x7f4124001090
-    fi:
-    flags = 0x00018800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f4124001090
-    lock_owner = 0x0000000000000000
-
-bb_readdir(path="/", buf=0x24001010, filler=0x329faa90, offset=0, fi=0x327e8c10)
-    readdir returned 0x0x7f41240010c0
-calling filler with name ..
-calling filler with name .
-calling filler with name bogus.txt
-    fi:
-    flags = 0x00000000
-    fh_old = 0x7f4124001090
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f4124001090
-    lock_owner = 0x0000000000000000
-
-bb_getattr(path="/bogus.txt", statbuf=0x31fc5c20)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
-    lstat returned 0
-    si:
-    st_dev = 2049
-    st_ino = 540284
-    st_mode = 0100644
-    st_nlink = 1
-    st_uid = 1000
-    st_gid = 1000
-    st_rdev = 0
-    st_size = 11
-    st_blksize = 4096
-    st_blocks = 8
-    st_atime = 0x65e0271c
-    st_mtime = 0x65e0271c
-    st_ctime = 0x65e0271c
-
-bb_getxattr(path = "/bogus.txt", name = "security.selinux", value = 0x2c001e40, size = 255)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_getxattr(path = "/bogus.txt", name = "system.posix_acl_access", value = 0x240091f0, size = 4096)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_releasedir(path="/", fi=0x31fc5c10)
-    fi:
-    flags = 0x00000000
-    fh_old = 0x7f4124001090
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f4124001090
-    lock_owner = 0x0000000000000000
-
-bb_getattr(path="/", statbuf=0x327e8bf0)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lstat returned 0
-    si:
-    st_dev = 2049
-    st_ino = 540283
-    st_mode = 040755
-    st_nlink = 2
-    st_uid = 1000
-    st_gid = 1000
-    st_rdev = 0
-    st_size = 4096
-    st_blksize = 4096
-    st_blocks = 8
-    st_atime = 0x65e02749
-    st_mtime = 0x65e0271c
-    st_ctime = 0x65e0271c
-
+06 Mar 2024 15:04:53.250     conn:
+06 Mar 2024 15:04:53.250     proto_major = 7
+06 Mar 2024 15:04:53.250     proto_minor = 39
+06 Mar 2024 15:04:53.250     async_read = 1
+06 Mar 2024 15:04:53.250     max_write = 131072
+06 Mar 2024 15:04:53.250     max_readahead = 131072
+06 Mar 2024 15:04:53.250     capable = 00000ffb
+06 Mar 2024 15:04:53.250     want = 00000010
+06 Mar 2024 15:04:53.250     max_background = 0
+06 Mar 2024 15:04:53.250     congestion_threshold = 0
+06 Mar 2024 15:04:53.250     context:
+06 Mar 2024 15:04:53.250     fuse = 7c6f4800
+06 Mar 2024 15:04:53.250     uid = 0
+06 Mar 2024 15:04:53.250     gid = 0
+06 Mar 2024 15:04:53.250     pid = 0
+06 Mar 2024 15:04:53.250     private_data = 7c6f42a0
+06 Mar 2024 15:04:53.250     logfile = 7c6f4320
+06 Mar 2024 15:04:53.250     rootdir = /home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir
+06 Mar 2024 15:04:53.250     umask = 00000
+06 Mar 2024 15:04:57.852 
+bb_getattr(path="/", statbuf=0x2f90abf0)
+06 Mar 2024 15:04:57.852     bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 15:04:57.852     lstat returned 0
+06 Mar 2024 15:04:57.852     si:
+06 Mar 2024 15:04:57.852     st_dev = 2049
+06 Mar 2024 15:04:57.852     st_ino = 824762
+06 Mar 2024 15:04:57.852     st_mode = 040755
+06 Mar 2024 15:04:57.852     st_nlink = 2
+06 Mar 2024 15:04:57.852     st_uid = 1000
+06 Mar 2024 15:04:57.852     st_gid = 1000
+06 Mar 2024 15:04:57.852     st_rdev = 0
+06 Mar 2024 15:04:57.852     st_size = 4096
+06 Mar 2024 15:04:57.852     st_blksize = 4096
+06 Mar 2024 15:04:57.852     st_blocks = 8
+06 Mar 2024 15:04:57.852     st_atime = 0x65e8237f
+06 Mar 2024 15:04:57.852     st_mtime = 0x65e82374
+06 Mar 2024 15:04:57.852     st_ctime = 0x65e82374
+06 Mar 2024 15:04:57.852 
+bb_getxattr(path = "/", name = "security.selinux", value = 0x28001110, size = 255)
+06 Mar 2024 15:04:57.852     bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 15:04:57.852     lgetxattr returned -1
+06 Mar 2024 15:04:57.852     ERROR lgetxattr: No data available
+06 Mar 2024 15:04:57.852 
+bb_getxattr(path = "/", name = "system.posix_acl_access", value = 0x20000de0, size = 4096)
+06 Mar 2024 15:04:57.852     bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 15:04:57.852     lgetxattr returned -1
+06 Mar 2024 15:04:57.852     ERROR lgetxattr: No data available
+06 Mar 2024 15:04:57.853 
+bb_getxattr(path = "/", name = "system.posix_acl_default", value = 0x28003070, size = 4096)
+06 Mar 2024 15:04:57.853     bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 15:04:57.853     lgetxattr returned -1
+06 Mar 2024 15:04:57.853     ERROR lgetxattr: No data available
+06 Mar 2024 15:04:57.853 
+bb_opendir(path="/", fi=0x2f90ac10)
+06 Mar 2024 15:04:57.853     bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 15:04:57.853     opendir returned 0x0x7f4320000ef0
+06 Mar 2024 15:04:57.853     fi:
+06 Mar 2024 15:04:57.853     flags = 0x00018800
+06 Mar 2024 15:04:57.853     fh_old = 0x00000000
+06 Mar 2024 15:04:57.853     writepage = 0
+06 Mar 2024 15:04:57.853     direct_io = 0
+06 Mar 2024 15:04:57.853     keep_cache = 0
+06 Mar 2024 15:04:57.853     fh = 0x00007f4320000ef0
+06 Mar 2024 15:04:57.853     lock_owner = 0x0000000000000000
+06 Mar 2024 15:04:57.854 
+bb_readdir(path="/", buf=0x20000e70, filler=0x3033fa90, offset=0, fi=0x3012dc10)
+06 Mar 2024 15:04:57.854     readdir returned 0x0x7f4320000f20
+06 Mar 2024 15:04:57.854 calling filler with name ..
+06 Mar 2024 15:04:57.854 calling filler with name .
+06 Mar 2024 15:04:57.854 calling filler with name bogus.txt
+06 Mar 2024 15:04:57.854     fi:
+06 Mar 2024 15:04:57.854     flags = 0x00000000
+06 Mar 2024 15:04:57.854     fh_old = 0x7f4320000ef0
+06 Mar 2024 15:04:57.854     writepage = 0
+06 Mar 2024 15:04:57.854     direct_io = 0
+06 Mar 2024 15:04:57.854     keep_cache = 0
+06 Mar 2024 15:04:57.854     fh = 0x00007f4320000ef0
+06 Mar 2024 15:04:57.854     lock_owner = 0x0000000000000000
+06 Mar 2024 15:04:57.854 
+bb_getattr(path="/bogus.txt", statbuf=0x2f90ac20)
+06 Mar 2024 15:04:57.854     bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+06 Mar 2024 15:04:57.854     lstat returned 0
+06 Mar 2024 15:04:57.854     si:
+06 Mar 2024 15:04:57.854     st_dev = 2049
+06 Mar 2024 15:04:57.854     st_ino = 824763
+06 Mar 2024 15:04:57.854     st_mode = 0100644
+06 Mar 2024 15:04:57.854     st_nlink = 1
+06 Mar 2024 15:04:57.854     st_uid = 1000
+06 Mar 2024 15:04:57.854     st_gid = 1000
+06 Mar 2024 15:04:57.854     st_rdev = 0
+06 Mar 2024 15:04:57.854     st_size = 11
+06 Mar 2024 15:04:57.854     st_blksize = 4096
+06 Mar 2024 15:04:57.854     st_blocks = 8
+06 Mar 2024 15:04:57.854     st_atime = 0x65e82374
+06 Mar 2024 15:04:57.854     st_mtime = 0x65e82374
+06 Mar 2024 15:04:57.854     st_ctime = 0x65e82374
+06 Mar 2024 15:04:57.854 
+bb_getxattr(path = "/bogus.txt", name = "security.selinux", value = 0x28001110, size = 255)
+06 Mar 2024 15:04:57.854     bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+06 Mar 2024 15:04:57.854     lgetxattr returned -1
+06 Mar 2024 15:04:57.854     ERROR lgetxattr: No data available
+06 Mar 2024 15:04:57.855 
+bb_getxattr(path = "/bogus.txt", name = "system.posix_acl_access", value = 0x20009050, size = 4096)
+06 Mar 2024 15:04:57.855     bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+06 Mar 2024 15:04:57.855     lgetxattr returned -1
+06 Mar 2024 15:04:57.855     ERROR lgetxattr: No data available
+06 Mar 2024 15:04:57.855 
+bb_releasedir(path="/", fi=0x2f90ac10)
+06 Mar 2024 15:04:57.855     fi:
+06 Mar 2024 15:04:57.855     flags = 0x00000000
+06 Mar 2024 15:04:57.855     fh_old = 0x7f4320000ef0
+06 Mar 2024 15:04:57.855     writepage = 0
+06 Mar 2024 15:04:57.855     direct_io = 0
+06 Mar 2024 15:04:57.855     keep_cache = 0
+06 Mar 2024 15:04:57.855     fh = 0x00007f4320000ef0
+06 Mar 2024 15:04:57.855     lock_owner = 0x0000000000000000
+06 Mar 2024 15:05:18.066 
+bb_getattr(path="/", statbuf=0x3012dbf0)
+06 Mar 2024 15:05:18.066     bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 15:05:18.066     lstat returned 0
+06 Mar 2024 15:05:18.066     si:
+06 Mar 2024 15:05:18.066     st_dev = 2049
+06 Mar 2024 15:05:18.066     st_ino = 824762
+06 Mar 2024 15:05:18.066     st_mode = 040755
+06 Mar 2024 15:05:18.066     st_nlink = 2
+06 Mar 2024 15:05:18.066     st_uid = 1000
+06 Mar 2024 15:05:18.066     st_gid = 1000
+06 Mar 2024 15:05:18.066     st_rdev = 0
+06 Mar 2024 15:05:18.066     st_size = 4096
+06 Mar 2024 15:05:18.066     st_blksize = 4096
+06 Mar 2024 15:05:18.066     st_blocks = 8
+06 Mar 2024 15:05:18.066     st_atime = 0x65e8237f
+06 Mar 2024 15:05:18.066     st_mtime = 0x65e82374
+06 Mar 2024 15:05:18.066     st_ctime = 0x65e82374
+06 Mar 2024 15:05:19.581 
 bb_access(path="/", mask=01)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-
-bb_opendir(path="/", fi=0x327e8c10)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    opendir returned 0x0x7f412c002850
-    fi:
-    flags = 0x00018800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f412c002850
-    lock_owner = 0x0000000000000000
-
-bb_getattr(path="/", statbuf=0x31fc5bf0)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lstat returned 0
-    si:
-    st_dev = 2049
-    st_ino = 540283
-    st_mode = 040755
-    st_nlink = 2
-    st_uid = 1000
-    st_gid = 1000
-    st_rdev = 0
-    st_size = 4096
-    st_blksize = 4096
-    st_blocks = 8
-    st_atime = 0x65e02749
-    st_mtime = 0x65e0271c
-    st_ctime = 0x65e0271c
-
-bb_readdir(path="/", buf=0x2c0027d0, filler=0x329faa90, offset=0, fi=0x31fc5c10)
-    readdir returned 0x0x7f412c002880
-calling filler with name ..
-calling filler with name .
-calling filler with name bogus.txt
-    fi:
-    flags = 0x00000000
-    fh_old = 0x7f412c002850
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f412c002850
-    lock_owner = 0x0000000000000000
-
-bb_getxattr(path = "/", name = "security.selinux", value = 0x24000c40, size = 255)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_getxattr(path = "/", name = "system.posix_acl_access", value = 0x2c00a890, size = 4096)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_getxattr(path = "/", name = "system.posix_acl_default", value = 0x24001120, size = 4096)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_getattr(path="/bogus.txt", statbuf=0x327e8c20)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
-    lstat returned 0
-    si:
-    st_dev = 2049
-    st_ino = 540284
-    st_mode = 0100644
-    st_nlink = 1
-    st_uid = 1000
-    st_gid = 1000
-    st_rdev = 0
-    st_size = 11
-    st_blksize = 4096
-    st_blocks = 8
-    st_atime = 0x65e0271c
-    st_mtime = 0x65e0271c
-    st_ctime = 0x65e0271c
-
-bb_getxattr(path = "/bogus.txt", name = "security.selinux", value = 0x24000c40, size = 255)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_getxattr(path = "/bogus.txt", name = "system.posix_acl_access", value = 0x2c00a890, size = 4096)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_releasedir(path="/", fi=0x327e8c10)
-    fi:
-    flags = 0x00000000
-    fh_old = 0x7f412c002850
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f412c002850
-    lock_owner = 0x0000000000000000
-
-bb_getattr(path="/", statbuf=0x31fc5bf0)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lstat returned 0
-    si:
-    st_dev = 2049
-    st_ino = 540283
-    st_mode = 040755
-    st_nlink = 2
-    st_uid = 1000
-    st_gid = 1000
-    st_rdev = 0
-    st_size = 4096
-    st_blksize = 4096
-    st_blocks = 8
-    st_atime = 0x65e02749
-    st_mtime = 0x65e0271c
-    st_ctime = 0x65e0271c
-
-bb_getattr(path="/aghoz-i.txt", statbuf=0x327e8c20)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/aghoz-i.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/aghoz-i.txt"
-    lstat returned -1
-    ERROR lstat: No such file or directory
-    si:
-    st_dev = 0
-    st_ino = 0
-    st_mode = 00
-    st_nlink = 0
-    st_uid = 0
-    st_gid = 0
-    st_rdev = 0
-    st_size = 0
-    st_blksize = 0
-    st_blocks = 0
-    st_atime = 0x00000000
-    st_mtime = 0x00000000
-    st_ctime = 0x00000000
-
+06 Mar 2024 15:05:19.581     bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 15:05:20.785 
+bb_opendir(path="/", fi=0x3012dc10)
+06 Mar 2024 15:05:20.785     bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 15:05:20.785     opendir returned 0x0x7f4328003070
+06 Mar 2024 15:05:20.785     fi:
+06 Mar 2024 15:05:20.785     flags = 0x00018800
+06 Mar 2024 15:05:20.785     fh_old = 0x00000000
+06 Mar 2024 15:05:20.785     writepage = 0
+06 Mar 2024 15:05:20.785     direct_io = 0
+06 Mar 2024 15:05:20.785     keep_cache = 0
+06 Mar 2024 15:05:20.785     fh = 0x00007f4328003070
+06 Mar 2024 15:05:20.785     lock_owner = 0x0000000000000000
+06 Mar 2024 15:05:20.785 
+bb_getattr(path="/", statbuf=0x2f90abf0)
+06 Mar 2024 15:05:20.785     bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 15:05:20.785     lstat returned 0
+06 Mar 2024 15:05:20.785     si:
+06 Mar 2024 15:05:20.785     st_dev = 2049
+06 Mar 2024 15:05:20.785     st_ino = 824762
+06 Mar 2024 15:05:20.785     st_mode = 040755
+06 Mar 2024 15:05:20.785     st_nlink = 2
+06 Mar 2024 15:05:20.785     st_uid = 1000
+06 Mar 2024 15:05:20.785     st_gid = 1000
+06 Mar 2024 15:05:20.785     st_rdev = 0
+06 Mar 2024 15:05:20.785     st_size = 4096
+06 Mar 2024 15:05:20.785     st_blksize = 4096
+06 Mar 2024 15:05:20.785     st_blocks = 8
+06 Mar 2024 15:05:20.785     st_atime = 0x65e8237f
+06 Mar 2024 15:05:20.785     st_mtime = 0x65e82374
+06 Mar 2024 15:05:20.785     st_ctime = 0x65e82374
+06 Mar 2024 15:05:20.785 
+bb_readdir(path="/", buf=0x28001aa0, filler=0x3033fa90, offset=0, fi=0x3012dc10)
+06 Mar 2024 15:05:20.785     readdir returned 0x0x7f43280030a0
+06 Mar 2024 15:05:20.785 calling filler with name ..
+06 Mar 2024 15:05:20.785 calling filler with name .
+06 Mar 2024 15:05:20.785 calling filler with name bogus.txt
+06 Mar 2024 15:05:20.785     fi:
+06 Mar 2024 15:05:20.785     flags = 0x00000000
+06 Mar 2024 15:05:20.785     fh_old = 0x7f4328003070
+06 Mar 2024 15:05:20.785     writepage = 0
+06 Mar 2024 15:05:20.785     direct_io = 0
+06 Mar 2024 15:05:20.785     keep_cache = 0
+06 Mar 2024 15:05:20.785     fh = 0x00007f4328003070
+06 Mar 2024 15:05:20.785     lock_owner = 0x0000000000000000
+06 Mar 2024 15:05:20.786 
+bb_getxattr(path = "/", name = "security.selinux", value = 0x20000c40, size = 255)
+06 Mar 2024 15:05:20.786     bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 15:05:20.786     lgetxattr returned -1
+06 Mar 2024 15:05:20.786     ERROR lgetxattr: No data available
+06 Mar 2024 15:05:20.786 
+bb_getxattr(path = "/", name = "system.posix_acl_access", value = 0x2800b0b0, size = 4096)
+06 Mar 2024 15:05:20.786     bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 15:05:20.786     lgetxattr returned -1
+06 Mar 2024 15:05:20.786     ERROR lgetxattr: No data available
+06 Mar 2024 15:05:20.786 
+bb_getxattr(path = "/", name = "system.posix_acl_default", value = 0x2800b0b0, size = 4096)
+06 Mar 2024 15:05:20.786     bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 15:05:20.786     lgetxattr returned -1
+06 Mar 2024 15:05:20.786     ERROR lgetxattr: No data available
+06 Mar 2024 15:05:20.786 
+bb_getattr(path="/bogus.txt", statbuf=0x3012dc20)
+06 Mar 2024 15:05:20.786     bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+06 Mar 2024 15:05:20.786     lstat returned 0
+06 Mar 2024 15:05:20.786     si:
+06 Mar 2024 15:05:20.786     st_dev = 2049
+06 Mar 2024 15:05:20.786     st_ino = 824763
+06 Mar 2024 15:05:20.786     st_mode = 0100644
+06 Mar 2024 15:05:20.786     st_nlink = 1
+06 Mar 2024 15:05:20.786     st_uid = 1000
+06 Mar 2024 15:05:20.786     st_gid = 1000
+06 Mar 2024 15:05:20.786     st_rdev = 0
+06 Mar 2024 15:05:20.786     st_size = 11
+06 Mar 2024 15:05:20.786     st_blksize = 4096
+06 Mar 2024 15:05:20.786     st_blocks = 8
+06 Mar 2024 15:05:20.786     st_atime = 0x65e82374
+06 Mar 2024 15:05:20.786     st_mtime = 0x65e82374
+06 Mar 2024 15:05:20.786     st_ctime = 0x65e82374
+06 Mar 2024 15:05:20.786 
+bb_getxattr(path = "/bogus.txt", name = "security.selinux", value = 0x28001110, size = 255)
+06 Mar 2024 15:05:20.786     bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+06 Mar 2024 15:05:20.786     lgetxattr returned -1
+06 Mar 2024 15:05:20.786     ERROR lgetxattr: No data available
+06 Mar 2024 15:05:20.786 
+bb_getxattr(path = "/bogus.txt", name = "system.posix_acl_access", value = 0x20001120, size = 4096)
+06 Mar 2024 15:05:20.786     bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+06 Mar 2024 15:05:20.786     lgetxattr returned -1
+06 Mar 2024 15:05:20.786     ERROR lgetxattr: No data available
+06 Mar 2024 15:05:20.786 
+bb_releasedir(path="/", fi=0x2f90ac10)
+06 Mar 2024 15:05:20.786     fi:
+06 Mar 2024 15:05:20.786     flags = 0x00000000
+06 Mar 2024 15:05:20.786     fh_old = 0x7f4328003070
+06 Mar 2024 15:05:20.786     writepage = 0
+06 Mar 2024 15:05:20.786     direct_io = 0
+06 Mar 2024 15:05:20.786     keep_cache = 0
+06 Mar 2024 15:05:20.786     fh = 0x00007f4328003070
+06 Mar 2024 15:05:20.786     lock_owner = 0x0000000000000000
+06 Mar 2024 15:05:24.621 
+bb_getattr(path="/", statbuf=0x3012dbf0)
+06 Mar 2024 15:05:24.621     bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 15:05:24.621     lstat returned 0
+06 Mar 2024 15:05:24.621     si:
+06 Mar 2024 15:05:24.621     st_dev = 2049
+06 Mar 2024 15:05:24.621     st_ino = 824762
+06 Mar 2024 15:05:24.621     st_mode = 040755
+06 Mar 2024 15:05:24.621     st_nlink = 2
+06 Mar 2024 15:05:24.621     st_uid = 1000
+06 Mar 2024 15:05:24.621     st_gid = 1000
+06 Mar 2024 15:05:24.621     st_rdev = 0
+06 Mar 2024 15:05:24.621     st_size = 4096
+06 Mar 2024 15:05:24.621     st_blksize = 4096
+06 Mar 2024 15:05:24.622     st_blocks = 8
+06 Mar 2024 15:05:24.622     st_atime = 0x65e8237f
+06 Mar 2024 15:05:24.622     st_mtime = 0x65e82374
+06 Mar 2024 15:05:24.622     st_ctime = 0x65e82374
+06 Mar 2024 15:05:24.624 
+bb_getattr(path="/aghoz-i.txt", statbuf=0x2f90ac20)
+06 Mar 2024 15:05:24.624     bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/aghoz-i.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/aghoz-i.txt"
+06 Mar 2024 15:05:24.624     lstat returned -1
+06 Mar 2024 15:05:24.624     ERROR lstat: No such file or directory
+06 Mar 2024 15:05:24.624     si:
+06 Mar 2024 15:05:24.624     st_dev = 0
+06 Mar 2024 15:05:24.624     st_ino = 0
+06 Mar 2024 15:05:24.624     st_mode = 00
+06 Mar 2024 15:05:24.624     st_nlink = 0
+06 Mar 2024 15:05:24.624     st_uid = 0
+06 Mar 2024 15:05:24.624     st_gid = 0
+06 Mar 2024 15:05:24.624     st_rdev = 0
+06 Mar 2024 15:05:24.624     st_size = 0
+06 Mar 2024 15:05:24.624     st_blksize = 0
+06 Mar 2024 15:05:24.624     st_blocks = 0
+06 Mar 2024 15:05:24.624     st_atime = 0x00000000
+06 Mar 2024 15:05:24.624     st_mtime = 0x00000000
+06 Mar 2024 15:05:24.624     st_ctime = 0x00000000
+06 Mar 2024 15:05:24.624 
 bb_mknod(path="/aghoz-i.txt", mode=0100644, dev=0)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/aghoz-i.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/aghoz-i.txt"
-    open returned 5
-    close returned 0
-
-bb_getattr(path="/aghoz-i.txt", statbuf=0x327e8c20)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/aghoz-i.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/aghoz-i.txt"
-    lstat returned 0
-    si:
-    st_dev = 2049
-    st_ino = 540424
-    st_mode = 0100644
-    st_nlink = 1
-    st_uid = 1000
-    st_gid = 1000
-    st_rdev = 0
-    st_size = 0
-    st_blksize = 4096
-    st_blocks = 0
-    st_atime = 0x65e027e1
-    st_mtime = 0x65e027e1
-    st_ctime = 0x65e027e1
-
-bb_open(path"/aghoz-i.txt", fi=0x31fc5cd0)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/aghoz-i.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/aghoz-i.txt"
-    open returned 5
-    fi:
-    flags = 0x00008801
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x0000000000000005
-    lock_owner = 0x0000000000000000
-
-bb_flush(path="/aghoz-i.txt", fi=0x327e8cd0)
-    fi:
-    flags = 0x00000000
-    fh_old = 0x00000005
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x0000000000000005
-    lock_owner = 0x66b55ea9fe2a255d
-
-bb_utime(path="/aghoz-i.txt", ubuf=0x31fc5a80)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/aghoz-i.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/aghoz-i.txt"
-    utime returned 0
-
-bb_getattr(path="/aghoz-i.txt", statbuf=0x31fc5b50)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/aghoz-i.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/aghoz-i.txt"
-    lstat returned 0
-    si:
-    st_dev = 2049
-    st_ino = 540424
-    st_mode = 0100644
-    st_nlink = 1
-    st_uid = 1000
-    st_gid = 1000
-    st_rdev = 0
-    st_size = 0
-    st_blksize = 4096
-    st_blocks = 0
-    st_atime = 0x65e027e1
-    st_mtime = 0x65e027e1
-    st_ctime = 0x65e027e1
-
-bb_flush(path="/aghoz-i.txt", fi=0x31fc5cd0)
-    fi:
-    flags = 0x00000000
-    fh_old = 0x00000005
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x0000000000000005
-    lock_owner = 0x66b55ea9fe2a255d
-
-bb_release(path="/aghoz-i.txt", fi=0x31fc5cd0)
-    fi:
-    flags = 0x00008801
-    fh_old = 0x00000005
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x0000000000000005
-    lock_owner = 0x0000000000000000
-    close returned 0
-
-bb_opendir(path="/", fi=0x327e8c10)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    opendir returned 0x0x7f412c0028d0
-    fi:
-    flags = 0x00018800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f412c0028d0
-    lock_owner = 0x0000000000000000
-
-bb_getattr(path="/", statbuf=0x31fc5bf0)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lstat returned 0
-    si:
-    st_dev = 2049
-    st_ino = 540283
-    st_mode = 040755
-    st_nlink = 2
-    st_uid = 1000
-    st_gid = 1000
-    st_rdev = 0
-    st_size = 4096
-    st_blksize = 4096
-    st_blocks = 8
-    st_atime = 0x65e02749
-    st_mtime = 0x65e027e1
-    st_ctime = 0x65e027e1
-
-bb_readdir(path="/", buf=0x2c002850, filler=0x329faa90, offset=0, fi=0x31fc5c10)
-    readdir returned 0x0x7f412c002900
-calling filler with name aghoz-i.txt
-calling filler with name ..
-calling filler with name .
-calling filler with name bogus.txt
-    fi:
-    flags = 0x00000000
-    fh_old = 0x7f412c0028d0
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f412c0028d0
-    lock_owner = 0x0000000000000000
-
-bb_getattr(path="/aghoz-i.txt", statbuf=0x327e8c20)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/aghoz-i.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/aghoz-i.txt"
-    lstat returned 0
-    si:
-    st_dev = 2049
-    st_ino = 540424
-    st_mode = 0100644
-    st_nlink = 1
-    st_uid = 1000
-    st_gid = 1000
-    st_rdev = 0
-    st_size = 0
-    st_blksize = 4096
-    st_blocks = 0
-    st_atime = 0x65e027e1
-    st_mtime = 0x65e027e1
-    st_ctime = 0x65e027e1
-
-bb_getxattr(path = "/aghoz-i.txt", name = "security.selinux", value = 0x24000c40, size = 255)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/aghoz-i.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/aghoz-i.txt"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_getxattr(path = "/aghoz-i.txt", name = "system.posix_acl_access", value = 0x2c00a910, size = 4096)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/aghoz-i.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/aghoz-i.txt"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_getxattr(path = "/", name = "security.selinux", value = 0x24000c40, size = 255)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_getxattr(path = "/", name = "system.posix_acl_access", value = 0x24001530, size = 4096)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_getxattr(path = "/", name = "system.posix_acl_default", value = 0x24001530, size = 4096)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_getattr(path="/bogus.txt", statbuf=0x327e8c20)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
-    lstat returned 0
-    si:
-    st_dev = 2049
-    st_ino = 540284
-    st_mode = 0100644
-    st_nlink = 1
-    st_uid = 1000
-    st_gid = 1000
-    st_rdev = 0
-    st_size = 11
-    st_blksize = 4096
-    st_blocks = 8
-    st_atime = 0x65e0271c
-    st_mtime = 0x65e0271c
-    st_ctime = 0x65e0271c
-
-bb_getxattr(path = "/bogus.txt", name = "security.selinux", value = 0x24000c40, size = 255)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_getxattr(path = "/bogus.txt", name = "system.posix_acl_access", value = 0x24001530, size = 4096)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_releasedir(path="/", fi=0x31fc5c10)
-    fi:
-    flags = 0x00000000
-    fh_old = 0x7f412c0028d0
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f412c0028d0
-    lock_owner = 0x0000000000000000
-
-bb_getattr(path="/", statbuf=0x327e8bf0)
-    bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lstat returned 0
-    si:
-    st_dev = 2049
-    st_ino = 540283
-    st_mode = 040755
-    st_nlink = 2
-    st_uid = 1000
-    st_gid = 1000
-    st_rdev = 0
-    st_size = 4096
-    st_blksize = 4096
-    st_blocks = 8
-    st_atime = 0x65e027e2
-    st_mtime = 0x65e027e1
-    st_ctime = 0x65e027e1
-
-bb_destroy(userdata=0x5cdf92a0)
+06 Mar 2024 15:05:24.624     bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/aghoz-i.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/aghoz-i.txt"
+06 Mar 2024 15:05:24.624     open returned 5
+06 Mar 2024 15:05:24.624     close returned 0
+06 Mar 2024 15:05:24.624 
+bb_getattr(path="/aghoz-i.txt", statbuf=0x2f90ac20)
+06 Mar 2024 15:05:24.624     bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/aghoz-i.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/aghoz-i.txt"
+06 Mar 2024 15:05:24.624     lstat returned 0
+06 Mar 2024 15:05:24.624     si:
+06 Mar 2024 15:05:24.624     st_dev = 2049
+06 Mar 2024 15:05:24.624     st_ino = 824776
+06 Mar 2024 15:05:24.624     st_mode = 0100644
+06 Mar 2024 15:05:24.624     st_nlink = 1
+06 Mar 2024 15:05:24.624     st_uid = 1000
+06 Mar 2024 15:05:24.624     st_gid = 1000
+06 Mar 2024 15:05:24.624     st_rdev = 0
+06 Mar 2024 15:05:24.624     st_size = 0
+06 Mar 2024 15:05:24.624     st_blksize = 4096
+06 Mar 2024 15:05:24.624     st_blocks = 0
+06 Mar 2024 15:05:24.624     st_atime = 0x65e823c4
+06 Mar 2024 15:05:24.624     st_mtime = 0x65e823c4
+06 Mar 2024 15:05:24.624     st_ctime = 0x65e823c4
+06 Mar 2024 15:05:24.624 
+bb_open(path"/aghoz-i.txt", fi=0x3012dcd0)
+06 Mar 2024 15:05:24.624     bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/aghoz-i.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/aghoz-i.txt"
+06 Mar 2024 15:05:24.624     open returned 5
+06 Mar 2024 15:05:24.624     fi:
+06 Mar 2024 15:05:24.624     flags = 0x00008801
+06 Mar 2024 15:05:24.624     fh_old = 0x00000000
+06 Mar 2024 15:05:24.624     writepage = 0
+06 Mar 2024 15:05:24.624     direct_io = 0
+06 Mar 2024 15:05:24.624     keep_cache = 0
+06 Mar 2024 15:05:24.624     fh = 0x0000000000000005
+06 Mar 2024 15:05:24.624     lock_owner = 0x0000000000000000
+06 Mar 2024 15:05:24.625 
+bb_flush(path="/aghoz-i.txt", fi=0x3012dcd0)
+06 Mar 2024 15:05:24.625     fi:
+06 Mar 2024 15:05:24.625     flags = 0x00000000
+06 Mar 2024 15:05:24.625     fh_old = 0x00000005
+06 Mar 2024 15:05:24.625     writepage = 0
+06 Mar 2024 15:05:24.625     direct_io = 0
+06 Mar 2024 15:05:24.625     keep_cache = 0
+06 Mar 2024 15:05:24.625     fh = 0x0000000000000005
+06 Mar 2024 15:05:24.625     lock_owner = 0x159948046d89f9eb
+06 Mar 2024 15:05:24.625 
+bb_utime(path="/aghoz-i.txt", ubuf=0x2f90aa80)
+06 Mar 2024 15:05:24.625     bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/aghoz-i.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/aghoz-i.txt"
+06 Mar 2024 15:05:24.625     utime returned 0
+06 Mar 2024 15:05:24.625 
+bb_getattr(path="/aghoz-i.txt", statbuf=0x2f90ab50)
+06 Mar 2024 15:05:24.625     bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/aghoz-i.txt", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/aghoz-i.txt"
+06 Mar 2024 15:05:24.625     lstat returned 0
+06 Mar 2024 15:05:24.625     si:
+06 Mar 2024 15:05:24.625     st_dev = 2049
+06 Mar 2024 15:05:24.625     st_ino = 824776
+06 Mar 2024 15:05:24.625     st_mode = 0100644
+06 Mar 2024 15:05:24.625     st_nlink = 1
+06 Mar 2024 15:05:24.625     st_uid = 1000
+06 Mar 2024 15:05:24.625     st_gid = 1000
+06 Mar 2024 15:05:24.625     st_rdev = 0
+06 Mar 2024 15:05:24.625     st_size = 0
+06 Mar 2024 15:05:24.625     st_blksize = 4096
+06 Mar 2024 15:05:24.625     st_blocks = 0
+06 Mar 2024 15:05:24.625     st_atime = 0x65e823c4
+06 Mar 2024 15:05:24.625     st_mtime = 0x65e823c4
+06 Mar 2024 15:05:24.625     st_ctime = 0x65e823c4
+06 Mar 2024 15:05:24.625 
+bb_flush(path="/aghoz-i.txt", fi=0x3012dcd0)
+06 Mar 2024 15:05:24.625     fi:
+06 Mar 2024 15:05:24.625     flags = 0x00000000
+06 Mar 2024 15:05:24.625     fh_old = 0x00000005
+06 Mar 2024 15:05:24.625     writepage = 0
+06 Mar 2024 15:05:24.625     direct_io = 0
+06 Mar 2024 15:05:24.625     keep_cache = 0
+06 Mar 2024 15:05:24.625     fh = 0x0000000000000005
+06 Mar 2024 15:05:24.625     lock_owner = 0x159948046d89f9eb
+06 Mar 2024 15:05:24.625 
+bb_release(path="/aghoz-i.txt", fi=0x2f90acd0)
+06 Mar 2024 15:05:24.625     fi:
+06 Mar 2024 15:05:24.625     flags = 0x00008801
+06 Mar 2024 15:05:24.625     fh_old = 0x00000005
+06 Mar 2024 15:05:24.625     writepage = 0
+06 Mar 2024 15:05:24.625     direct_io = 0
+06 Mar 2024 15:05:24.625     keep_cache = 0
+06 Mar 2024 15:05:24.625     fh = 0x0000000000000005
+06 Mar 2024 15:05:24.625     lock_owner = 0x0000000000000000
+06 Mar 2024 15:05:24.625     close returned 0
+06 Mar 2024 15:05:31.040 
+bb_getattr(path="/", statbuf=0x3012dbf0)
+06 Mar 2024 15:05:31.041     bb_fullpath:  rootdir = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/aghoz-i/git/sharesp241/aghoz-i/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 15:05:31.041     lstat returned 0
+06 Mar 2024 15:05:31.041     si:
+06 Mar 2024 15:05:31.041     st_dev = 2049
+06 Mar 2024 15:05:31.041     st_ino = 824762
+06 Mar 2024 15:05:31.041     st_mode = 040755
+06 Mar 2024 15:05:31.041     st_nlink = 2
+06 Mar 2024 15:05:31.041     st_uid = 1000
+06 Mar 2024 15:05:31.041     st_gid = 1000
+06 Mar 2024 15:05:31.041     st_rdev = 0
+06 Mar 2024 15:05:31.041     st_size = 4096
+06 Mar 2024 15:05:31.041     st_blksize = 4096
+06 Mar 2024 15:05:31.041     st_blocks = 8
+06 Mar 2024 15:05:31.041     st_atime = 0x65e8237f
+06 Mar 2024 15:05:31.041     st_mtime = 0x65e823c4
+06 Mar 2024 15:05:31.041     st_ctime = 0x65e823c4
+06 Mar 2024 15:05:49.646 
+bb_destroy(userdata=0x7c6f42a0)
