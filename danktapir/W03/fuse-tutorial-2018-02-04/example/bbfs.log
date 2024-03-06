@@ -1,476 +1,494 @@
-
+06 Mar 2024 17:22:59.339 
 bb_init()
-    conn:
-    proto_major = 7
-    proto_minor = 39
-    async_read = 1
-    max_write = 131072
-    max_readahead = 131072
-    capable = 00000ffb
-    want = 00000010
-    max_background = 0
-    congestion_threshold = 0
-    context:
-    fuse = 9c0c7810
-    uid = 0
-    gid = 0
-    pid = 0
-    private_data = 9c0c72a0
-    logfile = 9c0c7320
-    rootdir = /home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir
-    umask = 00000
-
-bb_getattr(path="/", statbuf=0xf6ee9bf0)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lstat returned 0
-    si:
-    st_dev = 2049
-    st_ino = 791378
-    st_mode = 040755
-    st_nlink = 2
-    st_uid = 1000
-    st_gid = 1000
-    st_rdev = 0
-    st_size = 4096
-    st_blksize = 4096
-    st_blocks = 8
-    st_atime = 0x65e02ce2
-    st_mtime = 0x65e02c7f
-    st_ctime = 0x65e02c7f
-
-bb_getxattr(path = "/", name = "security.selinux", value = 0xe8000c40, size = 255)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_getxattr(path = "/", name = "system.posix_acl_access", value = 0xf0001fe0, size = 4096)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_getxattr(path = "/", name = "system.posix_acl_default", value = 0xe8000ef0, size = 4096)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_opendir(path="/", fi=0xf6ee9c10)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    opendir returned 0x0x7fc8f00020f0
-    fi:
-    flags = 0x00018800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007fc8f00020f0
-    lock_owner = 0x0000000000000000
-
-bb_readdir(path="/", buf=0xf0002070, filler=0xf70fba90, offset=0, fi=0xf66c6c10)
-    readdir returned 0x0x7fc8f0002120
-calling filler with name .
-calling filler with name ..
-calling filler with name bogus.txt
-    fi:
-    flags = 0x00000000
-    fh_old = 0x7fc8f00020f0
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007fc8f00020f0
-    lock_owner = 0x0000000000000000
-
-bb_getattr(path="/bogus.txt", statbuf=0xf6ee9c20)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
-    lstat returned 0
-    si:
-    st_dev = 2049
-    st_ino = 791379
-    st_mode = 0100644
-    st_nlink = 1
-    st_uid = 1000
-    st_gid = 1000
-    st_rdev = 0
-    st_size = 11
-    st_blksize = 4096
-    st_blocks = 8
-    st_atime = 0x65e02c7f
-    st_mtime = 0x65e02c7f
-    st_ctime = 0x65e02c7f
-
-bb_getxattr(path = "/bogus.txt", name = "security.selinux", value = 0xe8000c40, size = 255)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_getxattr(path = "/bogus.txt", name = "system.posix_acl_access", value = 0xf000a3b0, size = 4096)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_releasedir(path="/", fi=0xf5ea3c10)
-    fi:
-    flags = 0x00000000
-    fh_old = 0x7fc8f00020f0
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007fc8f00020f0
-    lock_owner = 0x0000000000000000
-
-bb_getattr(path="/", statbuf=0xf5ea3bf0)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lstat returned 0
-    si:
-    st_dev = 2049
-    st_ino = 791378
-    st_mode = 040755
-    st_nlink = 2
-    st_uid = 1000
-    st_gid = 1000
-    st_rdev = 0
-    st_size = 4096
-    st_blksize = 4096
-    st_blocks = 8
-    st_atime = 0x65e02ce2
-    st_mtime = 0x65e02c7f
-    st_ctime = 0x65e02c7f
-
-bb_getxattr(path = "/", name = "security.selinux", value = 0xf0001e40, size = 255)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_getxattr(path = "/", name = "system.posix_acl_access", value = 0xf0002290, size = 4096)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_getxattr(path = "/", name = "system.posix_acl_default", value = 0xe80014b0, size = 4096)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_getattr(path="/", statbuf=0xf6ee9bf0)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lstat returned 0
-    si:
-    st_dev = 2049
-    st_ino = 791378
-    st_mode = 040755
-    st_nlink = 2
-    st_uid = 1000
-    st_gid = 1000
-    st_rdev = 0
-    st_size = 4096
-    st_blksize = 4096
-    st_blocks = 8
-    st_atime = 0x65e02ce2
-    st_mtime = 0x65e02c7f
-    st_ctime = 0x65e02c7f
-
+06 Mar 2024 17:22:59.340     conn:
+06 Mar 2024 17:22:59.340     proto_major = 7
+06 Mar 2024 17:22:59.341     proto_minor = 39
+06 Mar 2024 17:22:59.341     async_read = 1
+06 Mar 2024 17:22:59.341     max_write = 131072
+06 Mar 2024 17:22:59.341     max_readahead = 131072
+06 Mar 2024 17:22:59.341     capable = 00000ffb
+06 Mar 2024 17:22:59.341     want = 00000010
+06 Mar 2024 17:22:59.341     max_background = 0
+06 Mar 2024 17:22:59.341     congestion_threshold = 0
+06 Mar 2024 17:22:59.341     context:
+06 Mar 2024 17:22:59.341     fuse = cfedf810
+06 Mar 2024 17:22:59.341     uid = 0
+06 Mar 2024 17:22:59.341     gid = 0
+06 Mar 2024 17:22:59.342     pid = 0
+06 Mar 2024 17:22:59.342     private_data = cfedf2a0
+06 Mar 2024 17:22:59.342     logfile = cfedf320
+06 Mar 2024 17:22:59.342     rootdir = /home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir
+06 Mar 2024 17:22:59.342     umask = 00000
+06 Mar 2024 17:23:08.303 
+bb_getattr(path="/", statbuf=0xabf31bf0)
+06 Mar 2024 17:23:08.303     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 17:23:08.303     lstat returned 0
+06 Mar 2024 17:23:08.303     si:
+06 Mar 2024 17:23:08.303     st_dev = 2049
+06 Mar 2024 17:23:08.303     st_ino = 791397
+06 Mar 2024 17:23:08.303     st_mode = 040755
+06 Mar 2024 17:23:08.303     st_nlink = 2
+06 Mar 2024 17:23:08.303     st_uid = 1000
+06 Mar 2024 17:23:08.303     st_gid = 1000
+06 Mar 2024 17:23:08.303     st_rdev = 0
+06 Mar 2024 17:23:08.303     st_size = 4096
+06 Mar 2024 17:23:08.303     st_blksize = 4096
+06 Mar 2024 17:23:08.303     st_blocks = 8
+06 Mar 2024 17:23:08.303     st_atime = 0x65e843f1
+06 Mar 2024 17:23:08.303     st_mtime = 0x65e843d6
+06 Mar 2024 17:23:08.303     st_ctime = 0x65e843d6
+06 Mar 2024 17:23:08.304 
+bb_getxattr(path = "/", name = "security.selinux", value = 0x9c000c40, size = 255)
+06 Mar 2024 17:23:08.304     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 17:23:08.304     lgetxattr returned -1
+06 Mar 2024 17:23:08.304     ERROR lgetxattr: No data available
+06 Mar 2024 17:23:08.305 
+bb_getxattr(path = "/", name = "system.posix_acl_access", value = 0xa4003070, size = 4096)
+06 Mar 2024 17:23:08.306     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 17:23:08.306     lgetxattr returned -1
+06 Mar 2024 17:23:08.306     ERROR lgetxattr: No data available
+06 Mar 2024 17:23:08.310 
+bb_getxattr(path = "/", name = "system.posix_acl_default", value = 0x9c000f80, size = 4096)
+06 Mar 2024 17:23:08.310     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 17:23:08.311     lgetxattr returned -1
+06 Mar 2024 17:23:08.311     ERROR lgetxattr: No data available
+06 Mar 2024 17:23:08.314 
+bb_opendir(path="/", fi=0xac754c10)
+06 Mar 2024 17:23:08.314     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 17:23:08.314     opendir returned 0x0x7fa2a4003070
+06 Mar 2024 17:23:08.314     fi:
+06 Mar 2024 17:23:08.314     flags = 0x00018800
+06 Mar 2024 17:23:08.314     fh_old = 0x00000000
+06 Mar 2024 17:23:08.314     writepage = 0
+06 Mar 2024 17:23:08.314     direct_io = 0
+06 Mar 2024 17:23:08.314     keep_cache = 0
+06 Mar 2024 17:23:08.314     fh = 0x00007fa2a4003070
+06 Mar 2024 17:23:08.314     lock_owner = 0x0000000000000000
+06 Mar 2024 17:23:08.315 
+bb_readdir(path="/", buf=0xa40012b0, filler=0xac966a90, offset=0, fi=0xabf31c10)
+06 Mar 2024 17:23:08.315     readdir returned 0x0x7fa2a40030a0
+06 Mar 2024 17:23:08.315 calling filler with name .
+06 Mar 2024 17:23:08.315 calling filler with name ..
+06 Mar 2024 17:23:08.315 calling filler with name bogus.txt
+06 Mar 2024 17:23:08.315     fi:
+06 Mar 2024 17:23:08.315     flags = 0x00000000
+06 Mar 2024 17:23:08.315     fh_old = 0x7fa2a4003070
+06 Mar 2024 17:23:08.315     writepage = 0
+06 Mar 2024 17:23:08.316     direct_io = 0
+06 Mar 2024 17:23:08.316     keep_cache = 0
+06 Mar 2024 17:23:08.316     fh = 0x00007fa2a4003070
+06 Mar 2024 17:23:08.316     lock_owner = 0x0000000000000000
+06 Mar 2024 17:23:08.316 
+bb_getattr(path="/bogus.txt", statbuf=0xac754c20)
+06 Mar 2024 17:23:08.317     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+06 Mar 2024 17:23:08.317     lstat returned 0
+06 Mar 2024 17:23:08.317     si:
+06 Mar 2024 17:23:08.317     st_dev = 2049
+06 Mar 2024 17:23:08.317     st_ino = 791398
+06 Mar 2024 17:23:08.317     st_mode = 0100644
+06 Mar 2024 17:23:08.317     st_nlink = 1
+06 Mar 2024 17:23:08.317     st_uid = 1000
+06 Mar 2024 17:23:08.317     st_gid = 1000
+06 Mar 2024 17:23:08.317     st_rdev = 0
+06 Mar 2024 17:23:08.317     st_size = 11
+06 Mar 2024 17:23:08.317     st_blksize = 4096
+06 Mar 2024 17:23:08.317     st_blocks = 8
+06 Mar 2024 17:23:08.317     st_atime = 0x65e843d6
+06 Mar 2024 17:23:08.317     st_mtime = 0x65e843d6
+06 Mar 2024 17:23:08.317     st_ctime = 0x65e843d6
+06 Mar 2024 17:23:08.318 
+bb_getxattr(path = "/bogus.txt", name = "security.selinux", value = 0x9c000c40, size = 255)
+06 Mar 2024 17:23:08.318     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+06 Mar 2024 17:23:08.318     lgetxattr returned -1
+06 Mar 2024 17:23:08.318     ERROR lgetxattr: No data available
+06 Mar 2024 17:23:08.318 
+bb_getxattr(path = "/bogus.txt", name = "system.posix_acl_access", value = 0xa400b0b0, size = 4096)
+06 Mar 2024 17:23:08.318     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+06 Mar 2024 17:23:08.318     lgetxattr returned -1
+06 Mar 2024 17:23:08.318     ERROR lgetxattr: No data available
+06 Mar 2024 17:23:08.320 
+bb_releasedir(path="/", fi=0xac754c10)
+06 Mar 2024 17:23:08.320     fi:
+06 Mar 2024 17:23:08.321     flags = 0x00000000
+06 Mar 2024 17:23:08.321     fh_old = 0x7fa2a4003070
+06 Mar 2024 17:23:08.321     writepage = 0
+06 Mar 2024 17:23:08.321     direct_io = 0
+06 Mar 2024 17:23:08.321     keep_cache = 0
+06 Mar 2024 17:23:08.321     fh = 0x00007fa2a4003070
+06 Mar 2024 17:23:08.321     lock_owner = 0x0000000000000000
+06 Mar 2024 17:25:02.255 
+bb_getattr(path="/", statbuf=0xabf31bf0)
+06 Mar 2024 17:25:02.255     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 17:25:02.255     lstat returned 0
+06 Mar 2024 17:25:02.255     si:
+06 Mar 2024 17:25:02.255     st_dev = 2049
+06 Mar 2024 17:25:02.255     st_ino = 791397
+06 Mar 2024 17:25:02.255     st_mode = 040755
+06 Mar 2024 17:25:02.255     st_nlink = 2
+06 Mar 2024 17:25:02.256     st_uid = 1000
+06 Mar 2024 17:25:02.256     st_gid = 1000
+06 Mar 2024 17:25:02.256     st_rdev = 0
+06 Mar 2024 17:25:02.257     st_size = 4096
+06 Mar 2024 17:25:02.257     st_blksize = 4096
+06 Mar 2024 17:25:02.257     st_blocks = 8
+06 Mar 2024 17:25:02.257     st_atime = 0x65e843f1
+06 Mar 2024 17:25:02.258     st_mtime = 0x65e843d6
+06 Mar 2024 17:25:02.259     st_ctime = 0x65e843d6
+06 Mar 2024 17:25:02.262 
+bb_getxattr(path = "/", name = "security.selinux", value = 0xa4001110, size = 255)
+06 Mar 2024 17:25:02.262     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 17:25:02.262     lgetxattr returned -1
+06 Mar 2024 17:25:02.263     ERROR lgetxattr: No data available
+06 Mar 2024 17:25:02.264 
+bb_getxattr(path = "/", name = "system.posix_acl_access", value = 0x9c001660, size = 4096)
+06 Mar 2024 17:25:02.264     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 17:25:02.264     lgetxattr returned -1
+06 Mar 2024 17:25:02.264     ERROR lgetxattr: No data available
+06 Mar 2024 17:25:02.266 
+bb_getxattr(path = "/", name = "system.posix_acl_default", value = 0xa4003070, size = 4096)
+06 Mar 2024 17:25:02.266     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 17:25:02.266     lgetxattr returned -1
+06 Mar 2024 17:25:02.267     ERROR lgetxattr: No data available
+06 Mar 2024 17:25:48.549 
+bb_getattr(path="/", statbuf=0xabf31bf0)
+06 Mar 2024 17:25:48.549     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 17:25:48.549     lstat returned 0
+06 Mar 2024 17:25:48.551     si:
+06 Mar 2024 17:25:48.552     st_dev = 2049
+06 Mar 2024 17:25:48.552     st_ino = 791397
+06 Mar 2024 17:25:48.552     st_mode = 040755
+06 Mar 2024 17:25:48.552     st_nlink = 2
+06 Mar 2024 17:25:48.552     st_uid = 1000
+06 Mar 2024 17:25:48.552     st_gid = 1000
+06 Mar 2024 17:25:48.552     st_rdev = 0
+06 Mar 2024 17:25:48.552     st_size = 4096
+06 Mar 2024 17:25:48.553     st_blksize = 4096
+06 Mar 2024 17:25:48.553     st_blocks = 8
+06 Mar 2024 17:25:48.553     st_atime = 0x65e843f1
+06 Mar 2024 17:25:48.553     st_mtime = 0x65e843d6
+06 Mar 2024 17:25:48.553     st_ctime = 0x65e843d6
+06 Mar 2024 17:25:48.554 
+bb_getxattr(path = "/", name = "security.selinux", value = 0xa4001110, size = 255)
+06 Mar 2024 17:25:48.554     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 17:25:48.554     lgetxattr returned -1
+06 Mar 2024 17:25:48.555     ERROR lgetxattr: No data available
+06 Mar 2024 17:25:48.556 
+bb_getxattr(path = "/", name = "system.posix_acl_access", value = 0x9c001660, size = 4096)
+06 Mar 2024 17:25:48.556     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 17:25:48.556     lgetxattr returned -1
+06 Mar 2024 17:25:48.556     ERROR lgetxattr: No data available
+06 Mar 2024 17:25:48.557 
+bb_getxattr(path = "/", name = "system.posix_acl_default", value = 0xa4003070, size = 4096)
+06 Mar 2024 17:25:48.557     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 17:25:48.557     lgetxattr returned -1
+06 Mar 2024 17:25:48.558     ERROR lgetxattr: No data available
+06 Mar 2024 17:25:49.301 
+bb_getattr(path="/", statbuf=0xabf31bf0)
+06 Mar 2024 17:25:49.301     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 17:25:49.301     lstat returned 0
+06 Mar 2024 17:25:49.301     si:
+06 Mar 2024 17:25:49.301     st_dev = 2049
+06 Mar 2024 17:25:49.301     st_ino = 791397
+06 Mar 2024 17:25:49.301     st_mode = 040755
+06 Mar 2024 17:25:49.301     st_nlink = 2
+06 Mar 2024 17:25:49.302     st_uid = 1000
+06 Mar 2024 17:25:49.302     st_gid = 1000
+06 Mar 2024 17:25:49.303     st_rdev = 0
+06 Mar 2024 17:25:49.303     st_size = 4096
+06 Mar 2024 17:25:49.303     st_blksize = 4096
+06 Mar 2024 17:25:49.303     st_blocks = 8
+06 Mar 2024 17:25:49.303     st_atime = 0x65e843f1
+06 Mar 2024 17:25:49.303     st_mtime = 0x65e843d6
+06 Mar 2024 17:25:49.303     st_ctime = 0x65e843d6
+06 Mar 2024 17:25:50.729 
 bb_access(path="/", mask=01)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-
-bb_getattr(path="/", statbuf=0xf66c6bf0)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lstat returned 0
-    si:
-    st_dev = 2049
-    st_ino = 791378
-    st_mode = 040755
-    st_nlink = 2
-    st_uid = 1000
-    st_gid = 1000
-    st_rdev = 0
-    st_size = 4096
-    st_blksize = 4096
-    st_blocks = 8
-    st_atime = 0x65e02ce2
-    st_mtime = 0x65e02c7f
-    st_ctime = 0x65e02c7f
-
-bb_getattr(path="/danktapir.txt", statbuf=0xf6ee9c20)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/danktapir.txt", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/danktapir.txt"
-    lstat returned -1
-    ERROR lstat: No such file or directory
-    si:
-    st_dev = 0
-    st_ino = 0
-    st_mode = 00
-    st_nlink = 0
-    st_uid = 0
-    st_gid = 0
-    st_rdev = 0
-    st_size = 0
-    st_blksize = 0
-    st_blocks = 0
-    st_atime = 0x00000000
-    st_mtime = 0x00000000
-    st_ctime = 0x00000000
-
+06 Mar 2024 17:25:50.729     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 17:26:00.703 
+bb_getattr(path="/", statbuf=0xabf31bf0)
+06 Mar 2024 17:26:00.703     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 17:26:00.704     lstat returned 0
+06 Mar 2024 17:26:00.704     si:
+06 Mar 2024 17:26:00.704     st_dev = 2049
+06 Mar 2024 17:26:00.704     st_ino = 791397
+06 Mar 2024 17:26:00.704     st_mode = 040755
+06 Mar 2024 17:26:00.706     st_nlink = 2
+06 Mar 2024 17:26:00.706     st_uid = 1000
+06 Mar 2024 17:26:00.706     st_gid = 1000
+06 Mar 2024 17:26:00.707     st_rdev = 0
+06 Mar 2024 17:26:00.707     st_size = 4096
+06 Mar 2024 17:26:00.707     st_blksize = 4096
+06 Mar 2024 17:26:00.707     st_blocks = 8
+06 Mar 2024 17:26:00.707     st_atime = 0x65e843f1
+06 Mar 2024 17:26:00.707     st_mtime = 0x65e843d6
+06 Mar 2024 17:26:00.707     st_ctime = 0x65e843d6
+06 Mar 2024 17:26:00.740 
+bb_getattr(path="/danktapir.txt", statbuf=0xac754c20)
+06 Mar 2024 17:26:00.740     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/danktapir.txt", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/danktapir.txt"
+06 Mar 2024 17:26:00.740     lstat returned -1
+06 Mar 2024 17:26:00.741     ERROR lstat: No such file or directory
+06 Mar 2024 17:26:00.741     si:
+06 Mar 2024 17:26:00.742     st_dev = 0
+06 Mar 2024 17:26:00.742     st_ino = 0
+06 Mar 2024 17:26:00.742     st_mode = 00
+06 Mar 2024 17:26:00.742     st_nlink = 0
+06 Mar 2024 17:26:00.742     st_uid = 0
+06 Mar 2024 17:26:00.742     st_gid = 0
+06 Mar 2024 17:26:00.742     st_rdev = 0
+06 Mar 2024 17:26:00.742     st_size = 0
+06 Mar 2024 17:26:00.743     st_blksize = 0
+06 Mar 2024 17:26:00.743     st_blocks = 0
+06 Mar 2024 17:26:00.743     st_atime = 0x00000000
+06 Mar 2024 17:26:00.744     st_mtime = 0x00000000
+06 Mar 2024 17:26:00.744     st_ctime = 0x00000000
+06 Mar 2024 17:26:00.744 
 bb_mknod(path="/danktapir.txt", mode=0100644, dev=0)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/danktapir.txt", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/danktapir.txt"
-    open returned 5
-    close returned 0
-
-bb_getattr(path="/danktapir.txt", statbuf=0xf66c6c20)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/danktapir.txt", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/danktapir.txt"
-    lstat returned 0
-    si:
-    st_dev = 2049
-    st_ino = 791157
-    st_mode = 0100644
-    st_nlink = 1
-    st_uid = 1000
-    st_gid = 1000
-    st_rdev = 0
-    st_size = 0
-    st_blksize = 4096
-    st_blocks = 0
-    st_atime = 0x65e02de2
-    st_mtime = 0x65e02de2
-    st_ctime = 0x65e02de2
-
-bb_open(path"/danktapir.txt", fi=0xf6ee9cd0)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/danktapir.txt", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/danktapir.txt"
-    open returned 5
-    fi:
-    flags = 0x00008801
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x0000000000000005
-    lock_owner = 0x0000000000000000
-
-bb_flush(path="/danktapir.txt", fi=0xf5ea3cd0)
-    fi:
-    flags = 0x00000000
-    fh_old = 0x00000005
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x0000000000000005
-    lock_owner = 0x74f23fadbf52e0c6
-
-bb_utime(path="/danktapir.txt", ubuf=0xf66c6a80)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/danktapir.txt", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/danktapir.txt"
-    utime returned 0
-
-bb_getattr(path="/danktapir.txt", statbuf=0xf66c6b50)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/danktapir.txt", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/danktapir.txt"
-    lstat returned 0
-    si:
-    st_dev = 2049
-    st_ino = 791157
-    st_mode = 0100644
-    st_nlink = 1
-    st_uid = 1000
-    st_gid = 1000
-    st_rdev = 0
-    st_size = 0
-    st_blksize = 4096
-    st_blocks = 0
-    st_atime = 0x65e02de2
-    st_mtime = 0x65e02de2
-    st_ctime = 0x65e02de2
-
-bb_flush(path="/danktapir.txt", fi=0xf6ee9cd0)
-    fi:
-    flags = 0x00000000
-    fh_old = 0x00000005
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x0000000000000005
-    lock_owner = 0x74f23fadbf52e0c6
-
-bb_release(path="/danktapir.txt", fi=0xf5ea3cd0)
-    fi:
-    flags = 0x00008801
-    fh_old = 0x00000005
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x0000000000000005
-    lock_owner = 0x0000000000000000
-    close returned 0
-
-bb_opendir(path="/", fi=0xf66c6c10)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    opendir returned 0x0x7fc8e80016e0
-    fi:
-    flags = 0x00018800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007fc8e80016e0
-    lock_owner = 0x0000000000000000
-
-bb_getattr(path="/", statbuf=0xf6ee9bf0)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lstat returned 0
-    si:
-    st_dev = 2049
-    st_ino = 791378
-    st_mode = 040755
-    st_nlink = 2
-    st_uid = 1000
-    st_gid = 1000
-    st_rdev = 0
-    st_size = 4096
-    st_blksize = 4096
-    st_blocks = 8
-    st_atime = 0x65e02ce2
-    st_mtime = 0x65e02de2
-    st_ctime = 0x65e02de2
-
-bb_readdir(path="/", buf=0xe8001660, filler=0xf70fba90, offset=0, fi=0xf5ea3c10)
-    readdir returned 0x0x7fc8e8001710
-calling filler with name danktapir.txt
-calling filler with name .
-calling filler with name ..
-calling filler with name bogus.txt
-    fi:
-    flags = 0x00000000
-    fh_old = 0x7fc8e80016e0
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007fc8e80016e0
-    lock_owner = 0x0000000000000000
-
-bb_getattr(path="/danktapir.txt", statbuf=0xf66c6c20)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/danktapir.txt", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/danktapir.txt"
-    lstat returned 0
-    si:
-    st_dev = 2049
-    st_ino = 791157
-    st_mode = 0100644
-    st_nlink = 1
-    st_uid = 1000
-    st_gid = 1000
-    st_rdev = 0
-    st_size = 0
-    st_blksize = 4096
-    st_blocks = 0
-    st_atime = 0x65e02de2
-    st_mtime = 0x65e02de2
-    st_ctime = 0x65e02de2
-
-bb_getxattr(path = "/danktapir.txt", name = "security.selinux", value = 0xf0001e40, size = 255)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/danktapir.txt", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/danktapir.txt"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_getxattr(path = "/danktapir.txt", name = "system.posix_acl_access", value = 0xec001140, size = 4096)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/danktapir.txt", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/danktapir.txt"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_getxattr(path = "/", name = "security.selinux", value = 0xe8000c40, size = 255)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_getxattr(path = "/", name = "system.posix_acl_access", value = 0xf0002290, size = 4096)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_getxattr(path = "/", name = "system.posix_acl_default", value = 0xec001140, size = 4096)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_getattr(path="/bogus.txt", statbuf=0xf66c6c20)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
-    lstat returned 0
-    si:
-    st_dev = 2049
-    st_ino = 791379
-    st_mode = 0100644
-    st_nlink = 1
-    st_uid = 1000
-    st_gid = 1000
-    st_rdev = 0
-    st_size = 11
-    st_blksize = 4096
-    st_blocks = 8
-    st_atime = 0x65e02c7f
-    st_mtime = 0x65e02c7f
-    st_ctime = 0x65e02c7f
-
-bb_getxattr(path = "/bogus.txt", name = "security.selinux", value = 0xf0001e40, size = 255)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_getxattr(path = "/bogus.txt", name = "system.posix_acl_access", value = 0xec001140, size = 4096)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_releasedir(path="/", fi=0xf6ee9c10)
-    fi:
-    flags = 0x00000000
-    fh_old = 0x7fc8e80016e0
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007fc8e80016e0
-    lock_owner = 0x0000000000000000
-
-bb_getattr(path="/", statbuf=0xf5ea3bf0)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lstat returned 0
-    si:
-    st_dev = 2049
-    st_ino = 791378
-    st_mode = 040755
-    st_nlink = 2
-    st_uid = 1000
-    st_gid = 1000
-    st_rdev = 0
-    st_size = 4096
-    st_blksize = 4096
-    st_blocks = 8
-    st_atime = 0x65e02de4
-    st_mtime = 0x65e02de2
-    st_ctime = 0x65e02de2
-
-bb_getattr(path="/", statbuf=0xf66c6bf0)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lstat returned 0
-    si:
-    st_dev = 2049
-    st_ino = 791378
-    st_mode = 040755
-    st_nlink = 2
-    st_uid = 1000
-    st_gid = 1000
-    st_rdev = 0
-    st_size = 4096
-    st_blksize = 4096
-    st_blocks = 8
-    st_atime = 0x65e02de4
-    st_mtime = 0x65e02de2
-    st_ctime = 0x65e02de2
-
-bb_getxattr(path = "/", name = "security.selinux", value = 0xf0001e40, size = 255)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_getxattr(path = "/", name = "system.posix_acl_access", value = 0xec001140, size = 4096)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_getxattr(path = "/", name = "system.posix_acl_default", value = 0xe80016e0, size = 4096)
-    bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-    lgetxattr returned -1
-    ERROR lgetxattr: No data available
-
-bb_destroy(userdata=0x9c0c72a0)
+06 Mar 2024 17:26:00.744     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/danktapir.txt", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/danktapir.txt"
+06 Mar 2024 17:26:00.745     open returned 5
+06 Mar 2024 17:26:00.745     close returned 0
+06 Mar 2024 17:26:00.745 
+bb_getattr(path="/danktapir.txt", statbuf=0xac754c20)
+06 Mar 2024 17:26:00.745     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/danktapir.txt", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/danktapir.txt"
+06 Mar 2024 17:26:00.746     lstat returned 0
+06 Mar 2024 17:26:00.748     si:
+06 Mar 2024 17:26:00.748     st_dev = 2049
+06 Mar 2024 17:26:00.748     st_ino = 791492
+06 Mar 2024 17:26:00.748     st_mode = 0100644
+06 Mar 2024 17:26:00.748     st_nlink = 1
+06 Mar 2024 17:26:00.748     st_uid = 1000
+06 Mar 2024 17:26:00.748     st_gid = 1000
+06 Mar 2024 17:26:00.748     st_rdev = 0
+06 Mar 2024 17:26:00.748     st_size = 0
+06 Mar 2024 17:26:00.748     st_blksize = 4096
+06 Mar 2024 17:26:00.748     st_blocks = 0
+06 Mar 2024 17:26:00.748     st_atime = 0x65e844b8
+06 Mar 2024 17:26:00.748     st_mtime = 0x65e844b8
+06 Mar 2024 17:26:00.749     st_ctime = 0x65e844b8
+06 Mar 2024 17:26:00.749 
+bb_open(path"/danktapir.txt", fi=0xabf31cd0)
+06 Mar 2024 17:26:00.749     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/danktapir.txt", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/danktapir.txt"
+06 Mar 2024 17:26:00.749     open returned 5
+06 Mar 2024 17:26:00.749     fi:
+06 Mar 2024 17:26:00.749     flags = 0x00008801
+06 Mar 2024 17:26:00.749     fh_old = 0x00000000
+06 Mar 2024 17:26:00.749     writepage = 0
+06 Mar 2024 17:26:00.749     direct_io = 0
+06 Mar 2024 17:26:00.750     keep_cache = 0
+06 Mar 2024 17:26:00.751     fh = 0x0000000000000005
+06 Mar 2024 17:26:00.751     lock_owner = 0x0000000000000000
+06 Mar 2024 17:26:00.751 
+bb_flush(path="/danktapir.txt", fi=0xac754cd0)
+06 Mar 2024 17:26:00.751     fi:
+06 Mar 2024 17:26:00.751     flags = 0x00000000
+06 Mar 2024 17:26:00.751     fh_old = 0x00000005
+06 Mar 2024 17:26:00.751     writepage = 0
+06 Mar 2024 17:26:00.751     direct_io = 0
+06 Mar 2024 17:26:00.751     keep_cache = 0
+06 Mar 2024 17:26:00.751     fh = 0x0000000000000005
+06 Mar 2024 17:26:00.752     lock_owner = 0x6bc9d020c4364fbe
+06 Mar 2024 17:26:00.752 
+bb_utime(path="/danktapir.txt", ubuf=0xabf31a80)
+06 Mar 2024 17:26:00.752     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/danktapir.txt", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/danktapir.txt"
+06 Mar 2024 17:26:00.752     utime returned 0
+06 Mar 2024 17:26:00.753 
+bb_getattr(path="/danktapir.txt", statbuf=0xabf31b50)
+06 Mar 2024 17:26:00.753     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/danktapir.txt", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/danktapir.txt"
+06 Mar 2024 17:26:00.753     lstat returned 0
+06 Mar 2024 17:26:00.753     si:
+06 Mar 2024 17:26:00.754     st_dev = 2049
+06 Mar 2024 17:26:00.754     st_ino = 791492
+06 Mar 2024 17:26:00.754     st_mode = 0100644
+06 Mar 2024 17:26:00.754     st_nlink = 1
+06 Mar 2024 17:26:00.754     st_uid = 1000
+06 Mar 2024 17:26:00.754     st_gid = 1000
+06 Mar 2024 17:26:00.754     st_rdev = 0
+06 Mar 2024 17:26:00.754     st_size = 0
+06 Mar 2024 17:26:00.754     st_blksize = 4096
+06 Mar 2024 17:26:00.755     st_blocks = 0
+06 Mar 2024 17:26:00.755     st_atime = 0x65e844b8
+06 Mar 2024 17:26:00.755     st_mtime = 0x65e844b8
+06 Mar 2024 17:26:00.755     st_ctime = 0x65e844b8
+06 Mar 2024 17:26:00.755 
+bb_flush(path="/danktapir.txt", fi=0xac754cd0)
+06 Mar 2024 17:26:00.756     fi:
+06 Mar 2024 17:26:00.756     flags = 0x00000000
+06 Mar 2024 17:26:00.756     fh_old = 0x00000005
+06 Mar 2024 17:26:00.756     writepage = 0
+06 Mar 2024 17:26:00.757     direct_io = 0
+06 Mar 2024 17:26:00.757     keep_cache = 0
+06 Mar 2024 17:26:00.757     fh = 0x0000000000000005
+06 Mar 2024 17:26:00.757     lock_owner = 0x6bc9d020c4364fbe
+06 Mar 2024 17:26:00.758 
+bb_release(path="/danktapir.txt", fi=0xabf31cd0)
+06 Mar 2024 17:26:00.758     fi:
+06 Mar 2024 17:26:00.758     flags = 0x00008801
+06 Mar 2024 17:26:00.758     fh_old = 0x00000005
+06 Mar 2024 17:26:00.758     writepage = 0
+06 Mar 2024 17:26:00.758     direct_io = 0
+06 Mar 2024 17:26:00.759     keep_cache = 0
+06 Mar 2024 17:26:00.759     fh = 0x0000000000000005
+06 Mar 2024 17:26:00.759     lock_owner = 0x0000000000000000
+06 Mar 2024 17:26:00.759     close returned 0
+06 Mar 2024 17:26:01.000 
+bb_opendir(path="/", fi=0xac754c10)
+06 Mar 2024 17:26:01.001     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 17:26:01.001     opendir returned 0x0x7fa2a4003070
+06 Mar 2024 17:26:01.001     fi:
+06 Mar 2024 17:26:01.001     flags = 0x00018800
+06 Mar 2024 17:26:01.001     fh_old = 0x00000000
+06 Mar 2024 17:26:01.001     writepage = 0
+06 Mar 2024 17:26:01.001     direct_io = 0
+06 Mar 2024 17:26:01.001     keep_cache = 0
+06 Mar 2024 17:26:01.001     fh = 0x00007fa2a4003070
+06 Mar 2024 17:26:01.002     lock_owner = 0x0000000000000000
+06 Mar 2024 17:26:01.002 
+bb_getattr(path="/", statbuf=0xabf31bf0)
+06 Mar 2024 17:26:01.002     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 17:26:01.002     lstat returned 0
+06 Mar 2024 17:26:01.002     si:
+06 Mar 2024 17:26:01.002     st_dev = 2049
+06 Mar 2024 17:26:01.003     st_ino = 791397
+06 Mar 2024 17:26:01.003     st_mode = 040755
+06 Mar 2024 17:26:01.003     st_nlink = 2
+06 Mar 2024 17:26:01.003     st_uid = 1000
+06 Mar 2024 17:26:01.003     st_gid = 1000
+06 Mar 2024 17:26:01.003     st_rdev = 0
+06 Mar 2024 17:26:01.003     st_size = 4096
+06 Mar 2024 17:26:01.003     st_blksize = 4096
+06 Mar 2024 17:26:01.003     st_blocks = 8
+06 Mar 2024 17:26:01.003     st_atime = 0x65e843f1
+06 Mar 2024 17:26:01.003     st_mtime = 0x65e844b8
+06 Mar 2024 17:26:01.003     st_ctime = 0x65e844b8
+06 Mar 2024 17:26:01.003 
+bb_readdir(path="/", buf=0xa4001710, filler=0xac966a90, offset=0, fi=0xac754c10)
+06 Mar 2024 17:26:01.004     readdir returned 0x0x7fa2a40030a0
+06 Mar 2024 17:26:01.004 calling filler with name danktapir.txt
+06 Mar 2024 17:26:01.004 calling filler with name .
+06 Mar 2024 17:26:01.004 calling filler with name ..
+06 Mar 2024 17:26:01.004 calling filler with name bogus.txt
+06 Mar 2024 17:26:01.004     fi:
+06 Mar 2024 17:26:01.004     flags = 0x00000000
+06 Mar 2024 17:26:01.004     fh_old = 0x7fa2a4003070
+06 Mar 2024 17:26:01.004     writepage = 0
+06 Mar 2024 17:26:01.004     direct_io = 0
+06 Mar 2024 17:26:01.004     keep_cache = 0
+06 Mar 2024 17:26:01.004     fh = 0x00007fa2a4003070
+06 Mar 2024 17:26:01.004     lock_owner = 0x0000000000000000
+06 Mar 2024 17:26:01.004 
+bb_getattr(path="/danktapir.txt", statbuf=0xabf31c20)
+06 Mar 2024 17:26:01.004     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/danktapir.txt", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/danktapir.txt"
+06 Mar 2024 17:26:01.004     lstat returned 0
+06 Mar 2024 17:26:01.004     si:
+06 Mar 2024 17:26:01.004     st_dev = 2049
+06 Mar 2024 17:26:01.004     st_ino = 791492
+06 Mar 2024 17:26:01.005     st_mode = 0100644
+06 Mar 2024 17:26:01.005     st_nlink = 1
+06 Mar 2024 17:26:01.005     st_uid = 1000
+06 Mar 2024 17:26:01.005     st_gid = 1000
+06 Mar 2024 17:26:01.005     st_rdev = 0
+06 Mar 2024 17:26:01.005     st_size = 0
+06 Mar 2024 17:26:01.005     st_blksize = 4096
+06 Mar 2024 17:26:01.005     st_blocks = 0
+06 Mar 2024 17:26:01.005     st_atime = 0x65e844b8
+06 Mar 2024 17:26:01.005     st_mtime = 0x65e844b8
+06 Mar 2024 17:26:01.005     st_ctime = 0x65e844b8
+06 Mar 2024 17:26:01.005 
+bb_getxattr(path = "/danktapir.txt", name = "security.selinux", value = 0xa4001110, size = 255)
+06 Mar 2024 17:26:01.005     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/danktapir.txt", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/danktapir.txt"
+06 Mar 2024 17:26:01.005     lgetxattr returned -1
+06 Mar 2024 17:26:01.005     ERROR lgetxattr: No data available
+06 Mar 2024 17:26:01.005 
+bb_getxattr(path = "/danktapir.txt", name = "system.posix_acl_access", value = 0x9c001660, size = 4096)
+06 Mar 2024 17:26:01.005     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/danktapir.txt", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/danktapir.txt"
+06 Mar 2024 17:26:01.005     lgetxattr returned -1
+06 Mar 2024 17:26:01.006     ERROR lgetxattr: No data available
+06 Mar 2024 17:26:01.006 
+bb_getxattr(path = "/", name = "security.selinux", value = 0xa4001110, size = 255)
+06 Mar 2024 17:26:01.006     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 17:26:01.006     lgetxattr returned -1
+06 Mar 2024 17:26:01.006     ERROR lgetxattr: No data available
+06 Mar 2024 17:26:01.006 
+bb_getxattr(path = "/", name = "system.posix_acl_access", value = 0x9c001660, size = 4096)
+06 Mar 2024 17:26:01.006     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 17:26:01.006     lgetxattr returned -1
+06 Mar 2024 17:26:01.007     ERROR lgetxattr: No data available
+06 Mar 2024 17:26:01.008 
+bb_getxattr(path = "/", name = "system.posix_acl_default", value = 0xa400b0b0, size = 4096)
+06 Mar 2024 17:26:01.009     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 17:26:01.009     lgetxattr returned -1
+06 Mar 2024 17:26:01.009     ERROR lgetxattr: No data available
+06 Mar 2024 17:26:01.010 
+bb_getattr(path="/bogus.txt", statbuf=0xabf31c20)
+06 Mar 2024 17:26:01.010     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+06 Mar 2024 17:26:01.010     lstat returned 0
+06 Mar 2024 17:26:01.010     si:
+06 Mar 2024 17:26:01.010     st_dev = 2049
+06 Mar 2024 17:26:01.010     st_ino = 791398
+06 Mar 2024 17:26:01.010     st_mode = 0100644
+06 Mar 2024 17:26:01.011     st_nlink = 1
+06 Mar 2024 17:26:01.011     st_uid = 1000
+06 Mar 2024 17:26:01.011     st_gid = 1000
+06 Mar 2024 17:26:01.011     st_rdev = 0
+06 Mar 2024 17:26:01.012     st_size = 11
+06 Mar 2024 17:26:01.013     st_blksize = 4096
+06 Mar 2024 17:26:01.013     st_blocks = 8
+06 Mar 2024 17:26:01.013     st_atime = 0x65e843d6
+06 Mar 2024 17:26:01.013     st_mtime = 0x65e843d6
+06 Mar 2024 17:26:01.013     st_ctime = 0x65e843d6
+06 Mar 2024 17:26:01.015 
+bb_getxattr(path = "/bogus.txt", name = "security.selinux", value = 0xa4001110, size = 255)
+06 Mar 2024 17:26:01.015     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+06 Mar 2024 17:26:01.015     lgetxattr returned -1
+06 Mar 2024 17:26:01.015     ERROR lgetxattr: No data available
+06 Mar 2024 17:26:01.015 
+bb_getxattr(path = "/bogus.txt", name = "system.posix_acl_access", value = 0x9c001660, size = 4096)
+06 Mar 2024 17:26:01.015     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+06 Mar 2024 17:26:01.015     lgetxattr returned -1
+06 Mar 2024 17:26:01.015     ERROR lgetxattr: No data available
+06 Mar 2024 17:26:01.016 
+bb_releasedir(path="/", fi=0xabf31c10)
+06 Mar 2024 17:26:01.016     fi:
+06 Mar 2024 17:26:01.016     flags = 0x00000000
+06 Mar 2024 17:26:01.016     fh_old = 0x7fa2a4003070
+06 Mar 2024 17:26:01.016     writepage = 0
+06 Mar 2024 17:26:01.016     direct_io = 0
+06 Mar 2024 17:26:01.016     keep_cache = 0
+06 Mar 2024 17:26:01.016     fh = 0x00007fa2a4003070
+06 Mar 2024 17:26:01.017     lock_owner = 0x0000000000000000
+06 Mar 2024 17:26:49.096 
+bb_getattr(path="/", statbuf=0xac754bf0)
+06 Mar 2024 17:26:49.097     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 17:26:49.097     lstat returned 0
+06 Mar 2024 17:26:49.097     si:
+06 Mar 2024 17:26:49.098     st_dev = 2049
+06 Mar 2024 17:26:49.098     st_ino = 791397
+06 Mar 2024 17:26:49.098     st_mode = 040755
+06 Mar 2024 17:26:49.098     st_nlink = 2
+06 Mar 2024 17:26:49.098     st_uid = 1000
+06 Mar 2024 17:26:49.098     st_gid = 1000
+06 Mar 2024 17:26:49.098     st_rdev = 0
+06 Mar 2024 17:26:49.098     st_size = 4096
+06 Mar 2024 17:26:49.098     st_blksize = 4096
+06 Mar 2024 17:26:49.098     st_blocks = 8
+06 Mar 2024 17:26:49.098     st_atime = 0x65e844b9
+06 Mar 2024 17:26:49.098     st_mtime = 0x65e844b8
+06 Mar 2024 17:26:49.099     st_ctime = 0x65e844b8
+06 Mar 2024 17:27:00.266 
+bb_getattr(path="/", statbuf=0xabf31bf0)
+06 Mar 2024 17:27:00.266     bb_fullpath:  rootdir = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/danktapir/git/sharesp241/danktapir/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+06 Mar 2024 17:27:00.266     lstat returned 0
+06 Mar 2024 17:27:00.266     si:
+06 Mar 2024 17:27:00.266     st_dev = 2049
+06 Mar 2024 17:27:00.266     st_ino = 791397
+06 Mar 2024 17:27:00.266     st_mode = 040755
+06 Mar 2024 17:27:00.266     st_nlink = 2
+06 Mar 2024 17:27:00.266     st_uid = 1000
+06 Mar 2024 17:27:00.266     st_gid = 1000
+06 Mar 2024 17:27:00.267     st_rdev = 0
+06 Mar 2024 17:27:00.267     st_size = 4096
+06 Mar 2024 17:27:00.267     st_blksize = 4096
+06 Mar 2024 17:27:00.267     st_blocks = 8
+06 Mar 2024 17:27:00.267     st_atime = 0x65e844b9
+06 Mar 2024 17:27:00.267     st_mtime = 0x65e844b8
+06 Mar 2024 17:27:00.268     st_ctime = 0x65e844b8
+06 Mar 2024 17:27:03.965 
+bb_destroy(userdata=0xcfedf2a0)
