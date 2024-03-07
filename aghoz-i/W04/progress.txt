@@ -5,3 +5,6 @@ Filling attendance
 
 REV02: Thu 7 Mar 2024 13:55
 POP QUIZ W04-1 and W04-2 done
+
+REV03: Thu 7 Mar 2024 14:11
+W04 task changed NPM and Makefile
