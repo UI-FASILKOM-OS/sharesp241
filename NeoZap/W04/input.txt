@@ -1,17 +1,16 @@
+./2106630063-getopt
 
-./NPM-getopt 
+./2106630063-getopt -b
 
-./NPM-getopt -b
+./2106630063-getopt -n Dodo
 
-./NPM-getopt -n Dodo
+./2106630063-getopt -b -n Dodo
 
-./NPM-getopt -b -n Dodo
+./2106630063-getopt -n Dodo -b
 
-./NPM-getopt -n Dodo -b
+./2106630063-getopt -n Dodo -b World
 
-./NPM-getopt -n Dodo -b World
+./2106630063-getopt World -n Dodo -b
 
-./NPM-getopt World -n Dodo -b 
-
-./NPM-getopt -n Dodo World -b 
+./2106630063-getopt -n Dodo World -b
 
