@@ -17,3 +17,6 @@ W04 task updated 2006473932-getopt.c for long options
 
 REV06: Thu 7 Mar 2024 14:53
 POP QUIZ W04-3: Updating kernel
+
+REV07: Thu 7 Mar 2024 15:06
+POP QUIZ W04-3 Done; POP QUIZ W04-4 Done
