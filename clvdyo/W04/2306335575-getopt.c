@@ -1,12 +1,12 @@
 /*************************************************************************\
-*                  Copyright (C) Michael Kerrisk, 2022.                   *
-*                                                                         *
+*         Copyright (C) Michael Kerrisk, 2022.          *
+*                                     *
 * This program is free software. You may use, modify, and redistribute it *
-* under the terms of the GNU General Public License as published by the   *
-* Free Software Foundation, either version 3 or (at your option) any      *
-* later version. This program is distributed without any warranty.  See   *
-* the file COPYING.gpl-v3 for details.                                    *
-* CBKADAL: Modified for ASSIGNMENT WEEK05                                 *
+* under the terms of the GNU General Public License as published by the  *
+* Free Software Foundation, either version 3 or (at your option) any   *
+* later version. This program is distributed without any warranty. See  *
+* the file COPYING.gpl-v3 for details.                  *
+* CBKADAL: Modified for ASSIGNMENT WEEK05                 *
 \*************************************************************************/
 
 // Listing B-1
@@ -21,43 +21,48 @@
 __attribute__((noreturn))
 #endif
 
-static void             /* Print "usage" message and exit */
+static void       /* Print "usage" message and exit */
 usageError(void)
 {
-    fprintf(stderr, "Usage: ./2306335575-getopt [-b] [-n name]\n");
-    exit(EXIT_FAILURE);
+  fprintf(stderr, "Usage: ./2306335575-getopt [-b] [-n name]\n");
+  exit(EXIT_FAILURE);
 }
 
 
 int
 main(int argc, char *argv[])
 {
-    int opt;
-    char *pstr;
-    int is_b_specified = 0;
+  int opt;
+  char *pstr = NULL;
+  int is_b_specified = 0;
 
-    pstr = NULL;
+  while ((opt = getopt(argc, argv, ":n:b")) != -1) {
+    switch (opt) {
+    case 'n': pstr = optarg;    break;
+    case 'b': is_b_specified = 1;  break;
+    case ':': usageError();
+    case '?': usageError();
+    default: usageError();
+    }
+  }
 
-    while ((opt = getopt(argc, argv, ":n:b")) != -1) {
-        switch (opt) {
-        case 'n': pstr = optarg;        break;
-        case 'b': is_b_specified = 1;   break;
-        case ':': usageError();
-        case '?': usageError();
-        default:  usageError();
-        }
-    }
-
-    if (optind == argc) {
-        printf("Hello!\n");
+  // Print "Hello!" only if no arguments are provided
+  if (optind == argc) {
+    printf("Hello!\n");
+  } else {
+    // Print "Hello " followed by the provided name (if any)
+    if (pstr != NULL) {
+      printf("Hello %s!\n", pstr);
     } else {
-        if (pstr != NULL) {
-            printf("Hello %s!\n", pstr);
-        }
-        if (is_b_specified) {
-            printf("It is a beautiful day!\n");
-        }
+      // If no name was provided, use the first non-option argument
+      printf("Hello %s!\n", argv[optind]);
     }
 
-    exit(EXIT_SUCCESS);
+    // Print "It is a beautiful day!" if the -b flag is specified
+    if (is_b_specified) {
+      printf("It is a beautiful day!\n");
+    }
+  }
+
+  exit(EXIT_SUCCESS);
 }
