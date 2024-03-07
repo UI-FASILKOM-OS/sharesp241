@@ -1,0 +1,17 @@
+
+./2106705764-getopt 
+
+./2106705764-getopt -b
+
+./2106705764-getopt -n Dodo
+
+./2106705764-getopt -b -n Dodo
+
+./2106705764-getopt -n Dodo -b
+
+./2106705764-getopt -n Dodo -b World
+
+./2106705764-getopt World -n Dodo -b 
+
+./2106705764-getopt -n Dodo World -b 
+
