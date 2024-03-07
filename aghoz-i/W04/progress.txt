@@ -11,3 +11,6 @@ W04 task changed NPM and Makefile
 
 REV04: Thu 7 Mar 2024 14:25
 W04 task updated 2006473932-getopt.c
+
+REV05: Thu 7 Mar 2024 14:41
+W04 task updated 2006473932-getopt.c for long options

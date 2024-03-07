@@ -16,6 +16,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <getopt.h>
 
 #ifdef __GNUC__
 __attribute__((noreturn))
@@ -28,6 +29,11 @@ usageError(void)
     exit(EXIT_FAILURE);
 }
 
+static struct option long_options[] = {
+	{"beautiful", 0, NULL, 'b'},
+	{"name", 1, NULL, 'n'},
+	{NULL, 0, NULL, 0}
+};
 
 int
 main(int argc, char *argv[])
@@ -38,7 +44,7 @@ main(int argc, char *argv[])
     xfnd = 0;
     pstr = NULL;
 
-    while ((opt = getopt(argc, argv, "bn:")) != -1) {
+    while ((opt = getopt_long(argc, argv, "bn:", long_options, NULL)) != -1) {
         switch (opt) {
         case 'b': xfnd++;        break;
         case 'n': pstr = optarg;	break;
