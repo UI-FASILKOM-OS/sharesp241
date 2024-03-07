@@ -15,6 +15,7 @@ for II in * ; do
       echo "==== ==== ==== $II/$WEEK/"
       git log --pretty=format:'%ad' --date=format:'%Y%m%d %H%M' $II/$WEEK/ 
       echo ""
+      sleep 1
     }
   }
 done
