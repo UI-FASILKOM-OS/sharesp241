@@ -32,31 +32,36 @@ usageError(void)
 int
 main(int argc, char *argv[])
 {
-    int opt, xfnd;
+    int opt;
     char *pstr;
+    int is_b_specified = 0;
 
-    xfnd = 0;
     pstr = NULL;
 
-    while ((opt = getopt(argc, argv, ":p:x")) != -1) {
+    while ((opt = getopt(argc, argv, ":n:b")) != -1) {
         switch (opt) {
-        case 'p': pstr = optarg;        break;
-        case 'x': xfnd++;               break;
+        case 'n': pstr = optarg;        break;
+        case 'b': is_b_specified = 1;   break;
         case ':': usageError();
         case '?': usageError();
         default:  usageError();
         }
     }
 
-    if (argc==1)
+    if (optind == argc || (optind == argc - 1 && is_b_specified)) {
         printf("Hello!\n");
-    if (optind < argc)
-        printf("First nonoption argument is \"%s\" at argv[%d]\n",
-                argv[optind], optind);
-    if (xfnd != 0)
-        printf("-x was specified (count=%d)\n", xfnd);
-    if (pstr != NULL)
-        printf("-p was specified with the value \"%s\"\n", pstr);
+    } else {
+        if (optind < argc) {
+            printf("Hello %s!\n", argv[optind]);
+        }
+        if (is_b_specified) {
+            printf("It is a beautiful day!\n");
+        }
+        if (pstr != NULL) {
+            printf("Is your name %s?\n", pstr);
+        }
+    }
+
     exit(EXIT_SUCCESS);
 }
 
