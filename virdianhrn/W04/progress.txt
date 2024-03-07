@@ -8,3 +8,6 @@ Modifying NPM-getopt.c
 
 REV03: Thu 07 Mar 2024 14:23
 Updating kernel while modifying NPM-getopt.c
+
+REV04: Thu 07 Mar 2024 14:40
+Finished modifying NPM.getopt.c
