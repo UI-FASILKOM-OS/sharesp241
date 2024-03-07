@@ -1,17 +1,17 @@
 
-./NPM-getopt 
+./2306335575-getopt 
 
-./NPM-getopt -b
+./2306335575-getopt -b
 
-./NPM-getopt -n Dodo
+./2306335575-getopt -n Dodo
 
-./NPM-getopt -b -n Dodo
+./2306335575-getopt -b -n Dodo
 
-./NPM-getopt -n Dodo -b
+./2306335575-getopt -n Dodo -b
 
-./NPM-getopt -n Dodo -b World
+./2306335575-getopt -n Dodo -b World
 
-./NPM-getopt World -n Dodo -b 
+./2306335575-getopt World -n Dodo -b 
 
-./NPM-getopt -n Dodo World -b 
+./2306335575-getopt -n Dodo World -b 
 
