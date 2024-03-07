@@ -15,3 +15,4 @@
 
 ./2106705764-getopt -n Dodo World -b 
 
+./2106705764-getopt --name Dodo World
