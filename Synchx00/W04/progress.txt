@@ -1,3 +1,4 @@
 progress.txt v1: init
 progress.txt v2: TARBALL extracted
-progress.txt v3: checking 2106751455-getopt output
+progress.txt v3: checking 2106751455-getopt.c output
+progress.txt v4: fixing 2106751455-getopt.c
