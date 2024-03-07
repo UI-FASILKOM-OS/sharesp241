@@ -1,0 +1,38 @@
+$ ./NPM-getopt 
+Hello!
+
+$ ./NPM-getopt -b
+Hello!
+It is a beautiful day!
+
+$ ./NPM-getopt -n Dodo
+Hello!
+Is your name Dodo?
+
+$ ./NPM-getopt -b -n Dodo
+Hello!
+It is a beautiful day!
+Is your name Dodo?
+
+$ ./NPM-getopt -n Dodo -b
+Hello!
+It is a beautiful day!
+Is your name Dodo?
+
+$ ./NPM-getopt -n Dodo -b World
+Hello World!
+It is a beautiful day!
+Is your name Dodo?
+
+$ ./NPM-getopt World -n Dodo -b 
+Hello World!
+It is a beautiful day!
+Is your name Dodo?
+
+$ ./NPM-getopt -n Dodo World -b 
+Hello World!
+It is a beautiful day!
+Is your name Dodo?
+
+$
+
