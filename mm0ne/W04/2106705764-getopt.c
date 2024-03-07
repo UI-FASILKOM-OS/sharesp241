@@ -28,7 +28,6 @@ usageError(void)
     exit(EXIT_FAILURE);
 }
 
-
 int
 main(int argc, char *argv[])
 {
@@ -38,25 +37,44 @@ main(int argc, char *argv[])
     xfnd = 0;
     pstr = NULL;
 
-    while ((opt = getopt(argc, argv, ":p:x")) != -1) {
+    while ((opt = getopt(argc, argv, "bn:")) != -1) {
         switch (opt) {
-        case 'p': pstr = optarg;        break;
-        case 'x': xfnd++;               break;
-        case ':': usageError();
-        case '?': usageError();
-        default:  usageError();
+        case 'n':
+            pstr = optarg;
+            break;
+        case 'b':
+            xfnd++;
+            break;
+        case ':':
+        case '?':
+        default: usageError();
+		
+            
         }
     }
-
-    if (argc==1)
-        printf("Hello!\n");
-    if (optind < argc)
-        printf("First nonoption argument is \"%s\" at argv[%d]\n",
-                argv[optind], optind);
+	
+	if (optind < argc) {
+        printf("Hello %s!\n", argv[optind]);
+        optind++;
+    }else{
+	
+	printf("Hello!\n");
+	}
+	
     if (xfnd != 0)
-        printf("-x was specified (count=%d)\n", xfnd);
+        printf("It is a beautiful day!\n");
+
     if (pstr != NULL)
-        printf("-p was specified with the value \"%s\"\n", pstr);
+        printf("Is your name %s?\n", pstr);
+
+    
+
+    while (optind < argc) {
+        printf("%s ", argv[optind]);
+        optind++;
+    }
+    printf("\n");
+
     exit(EXIT_SUCCESS);
 }
 
