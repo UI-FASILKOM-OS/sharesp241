@@ -2,4 +2,5 @@ START: Thu 7 Mar 2024 13:29
 Thu 7 Mar 2024 13:29 -- Attendance & Init Progress (Done)
 Thu 7 Mar 2024 13:39 -- Assignment #2 (In Progress)
 Thu 7 Mar 2024 13:01 -- Assignment #2 (Done)
-Thu 7 Mar 2024 13:01 -- Assignment #2 Extended Using Long Arguments (Done)
+Thu 7 Mar 2024 14:01 -- Assignment #2 Extended Using Long Arguments (Done)
+Thu 7 Mar 2024 14:26 -- Update Kernel (In Progress)
