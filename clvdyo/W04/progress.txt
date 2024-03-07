@@ -1,3 +1,4 @@
 #START:THU 07 MAR 2024 13:00 
 13:18 Reading Week 04 Assignment #1: Readings
 13:35 Do Week 04 Assignment #2: Assignment Script
+14:00 Do README.txt
