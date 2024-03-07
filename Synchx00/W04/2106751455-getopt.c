@@ -40,7 +40,6 @@ main(int argc, char *argv[])
 
     while ((opt = getopt(argc, argv, ":p:xbn:")) != -1) {
         switch (opt) {
-            case 'p': pstr = optarg; break;
             case 'b': xfnd++; break;
             case 'n': pstr = optarg; break;
             case ':': usageError();
