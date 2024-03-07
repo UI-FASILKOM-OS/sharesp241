@@ -8,3 +8,6 @@ POP QUIZ W04-1 and W04-2 done
 
 REV03: Thu 7 Mar 2024 14:11
 W04 task changed NPM and Makefile
+
+REV04: Thu 7 Mar 2024 14:25
+W04 task updated 2006473932-getopt.c
