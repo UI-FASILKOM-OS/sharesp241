@@ -1,1 +1,2 @@
-W04: progress.txt v1
+progress.txt v1: init
+progress.txt v2: TARBALL extracted
