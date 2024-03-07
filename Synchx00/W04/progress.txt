@@ -1,2 +1,3 @@
 progress.txt v1: init
 progress.txt v2: TARBALL extracted
+progress.txt v3: checking 2106751455-getopt output
