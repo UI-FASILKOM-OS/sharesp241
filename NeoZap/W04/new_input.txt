@@ -1,0 +1,16 @@
+./2106630063-getopt
+
+./2106630063-getopt --beautiful
+
+./2106630063-getopt --name Dodo
+
+./2106630063-getopt --beautiful --name Dodo
+
+./2106630063-getopt --name Dodo --beautiful
+
+./2106630063-getopt --name Dodo --beautiful World
+
+./2106630063-getopt World --name Dodo --beautiful
+
+./2106630063-getopt --name Dodo World --beautiful
+
