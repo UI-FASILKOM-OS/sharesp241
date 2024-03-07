@@ -1,57 +1,572 @@
-07 Mar 2024 13:55:32.467 
+07 Mar 2024 15:08:41.250 
 bb_init()
-07 Mar 2024 13:55:32.467     conn:
-07 Mar 2024 13:55:32.467     proto_major = 7
-07 Mar 2024 13:55:32.467     proto_minor = 39
-07 Mar 2024 13:55:32.467     async_read = 1
-07 Mar 2024 13:55:32.467     max_write = 131072
-07 Mar 2024 13:55:32.467     max_readahead = 131072
-07 Mar 2024 13:55:32.467     capable = 00000ffb
-07 Mar 2024 13:55:32.467     want = 00000010
-07 Mar 2024 13:55:32.467     max_background = 0
-07 Mar 2024 13:55:32.468     congestion_threshold = 0
-07 Mar 2024 13:55:32.468     context:
-07 Mar 2024 13:55:32.468     fuse = a366a800
-07 Mar 2024 13:55:32.468     uid = 0
-07 Mar 2024 13:55:32.468     gid = 0
-07 Mar 2024 13:55:32.468     pid = 0
-07 Mar 2024 13:55:32.468     private_data = a366a2a0
-07 Mar 2024 13:55:32.468     logfile = a366a320
-07 Mar 2024 13:55:32.468     rootdir = /home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir
-07 Mar 2024 13:55:32.468     umask = 00000
-07 Mar 2024 13:55:41.051 
-bb_getattr(path="/", statbuf=0x56b87bf0)
-07 Mar 2024 13:55:41.051     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-07 Mar 2024 13:55:41.051     lstat returned 0
-07 Mar 2024 13:55:41.051     si:
-07 Mar 2024 13:55:41.051     st_dev = 2049
-07 Mar 2024 13:55:41.051     st_ino = 1361035
-07 Mar 2024 13:55:41.051     st_mode = 040755
-07 Mar 2024 13:55:41.051     st_nlink = 2
-07 Mar 2024 13:55:41.051     st_uid = 1000
-07 Mar 2024 13:55:41.051     st_gid = 1000
-07 Mar 2024 13:55:41.051     st_rdev = 0
-07 Mar 2024 13:55:41.051     st_size = 4096
-07 Mar 2024 13:55:41.051     st_blksize = 4096
-07 Mar 2024 13:55:41.051     st_blocks = 8
-07 Mar 2024 13:55:41.051     st_atime = 0x65e887aa
-07 Mar 2024 13:55:41.051     st_mtime = 0x65e08123
-07 Mar 2024 13:55:41.051     st_ctime = 0x65e08123
-07 Mar 2024 13:55:41.052 
-bb_statfs(path="/", statv=0x56364c50)
-07 Mar 2024 13:55:41.052     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/"
-07 Mar 2024 13:55:41.052     statvfs returned 0
-07 Mar 2024 13:55:41.052     sv:
-07 Mar 2024 13:55:41.052     f_bsize = 4096
-07 Mar 2024 13:55:41.052     f_frsize = 4096
-07 Mar 2024 13:55:41.052     f_blocks = 5902107
-07 Mar 2024 13:55:41.052     f_bfree = 4147570
-07 Mar 2024 13:55:41.052     f_bavail = 3841420
-07 Mar 2024 13:55:41.052     f_files = 1512560
-07 Mar 2024 13:55:41.052     f_ffree = 1259135
-07 Mar 2024 13:55:41.052     f_favail = 1259135
-07 Mar 2024 13:55:41.052     f_fsid = 3151134171139844161
-07 Mar 2024 13:55:41.052     f_flag = 0x00001000
-07 Mar 2024 13:55:41.053     f_namemax = 255
-07 Mar 2024 13:55:50.182 
-bb_destroy(userdata=0xa366a2a0)
+07 Mar 2024 15:08:41.250     conn:
+07 Mar 2024 15:08:41.250     proto_major = 7
+07 Mar 2024 15:08:41.250     proto_minor = 39
+07 Mar 2024 15:08:41.250     async_read = 1
+07 Mar 2024 15:08:41.250     max_write = 131072
+07 Mar 2024 15:08:41.250     max_readahead = 131072
+07 Mar 2024 15:08:41.250     capable = 00000ffb
+07 Mar 2024 15:08:41.250     want = 00000010
+07 Mar 2024 15:08:41.250     max_background = 0
+07 Mar 2024 15:08:41.250     congestion_threshold = 0
+07 Mar 2024 15:08:41.250     context:
+07 Mar 2024 15:08:41.250     fuse = 9f743800
+07 Mar 2024 15:08:41.250     uid = 0
+07 Mar 2024 15:08:41.250     gid = 0
+07 Mar 2024 15:08:41.250     pid = 0
+07 Mar 2024 15:08:41.250     private_data = 9f7432a0
+07 Mar 2024 15:08:41.250     logfile = 9f743320
+07 Mar 2024 15:08:41.250     rootdir = /home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir
+07 Mar 2024 15:08:41.250     umask = 00000
+07 Mar 2024 15:08:44.194 
+bb_getattr(path="/", statbuf=0xfb1abbf0)
+07 Mar 2024 15:08:44.194     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+07 Mar 2024 15:08:44.194     lstat returned 0
+07 Mar 2024 15:08:44.194     si:
+07 Mar 2024 15:08:44.194     st_dev = 2049
+07 Mar 2024 15:08:44.194     st_ino = 1361035
+07 Mar 2024 15:08:44.194     st_mode = 040755
+07 Mar 2024 15:08:44.194     st_nlink = 2
+07 Mar 2024 15:08:44.194     st_uid = 1000
+07 Mar 2024 15:08:44.194     st_gid = 1000
+07 Mar 2024 15:08:44.194     st_rdev = 0
+07 Mar 2024 15:08:44.195     st_size = 4096
+07 Mar 2024 15:08:44.195     st_blksize = 4096
+07 Mar 2024 15:08:44.195     st_blocks = 8
+07 Mar 2024 15:08:44.195     st_atime = 0x65e887aa
+07 Mar 2024 15:08:44.195     st_mtime = 0x65e08123
+07 Mar 2024 15:08:44.195     st_ctime = 0x65e08123
+07 Mar 2024 15:08:44.730 
+bb_access(path="/", mask=01)
+07 Mar 2024 15:08:44.730     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+07 Mar 2024 15:08:45.701 
+bb_opendir(path="/", fi=0xfb1abc10)
+07 Mar 2024 15:08:45.702     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+07 Mar 2024 15:08:45.702     opendir returned 0x0x7f7cec000e60
+07 Mar 2024 15:08:45.702     fi:
+07 Mar 2024 15:08:45.702     flags = 0x00018800
+07 Mar 2024 15:08:45.702     fh_old = 0x00000000
+07 Mar 2024 15:08:45.702     writepage = 0
+07 Mar 2024 15:08:45.702     direct_io = 0
+07 Mar 2024 15:08:45.702     keep_cache = 0
+07 Mar 2024 15:08:45.702     fh = 0x00007f7cec000e60
+07 Mar 2024 15:08:45.702     lock_owner = 0x0000000000000000
+07 Mar 2024 15:08:45.702 
+bb_getattr(path="/", statbuf=0xfb9cebf0)
+07 Mar 2024 15:08:45.702     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+07 Mar 2024 15:08:45.702     lstat returned 0
+07 Mar 2024 15:08:45.702     si:
+07 Mar 2024 15:08:45.702     st_dev = 2049
+07 Mar 2024 15:08:45.702     st_ino = 1361035
+07 Mar 2024 15:08:45.702     st_mode = 040755
+07 Mar 2024 15:08:45.702     st_nlink = 2
+07 Mar 2024 15:08:45.702     st_uid = 1000
+07 Mar 2024 15:08:45.702     st_gid = 1000
+07 Mar 2024 15:08:45.702     st_rdev = 0
+07 Mar 2024 15:08:45.702     st_size = 4096
+07 Mar 2024 15:08:45.702     st_blksize = 4096
+07 Mar 2024 15:08:45.702     st_blocks = 8
+07 Mar 2024 15:08:45.702     st_atime = 0x65e887aa
+07 Mar 2024 15:08:45.702     st_mtime = 0x65e08123
+07 Mar 2024 15:08:45.702     st_ctime = 0x65e08123
+07 Mar 2024 15:08:45.703 
+bb_readdir(path="/", buf=0xec000de0, filler=0xfbbe0a90, offset=0, fi=0xfb1abc10)
+07 Mar 2024 15:08:45.703     readdir returned 0x0x7f7cec000e90
+07 Mar 2024 15:08:45.703 calling filler with name bogus.txt
+07 Mar 2024 15:08:45.703 calling filler with name ..
+07 Mar 2024 15:08:45.703 calling filler with name cbkadal.txt
+07 Mar 2024 15:08:45.703 calling filler with name .
+07 Mar 2024 15:08:45.703     fi:
+07 Mar 2024 15:08:45.703     flags = 0x00000000
+07 Mar 2024 15:08:45.703     fh_old = 0x7f7cec000e60
+07 Mar 2024 15:08:45.703     writepage = 0
+07 Mar 2024 15:08:45.703     direct_io = 0
+07 Mar 2024 15:08:45.703     keep_cache = 0
+07 Mar 2024 15:08:45.703     fh = 0x00007f7cec000e60
+07 Mar 2024 15:08:45.703     lock_owner = 0x0000000000000000
+07 Mar 2024 15:08:45.703 
+bb_getattr(path="/bogus.txt", statbuf=0xfb1abc20)
+07 Mar 2024 15:08:45.703     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+07 Mar 2024 15:08:45.703     lstat returned 0
+07 Mar 2024 15:08:45.703     si:
+07 Mar 2024 15:08:45.703     st_dev = 2049
+07 Mar 2024 15:08:45.703     st_ino = 1361036
+07 Mar 2024 15:08:45.703     st_mode = 0100644
+07 Mar 2024 15:08:45.703     st_nlink = 1
+07 Mar 2024 15:08:45.703     st_uid = 1000
+07 Mar 2024 15:08:45.703     st_gid = 1000
+07 Mar 2024 15:08:45.704     st_rdev = 0
+07 Mar 2024 15:08:45.704     st_size = 11
+07 Mar 2024 15:08:45.704     st_blksize = 4096
+07 Mar 2024 15:08:45.704     st_blocks = 8
+07 Mar 2024 15:08:45.704     st_atime = 0x65e96507
+07 Mar 2024 15:08:45.704     st_mtime = 0x65e975f8
+07 Mar 2024 15:08:45.704     st_ctime = 0x65e975f8
+07 Mar 2024 15:08:45.704 
+bb_getxattr(path = "/bogus.txt", name = "security.selinux", value = 0xf4001110, size = 255)
+07 Mar 2024 15:08:45.704     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+07 Mar 2024 15:08:45.704     lgetxattr returned -1
+07 Mar 2024 15:08:45.704     ERROR lgetxattr: No data available
+07 Mar 2024 15:08:45.705 
+bb_getxattr(path = "/bogus.txt", name = "system.posix_acl_access", value = 0xec009460, size = 4096)
+07 Mar 2024 15:08:45.705     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+07 Mar 2024 15:08:45.705     lgetxattr returned -1
+07 Mar 2024 15:08:45.705     ERROR lgetxattr: No data available
+07 Mar 2024 15:08:45.705 
+bb_getattr(path="/cbkadal.txt", statbuf=0xfb9cec20)
+07 Mar 2024 15:08:45.705     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/cbkadal.txt", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/cbkadal.txt"
+07 Mar 2024 15:08:45.705     lstat returned 0
+07 Mar 2024 15:08:45.705     si:
+07 Mar 2024 15:08:45.706     st_dev = 2049
+07 Mar 2024 15:08:45.706     st_ino = 1361037
+07 Mar 2024 15:08:45.706     st_mode = 0100644
+07 Mar 2024 15:08:45.706     st_nlink = 1
+07 Mar 2024 15:08:45.706     st_uid = 1000
+07 Mar 2024 15:08:45.706     st_gid = 1000
+07 Mar 2024 15:08:45.706     st_rdev = 0
+07 Mar 2024 15:08:45.706     st_size = 36
+07 Mar 2024 15:08:45.706     st_blksize = 4096
+07 Mar 2024 15:08:45.706     st_blocks = 8
+07 Mar 2024 15:08:45.706     st_atime = 0x65e887aa
+07 Mar 2024 15:08:45.706     st_mtime = 0x65e08123
+07 Mar 2024 15:08:45.706     st_ctime = 0x65e08123
+07 Mar 2024 15:08:45.706 
+bb_getxattr(path = "/cbkadal.txt", name = "security.selinux", value = 0xec000c40, size = 255)
+07 Mar 2024 15:08:45.706     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/cbkadal.txt", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/cbkadal.txt"
+07 Mar 2024 15:08:45.706     lgetxattr returned -1
+07 Mar 2024 15:08:45.707     ERROR lgetxattr: No data available
+07 Mar 2024 15:08:45.707 
+bb_getxattr(path = "/cbkadal.txt", name = "system.posix_acl_access", value = 0xec009690, size = 4096)
+07 Mar 2024 15:08:45.707     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/cbkadal.txt", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/cbkadal.txt"
+07 Mar 2024 15:08:45.707     lgetxattr returned -1
+07 Mar 2024 15:08:45.707     ERROR lgetxattr: No data available
+07 Mar 2024 15:08:45.707 
+bb_getxattr(path = "/", name = "security.selinux", value = 0xec000c40, size = 255)
+07 Mar 2024 15:08:45.707     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+07 Mar 2024 15:08:45.707     lgetxattr returned -1
+07 Mar 2024 15:08:45.707     ERROR lgetxattr: No data available
+07 Mar 2024 15:08:45.707 
+bb_getxattr(path = "/", name = "system.posix_acl_access", value = 0xf4003070, size = 4096)
+07 Mar 2024 15:08:45.707     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+07 Mar 2024 15:08:45.707     lgetxattr returned -1
+07 Mar 2024 15:08:45.707     ERROR lgetxattr: No data available
+07 Mar 2024 15:08:45.707 
+bb_getxattr(path = "/", name = "system.posix_acl_default", value = 0xec009720, size = 4096)
+07 Mar 2024 15:08:45.708     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+07 Mar 2024 15:08:45.708     lgetxattr returned -1
+07 Mar 2024 15:08:45.708     ERROR lgetxattr: No data available
+07 Mar 2024 15:08:45.709 
+bb_releasedir(path="/", fi=0xfb1abc10)
+07 Mar 2024 15:08:45.709     fi:
+07 Mar 2024 15:08:45.709     flags = 0x00000000
+07 Mar 2024 15:08:45.709     fh_old = 0x7f7cec000e60
+07 Mar 2024 15:08:45.709     writepage = 0
+07 Mar 2024 15:08:45.709     direct_io = 0
+07 Mar 2024 15:08:45.709     keep_cache = 0
+07 Mar 2024 15:08:45.709     fh = 0x00007f7cec000e60
+07 Mar 2024 15:08:45.709     lock_owner = 0x0000000000000000
+07 Mar 2024 15:08:49.075 
+bb_opendir(path="/", fi=0xfb9cec10)
+07 Mar 2024 15:08:49.075     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+07 Mar 2024 15:08:49.075     opendir returned 0x0x7f7cf4003070
+07 Mar 2024 15:08:49.075     fi:
+07 Mar 2024 15:08:49.075     flags = 0x00018800
+07 Mar 2024 15:08:49.075     fh_old = 0x00000000
+07 Mar 2024 15:08:49.075     writepage = 0
+07 Mar 2024 15:08:49.075     direct_io = 0
+07 Mar 2024 15:08:49.075     keep_cache = 0
+07 Mar 2024 15:08:49.075     fh = 0x00007f7cf4003070
+07 Mar 2024 15:08:49.075     lock_owner = 0x0000000000000000
+07 Mar 2024 15:08:49.076 
+bb_getattr(path="/", statbuf=0xfb1abbf0)
+07 Mar 2024 15:08:49.076     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+07 Mar 2024 15:08:49.076     lstat returned 0
+07 Mar 2024 15:08:49.076     si:
+07 Mar 2024 15:08:49.076     st_dev = 2049
+07 Mar 2024 15:08:49.076     st_ino = 1361035
+07 Mar 2024 15:08:49.076     st_mode = 040755
+07 Mar 2024 15:08:49.076     st_nlink = 2
+07 Mar 2024 15:08:49.076     st_uid = 1000
+07 Mar 2024 15:08:49.076     st_gid = 1000
+07 Mar 2024 15:08:49.076     st_rdev = 0
+07 Mar 2024 15:08:49.076     st_size = 4096
+07 Mar 2024 15:08:49.076     st_blksize = 4096
+07 Mar 2024 15:08:49.076     st_blocks = 8
+07 Mar 2024 15:08:49.076     st_atime = 0x65e887aa
+07 Mar 2024 15:08:49.076     st_mtime = 0x65e08123
+07 Mar 2024 15:08:49.076     st_ctime = 0x65e08123
+07 Mar 2024 15:08:49.077 
+bb_readdir(path="/", buf=0xf4001690, filler=0xfbbe0a90, offset=0, fi=0xfb9cec10)
+07 Mar 2024 15:08:49.077     readdir returned 0x0x7f7cf40030a0
+07 Mar 2024 15:08:49.077 calling filler with name bogus.txt
+07 Mar 2024 15:08:49.077 calling filler with name ..
+07 Mar 2024 15:08:49.077 calling filler with name cbkadal.txt
+07 Mar 2024 15:08:49.077 calling filler with name .
+07 Mar 2024 15:08:49.077     fi:
+07 Mar 2024 15:08:49.077     flags = 0x00000000
+07 Mar 2024 15:08:49.077     fh_old = 0x7f7cf4003070
+07 Mar 2024 15:08:49.077     writepage = 0
+07 Mar 2024 15:08:49.077     direct_io = 0
+07 Mar 2024 15:08:49.077     keep_cache = 0
+07 Mar 2024 15:08:49.077     fh = 0x00007f7cf4003070
+07 Mar 2024 15:08:49.077     lock_owner = 0x0000000000000000
+07 Mar 2024 15:08:49.078 
+bb_releasedir(path="/", fi=0xfb9cec10)
+07 Mar 2024 15:08:49.078     fi:
+07 Mar 2024 15:08:49.078     flags = 0x00000000
+07 Mar 2024 15:08:49.078     fh_old = 0x7f7cf4003070
+07 Mar 2024 15:08:49.078     writepage = 0
+07 Mar 2024 15:08:49.078     direct_io = 0
+07 Mar 2024 15:08:49.078     keep_cache = 0
+07 Mar 2024 15:08:49.078     fh = 0x00007f7cf4003070
+07 Mar 2024 15:08:49.078     lock_owner = 0x0000000000000000
+07 Mar 2024 15:08:49.079 
+bb_getattr(path="/", statbuf=0xfb1abbf0)
+07 Mar 2024 15:08:49.079     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+07 Mar 2024 15:08:49.079     lstat returned 0
+07 Mar 2024 15:08:49.079     si:
+07 Mar 2024 15:08:49.079     st_dev = 2049
+07 Mar 2024 15:08:49.079     st_ino = 1361035
+07 Mar 2024 15:08:49.079     st_mode = 040755
+07 Mar 2024 15:08:49.079     st_nlink = 2
+07 Mar 2024 15:08:49.079     st_uid = 1000
+07 Mar 2024 15:08:49.079     st_gid = 1000
+07 Mar 2024 15:08:49.079     st_rdev = 0
+07 Mar 2024 15:08:49.080     st_size = 4096
+07 Mar 2024 15:08:49.080     st_blksize = 4096
+07 Mar 2024 15:08:49.080     st_blocks = 8
+07 Mar 2024 15:08:49.081     st_atime = 0x65e887aa
+07 Mar 2024 15:08:49.082     st_mtime = 0x65e08123
+07 Mar 2024 15:08:49.082     st_ctime = 0x65e08123
+07 Mar 2024 15:08:49.082 
+bb_getattr(path="/bogus.txt", statbuf=0xfb9cec20)
+07 Mar 2024 15:08:49.082     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+07 Mar 2024 15:08:49.082     lstat returned 0
+07 Mar 2024 15:08:49.082     si:
+07 Mar 2024 15:08:49.082     st_dev = 2049
+07 Mar 2024 15:08:49.082     st_ino = 1361036
+07 Mar 2024 15:08:49.082     st_mode = 0100644
+07 Mar 2024 15:08:49.082     st_nlink = 1
+07 Mar 2024 15:08:49.082     st_uid = 1000
+07 Mar 2024 15:08:49.082     st_gid = 1000
+07 Mar 2024 15:08:49.082     st_rdev = 0
+07 Mar 2024 15:08:49.082     st_size = 11
+07 Mar 2024 15:08:49.082     st_blksize = 4096
+07 Mar 2024 15:08:49.082     st_blocks = 8
+07 Mar 2024 15:08:49.083     st_atime = 0x65e96507
+07 Mar 2024 15:08:49.083     st_mtime = 0x65e975f8
+07 Mar 2024 15:08:49.083     st_ctime = 0x65e975f8
+07 Mar 2024 15:08:50.904 
+bb_getattr(path="/", statbuf=0xfb1abbf0)
+07 Mar 2024 15:08:50.904     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+07 Mar 2024 15:08:50.904     lstat returned 0
+07 Mar 2024 15:08:50.904     si:
+07 Mar 2024 15:08:50.904     st_dev = 2049
+07 Mar 2024 15:08:50.904     st_ino = 1361035
+07 Mar 2024 15:08:50.904     st_mode = 040755
+07 Mar 2024 15:08:50.904     st_nlink = 2
+07 Mar 2024 15:08:50.904     st_uid = 1000
+07 Mar 2024 15:08:50.904     st_gid = 1000
+07 Mar 2024 15:08:50.904     st_rdev = 0
+07 Mar 2024 15:08:50.904     st_size = 4096
+07 Mar 2024 15:08:50.904     st_blksize = 4096
+07 Mar 2024 15:08:50.904     st_blocks = 8
+07 Mar 2024 15:08:50.904     st_atime = 0x65e887aa
+07 Mar 2024 15:08:50.904     st_mtime = 0x65e08123
+07 Mar 2024 15:08:50.904     st_ctime = 0x65e08123
+07 Mar 2024 15:08:50.910 
+bb_getattr(path="/bogus.txt", statbuf=0xfb9cec20)
+07 Mar 2024 15:08:50.910     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+07 Mar 2024 15:08:50.910     lstat returned 0
+07 Mar 2024 15:08:50.910     si:
+07 Mar 2024 15:08:50.910     st_dev = 2049
+07 Mar 2024 15:08:50.910     st_ino = 1361036
+07 Mar 2024 15:08:50.910     st_mode = 0100644
+07 Mar 2024 15:08:50.910     st_nlink = 1
+07 Mar 2024 15:08:50.910     st_uid = 1000
+07 Mar 2024 15:08:50.910     st_gid = 1000
+07 Mar 2024 15:08:50.910     st_rdev = 0
+07 Mar 2024 15:08:50.910     st_size = 11
+07 Mar 2024 15:08:50.910     st_blksize = 4096
+07 Mar 2024 15:08:50.910     st_blocks = 8
+07 Mar 2024 15:08:50.910     st_atime = 0x65e96507
+07 Mar 2024 15:08:50.910     st_mtime = 0x65e975f8
+07 Mar 2024 15:08:50.910     st_ctime = 0x65e975f8
+07 Mar 2024 15:08:50.911 
+bb_access(path="/bogus.txt", mask=02)
+07 Mar 2024 15:08:50.911     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+07 Mar 2024 15:08:52.496 
+bb_getattr(path="/bogus.txt", statbuf=0xfb9cec20)
+07 Mar 2024 15:08:52.496     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+07 Mar 2024 15:08:52.496     lstat returned 0
+07 Mar 2024 15:08:52.497     si:
+07 Mar 2024 15:08:52.497     st_dev = 2049
+07 Mar 2024 15:08:52.497     st_ino = 1361036
+07 Mar 2024 15:08:52.497     st_mode = 0100644
+07 Mar 2024 15:08:52.497     st_nlink = 1
+07 Mar 2024 15:08:52.497     st_uid = 1000
+07 Mar 2024 15:08:52.497     st_gid = 1000
+07 Mar 2024 15:08:52.497     st_rdev = 0
+07 Mar 2024 15:08:52.497     st_size = 11
+07 Mar 2024 15:08:52.497     st_blksize = 4096
+07 Mar 2024 15:08:52.497     st_blocks = 8
+07 Mar 2024 15:08:52.497     st_atime = 0x65e96507
+07 Mar 2024 15:08:52.497     st_mtime = 0x65e975f8
+07 Mar 2024 15:08:52.497     st_ctime = 0x65e975f8
+07 Mar 2024 15:08:52.498 bb_unlink(path="/bogus.txt")
+07 Mar 2024 15:08:52.498     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/bogus.txt", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/bogus.txt"
+07 Mar 2024 15:08:52.498     unlink returned 0
+07 Mar 2024 15:08:58.571 
+bb_getattr(path="/tambah", statbuf=0xfb1abc20)
+07 Mar 2024 15:08:58.571     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/tambah", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/tambah"
+07 Mar 2024 15:08:58.571     lstat returned -1
+07 Mar 2024 15:08:58.571     ERROR lstat: No such file or directory
+07 Mar 2024 15:08:58.571     si:
+07 Mar 2024 15:08:58.571     st_dev = 0
+07 Mar 2024 15:08:58.571     st_ino = 0
+07 Mar 2024 15:08:58.571     st_mode = 00
+07 Mar 2024 15:08:58.571     st_nlink = 0
+07 Mar 2024 15:08:58.571     st_uid = 0
+07 Mar 2024 15:08:58.571     st_gid = 0
+07 Mar 2024 15:08:58.571     st_rdev = 0
+07 Mar 2024 15:08:58.571     st_size = 0
+07 Mar 2024 15:08:58.571     st_blksize = 0
+07 Mar 2024 15:08:58.571     st_blocks = 0
+07 Mar 2024 15:08:58.572     st_atime = 0x00000000
+07 Mar 2024 15:08:58.572     st_mtime = 0x00000000
+07 Mar 2024 15:08:58.572     st_ctime = 0x00000000
+07 Mar 2024 15:08:58.572 
+bb_mknod(path="/tambah", mode=0100644, dev=0)
+07 Mar 2024 15:08:58.572     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/tambah", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/tambah"
+07 Mar 2024 15:08:58.572     open returned 5
+07 Mar 2024 15:08:58.572     close returned 0
+07 Mar 2024 15:08:58.573 
+bb_getattr(path="/tambah", statbuf=0xfb1abc20)
+07 Mar 2024 15:08:58.573     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/tambah", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/tambah"
+07 Mar 2024 15:08:58.573     lstat returned 0
+07 Mar 2024 15:08:58.573     si:
+07 Mar 2024 15:08:58.573     st_dev = 2049
+07 Mar 2024 15:08:58.573     st_ino = 1333860
+07 Mar 2024 15:08:58.573     st_mode = 0100644
+07 Mar 2024 15:08:58.573     st_nlink = 1
+07 Mar 2024 15:08:58.573     st_uid = 1000
+07 Mar 2024 15:08:58.573     st_gid = 1000
+07 Mar 2024 15:08:58.573     st_rdev = 0
+07 Mar 2024 15:08:58.573     st_size = 0
+07 Mar 2024 15:08:58.573     st_blksize = 4096
+07 Mar 2024 15:08:58.573     st_blocks = 0
+07 Mar 2024 15:08:58.573     st_atime = 0x65e9761a
+07 Mar 2024 15:08:58.573     st_mtime = 0x65e9761a
+07 Mar 2024 15:08:58.573     st_ctime = 0x65e9761a
+07 Mar 2024 15:08:58.574 
+bb_open(path"/tambah", fi=0xfb9cecd0)
+07 Mar 2024 15:08:58.574     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/tambah", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/tambah"
+07 Mar 2024 15:08:58.574     open returned 5
+07 Mar 2024 15:08:58.574     fi:
+07 Mar 2024 15:08:58.574     flags = 0x00008801
+07 Mar 2024 15:08:58.574     fh_old = 0x00000000
+07 Mar 2024 15:08:58.574     writepage = 0
+07 Mar 2024 15:08:58.574     direct_io = 0
+07 Mar 2024 15:08:58.574     keep_cache = 0
+07 Mar 2024 15:08:58.574     fh = 0x0000000000000005
+07 Mar 2024 15:08:58.574     lock_owner = 0x0000000000000000
+07 Mar 2024 15:08:58.574 
+bb_flush(path="/tambah", fi=0xfb1abcd0)
+07 Mar 2024 15:08:58.574     fi:
+07 Mar 2024 15:08:58.574     flags = 0x00000000
+07 Mar 2024 15:08:58.574     fh_old = 0x00000005
+07 Mar 2024 15:08:58.574     writepage = 0
+07 Mar 2024 15:08:58.574     direct_io = 0
+07 Mar 2024 15:08:58.574     keep_cache = 0
+07 Mar 2024 15:08:58.574     fh = 0x0000000000000005
+07 Mar 2024 15:08:58.574     lock_owner = 0x2e128960ed655ad2
+07 Mar 2024 15:08:58.574 
+bb_utime(path="/tambah", ubuf=0xfb1aba80)
+07 Mar 2024 15:08:58.574     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/tambah", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/tambah"
+07 Mar 2024 15:08:58.574     utime returned 0
+07 Mar 2024 15:08:58.574 
+bb_getattr(path="/tambah", statbuf=0xfb1abb50)
+07 Mar 2024 15:08:58.575     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/tambah", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/tambah"
+07 Mar 2024 15:08:58.575     lstat returned 0
+07 Mar 2024 15:08:58.575     si:
+07 Mar 2024 15:08:58.575     st_dev = 2049
+07 Mar 2024 15:08:58.575     st_ino = 1333860
+07 Mar 2024 15:08:58.575     st_mode = 0100644
+07 Mar 2024 15:08:58.575     st_nlink = 1
+07 Mar 2024 15:08:58.575     st_uid = 1000
+07 Mar 2024 15:08:58.575     st_gid = 1000
+07 Mar 2024 15:08:58.575     st_rdev = 0
+07 Mar 2024 15:08:58.575     st_size = 0
+07 Mar 2024 15:08:58.575     st_blksize = 4096
+07 Mar 2024 15:08:58.575     st_blocks = 0
+07 Mar 2024 15:08:58.575     st_atime = 0x65e9761a
+07 Mar 2024 15:08:58.575     st_mtime = 0x65e9761a
+07 Mar 2024 15:08:58.575     st_ctime = 0x65e9761a
+07 Mar 2024 15:08:58.575 
+bb_flush(path="/tambah", fi=0xfb9cecd0)
+07 Mar 2024 15:08:58.575     fi:
+07 Mar 2024 15:08:58.575     flags = 0x00000000
+07 Mar 2024 15:08:58.575     fh_old = 0x00000005
+07 Mar 2024 15:08:58.575     writepage = 0
+07 Mar 2024 15:08:58.575     direct_io = 0
+07 Mar 2024 15:08:58.575     keep_cache = 0
+07 Mar 2024 15:08:58.575     fh = 0x0000000000000005
+07 Mar 2024 15:08:58.575     lock_owner = 0x2e128960ed655ad2
+07 Mar 2024 15:08:58.576 
+bb_release(path="/tambah", fi=0xfb1abcd0)
+07 Mar 2024 15:08:58.576     fi:
+07 Mar 2024 15:08:58.576     flags = 0x00008801
+07 Mar 2024 15:08:58.576     fh_old = 0x00000005
+07 Mar 2024 15:08:58.576     writepage = 0
+07 Mar 2024 15:08:58.576     direct_io = 0
+07 Mar 2024 15:08:58.576     keep_cache = 0
+07 Mar 2024 15:08:58.576     fh = 0x0000000000000005
+07 Mar 2024 15:08:58.576     lock_owner = 0x0000000000000000
+07 Mar 2024 15:08:58.576     close returned 0
+07 Mar 2024 15:09:00.117 
+bb_opendir(path="/", fi=0xfb9cec10)
+07 Mar 2024 15:09:00.117     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+07 Mar 2024 15:09:00.117     opendir returned 0x0x7f7cf4003070
+07 Mar 2024 15:09:00.117     fi:
+07 Mar 2024 15:09:00.117     flags = 0x00018800
+07 Mar 2024 15:09:00.117     fh_old = 0x00000000
+07 Mar 2024 15:09:00.117     writepage = 0
+07 Mar 2024 15:09:00.117     direct_io = 0
+07 Mar 2024 15:09:00.117     keep_cache = 0
+07 Mar 2024 15:09:00.117     fh = 0x00007f7cf4003070
+07 Mar 2024 15:09:00.117     lock_owner = 0x0000000000000000
+07 Mar 2024 15:09:00.118 
+bb_getattr(path="/", statbuf=0xfb1abbf0)
+07 Mar 2024 15:09:00.118     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+07 Mar 2024 15:09:00.118     lstat returned 0
+07 Mar 2024 15:09:00.118     si:
+07 Mar 2024 15:09:00.118     st_dev = 2049
+07 Mar 2024 15:09:00.118     st_ino = 1361035
+07 Mar 2024 15:09:00.118     st_mode = 040755
+07 Mar 2024 15:09:00.118     st_nlink = 2
+07 Mar 2024 15:09:00.118     st_uid = 1000
+07 Mar 2024 15:09:00.118     st_gid = 1000
+07 Mar 2024 15:09:00.118     st_rdev = 0
+07 Mar 2024 15:09:00.118     st_size = 4096
+07 Mar 2024 15:09:00.118     st_blksize = 4096
+07 Mar 2024 15:09:00.118     st_blocks = 8
+07 Mar 2024 15:09:00.118     st_atime = 0x65e887aa
+07 Mar 2024 15:09:00.119     st_mtime = 0x65e9761a
+07 Mar 2024 15:09:00.119     st_ctime = 0x65e9761a
+07 Mar 2024 15:09:00.119 
+bb_readdir(path="/", buf=0xf4001b20, filler=0xfbbe0a90, offset=0, fi=0xfb1abc10)
+07 Mar 2024 15:09:00.119     readdir returned 0x0x7f7cf40030a0
+07 Mar 2024 15:09:00.119 calling filler with name ..
+07 Mar 2024 15:09:00.119 calling filler with name tambah
+07 Mar 2024 15:09:00.119 calling filler with name cbkadal.txt
+07 Mar 2024 15:09:00.119 calling filler with name .
+07 Mar 2024 15:09:00.119     fi:
+07 Mar 2024 15:09:00.119     flags = 0x00000000
+07 Mar 2024 15:09:00.119     fh_old = 0x7f7cf4003070
+07 Mar 2024 15:09:00.119     writepage = 0
+07 Mar 2024 15:09:00.119     direct_io = 0
+07 Mar 2024 15:09:00.119     keep_cache = 0
+07 Mar 2024 15:09:00.119     fh = 0x00007f7cf4003070
+07 Mar 2024 15:09:00.119     lock_owner = 0x0000000000000000
+07 Mar 2024 15:09:00.119 
+bb_getattr(path="/tambah", statbuf=0xfb1abc20)
+07 Mar 2024 15:09:00.119     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/tambah", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/tambah"
+07 Mar 2024 15:09:00.119     lstat returned 0
+07 Mar 2024 15:09:00.119     si:
+07 Mar 2024 15:09:00.119     st_dev = 2049
+07 Mar 2024 15:09:00.119     st_ino = 1333860
+07 Mar 2024 15:09:00.120     st_mode = 0100644
+07 Mar 2024 15:09:00.120     st_nlink = 1
+07 Mar 2024 15:09:00.120     st_uid = 1000
+07 Mar 2024 15:09:00.120     st_gid = 1000
+07 Mar 2024 15:09:00.120     st_rdev = 0
+07 Mar 2024 15:09:00.120     st_size = 0
+07 Mar 2024 15:09:00.120     st_blksize = 4096
+07 Mar 2024 15:09:00.120     st_blocks = 0
+07 Mar 2024 15:09:00.120     st_atime = 0x65e9761a
+07 Mar 2024 15:09:00.120     st_mtime = 0x65e9761a
+07 Mar 2024 15:09:00.120     st_ctime = 0x65e9761a
+07 Mar 2024 15:09:00.120 
+bb_getxattr(path = "/tambah", name = "security.selinux", value = 0xf4001110, size = 255)
+07 Mar 2024 15:09:00.120     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/tambah", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/tambah"
+07 Mar 2024 15:09:00.120     lgetxattr returned -1
+07 Mar 2024 15:09:00.120     ERROR lgetxattr: No data available
+07 Mar 2024 15:09:00.120 
+bb_getxattr(path = "/tambah", name = "system.posix_acl_access", value = 0xec000ef0, size = 4096)
+07 Mar 2024 15:09:00.120     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/tambah", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/tambah"
+07 Mar 2024 15:09:00.121     lgetxattr returned -1
+07 Mar 2024 15:09:00.121     ERROR lgetxattr: No data available
+07 Mar 2024 15:09:00.121 
+bb_getattr(path="/cbkadal.txt", statbuf=0xfb9cec20)
+07 Mar 2024 15:09:00.121     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/cbkadal.txt", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/cbkadal.txt"
+07 Mar 2024 15:09:00.121     lstat returned 0
+07 Mar 2024 15:09:00.121     si:
+07 Mar 2024 15:09:00.121     st_dev = 2049
+07 Mar 2024 15:09:00.121     st_ino = 1361037
+07 Mar 2024 15:09:00.121     st_mode = 0100644
+07 Mar 2024 15:09:00.121     st_nlink = 1
+07 Mar 2024 15:09:00.121     st_uid = 1000
+07 Mar 2024 15:09:00.121     st_gid = 1000
+07 Mar 2024 15:09:00.121     st_rdev = 0
+07 Mar 2024 15:09:00.121     st_size = 36
+07 Mar 2024 15:09:00.121     st_blksize = 4096
+07 Mar 2024 15:09:00.121     st_blocks = 8
+07 Mar 2024 15:09:00.121     st_atime = 0x65e887aa
+07 Mar 2024 15:09:00.121     st_mtime = 0x65e08123
+07 Mar 2024 15:09:00.121     st_ctime = 0x65e08123
+07 Mar 2024 15:09:00.122 
+bb_getxattr(path = "/cbkadal.txt", name = "security.selinux", value = 0xec000c40, size = 255)
+07 Mar 2024 15:09:00.122     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/cbkadal.txt", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/cbkadal.txt"
+07 Mar 2024 15:09:00.122     lgetxattr returned -1
+07 Mar 2024 15:09:00.122     ERROR lgetxattr: No data available
+07 Mar 2024 15:09:00.122 
+bb_getxattr(path = "/cbkadal.txt", name = "system.posix_acl_access", value = 0xec000ef0, size = 4096)
+07 Mar 2024 15:09:00.122     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/cbkadal.txt", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/cbkadal.txt"
+07 Mar 2024 15:09:00.122     lgetxattr returned -1
+07 Mar 2024 15:09:00.122     ERROR lgetxattr: No data available
+07 Mar 2024 15:09:00.122 
+bb_getxattr(path = "/", name = "security.selinux", value = 0xec000c40, size = 255)
+07 Mar 2024 15:09:00.122     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+07 Mar 2024 15:09:00.122     lgetxattr returned -1
+07 Mar 2024 15:09:00.122     ERROR lgetxattr: No data available
+07 Mar 2024 15:09:00.122 
+bb_getxattr(path = "/", name = "system.posix_acl_access", value = 0xec000ef0, size = 4096)
+07 Mar 2024 15:09:00.122     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+07 Mar 2024 15:09:00.122     lgetxattr returned -1
+07 Mar 2024 15:09:00.122     ERROR lgetxattr: No data available
+07 Mar 2024 15:09:00.122 
+bb_getxattr(path = "/", name = "system.posix_acl_default", value = 0xec000ef0, size = 4096)
+07 Mar 2024 15:09:00.122     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+07 Mar 2024 15:09:00.122     lgetxattr returned -1
+07 Mar 2024 15:09:00.122     ERROR lgetxattr: No data available
+07 Mar 2024 15:09:00.123 
+bb_releasedir(path="/", fi=0xfb9cec10)
+07 Mar 2024 15:09:00.123     fi:
+07 Mar 2024 15:09:00.123     flags = 0x00000000
+07 Mar 2024 15:09:00.123     fh_old = 0x7f7cf4003070
+07 Mar 2024 15:09:00.123     writepage = 0
+07 Mar 2024 15:09:00.123     direct_io = 0
+07 Mar 2024 15:09:00.123     keep_cache = 0
+07 Mar 2024 15:09:00.123     fh = 0x00007f7cf4003070
+07 Mar 2024 15:09:00.123     lock_owner = 0x0000000000000000
+07 Mar 2024 15:09:04.576 
+bb_getattr(path="/", statbuf=0xfb1abbf0)
+07 Mar 2024 15:09:04.576     bb_fullpath:  rootdir = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir", path = "/", fpath = "/home/cbkadal/git/sharesp241/cbkadal/W03/fuse-tutorial-2018-02-04/example/rootdir/"
+07 Mar 2024 15:09:04.576     lstat returned 0
+07 Mar 2024 15:09:04.576     si:
+07 Mar 2024 15:09:04.576     st_dev = 2049
+07 Mar 2024 15:09:04.576     st_ino = 1361035
+07 Mar 2024 15:09:04.576     st_mode = 040755
+07 Mar 2024 15:09:04.576     st_nlink = 2
+07 Mar 2024 15:09:04.576     st_uid = 1000
+07 Mar 2024 15:09:04.576     st_gid = 1000
+07 Mar 2024 15:09:04.576     st_rdev = 0
+07 Mar 2024 15:09:04.576     st_size = 4096
+07 Mar 2024 15:09:04.576     st_blksize = 4096
+07 Mar 2024 15:09:04.576     st_blocks = 8
+07 Mar 2024 15:09:04.576     st_atime = 0x65e9761c
+07 Mar 2024 15:09:04.576     st_mtime = 0x65e9761a
+07 Mar 2024 15:09:04.576     st_ctime = 0x65e9761a
+07 Mar 2024 15:09:12.239 
+bb_destroy(userdata=0x9f7432a0)
