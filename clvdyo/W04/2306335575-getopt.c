@@ -24,7 +24,7 @@ __attribute__((noreturn))
 static void             /* Print "usage" message and exit */
 usageError(void)
 {
-    fprintf(stderr, "ERROR\n");
+    fprintf(stderr, "Usage: ./2306335575-getopt [-b] [-n name]\n");
     exit(EXIT_FAILURE);
 }
 
@@ -48,20 +48,16 @@ main(int argc, char *argv[])
         }
     }
 
-    if (optind == argc || (optind == argc - 1 && is_b_specified)) {
+    if (optind == argc) {
         printf("Hello!\n");
     } else {
-        if (optind < argc) {
-            printf("Hello %s!\n", argv[optind]);
+        if (pstr != NULL) {
+            printf("Hello %s!\n", pstr);
         }
         if (is_b_specified) {
             printf("It is a beautiful day!\n");
-        }
-        if (pstr != NULL) {
-            printf("Is your name %s?\n", pstr);
         }
     }
 
     exit(EXIT_SUCCESS);
 }
-
