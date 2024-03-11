@@ -1,0 +1,17 @@
+
+./NPM-getopt 
+
+./NPM-getopt -b
+
+./NPM-getopt -n Dodo
+
+./NPM-getopt -b -n Dodo
+
+./NPM-getopt -n Dodo -b
+
+./NPM-getopt -n Dodo -b World
+
+./NPM-getopt World -n Dodo -b 
+
+./NPM-getopt -n Dodo World -b 
+

@@ -1,0 +1,6 @@
+Progress 1 : init
+Progress 2 : extract tarball
+Progress 3 : check 2106752104-getopt.c
+Progress 4 : check input and output
+Progress 5 : Modify 2106752104-getopt.c
+Progress 6 : Pop Quiz Related
