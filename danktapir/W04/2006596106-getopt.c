@@ -16,6 +16,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <getopt.h>
 
 #ifdef __GNUC__
 __attribute__((noreturn))
@@ -28,6 +29,11 @@ usageError(void)
     exit(EXIT_FAILURE);
 }
 
+static struct option long_options[] = {
+	{"beautiful", 0, NULL, 'b'},
+	{"name", 1, NULL, 'n'},
+	{NULL, 0, NULL, 0}
+};
 
 int
 main(int argc, char *argv[])
@@ -35,28 +41,30 @@ main(int argc, char *argv[])
     int opt, xfnd;
     char *pstr;
 
-    xfnd = 0;
+    xfnd = 0; // flag
     pstr = NULL;
 
-    while ((opt = getopt(argc, argv, ":p:x")) != -1) {
+    while ((opt = getopt_long(argc, argv, "bn:", long_options, NULL)) != -1) {
         switch (opt) {
-        case 'p': pstr = optarg;        break;
-        case 'x': xfnd++;               break;
+        case 'b': xfnd = 1;   break;
+        case 'n': pstr = optarg;    break;
         case ':': usageError();
         case '?': usageError();
         default:  usageError();
         }
     }
 
-    if (argc==1)
-        printf("Hello!\n");
     if (optind < argc)
-        printf("First nonoption argument is \"%s\" at argv[%d]\n",
-                argv[optind], optind);
+        printf("Hello %s!\n", argv[optind]);
+    else
+        printf("Hello!\n");
+
     if (xfnd != 0)
-        printf("-x was specified (count=%d)\n", xfnd);
+        printf("It is a beautiful day!\n");
+
     if (pstr != NULL)
-        printf("-p was specified with the value \"%s\"\n", pstr);
+        printf("Is your name %s?\n", pstr);
+
     exit(EXIT_SUCCESS);
 }
 
