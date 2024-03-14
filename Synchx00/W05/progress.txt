@@ -2,3 +2,4 @@ progress.txt v1: Week 05 Assignment #1: Readings ETC
 progress.txt v2: Compiling Kernel Linux 6.8 finished
 progress.txt v3: Doing Week 05 Assignments #4: Autoconf and Automake
 progress.txt v4: Doing Week 05 Assignments #4: Autoconf and Automake
+progress.txt v5: Week 05 Assignments #4: Autoconf and Automake Done
