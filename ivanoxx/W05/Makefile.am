@@ -14,7 +14,7 @@ prog1_SOURCES = prog1.c
 prog2_SOURCES = prog2.c
 
 # Additional flags for the compiler
-AM_CFLAGS = -Wall -std=gnu18 -Wno-main
+AM_CFLAGS = -Wall -std=gnu18 -Wno-main share.c
 
 clean-local:
 	@rm config.status configure config.log
