@@ -1,4 +1,4 @@
 START: 14/03/2024 13.03
 
-REV06: Thu 14 Mar 2024 14:52:50 WIB
-Still debugging make error, about to resolve it
+REV07: Thu 14 Mar 2024 15:07:58 WIB
+Bug resolved, Assignment #4 done
