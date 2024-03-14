@@ -7,10 +7,12 @@
 
 AUTOMAKE_OPTIONS = foreign
 
-bin_PROGRAMS = prog1 prog2 share
+noinst_LIBRARIES = libshare.a
+libshare_a_SOURCES = share.c share.h
+
+bin_PROGRAMS = prog1 prog2
 prog1_SOURCES = prog1.c share.h
 prog2_SOURCES = prog2.c share.h
-share_SOURCES = share.c share.h
 
 AM_CFLAGS = -std=gnu18
 

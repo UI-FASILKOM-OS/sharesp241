@@ -22,6 +22,7 @@
 # Please complete this file.
 
 
+
 am__is_gnu_make = { \
   if test -z '$(MAKELEVEL)'; then \
     false; \
@@ -93,7 +94,7 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-bin_PROGRAMS = prog1$(EXEEXT) prog2$(EXEEXT) share$(EXEEXT)
+bin_PROGRAMS = prog1$(EXEEXT) prog2$(EXEEXT)
 subdir = .
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/configure.ac
@@ -109,15 +110,23 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
+LIBRARIES = $(noinst_LIBRARIES)
+AR = ar
+ARFLAGS = cru
+AM_V_AR = $(am__v_AR_$(V))
+am__v_AR_ = $(am__v_AR_$(AM_DEFAULT_VERBOSITY))
+am__v_AR_0 = @echo "  AR      " $@;
+am__v_AR_1 = 
+libshare_a_AR = $(AR) $(ARFLAGS)
+libshare_a_LIBADD =
+am_libshare_a_OBJECTS = share.$(OBJEXT)
+libshare_a_OBJECTS = $(am_libshare_a_OBJECTS)
 am_prog1_OBJECTS = prog1.$(OBJEXT)
 prog1_OBJECTS = $(am_prog1_OBJECTS)
 prog1_DEPENDENCIES = share.o
 am_prog2_OBJECTS = prog2.$(OBJEXT)
 prog2_OBJECTS = $(am_prog2_OBJECTS)
 prog2_DEPENDENCIES = share.o
-am_share_OBJECTS = share.$(OBJEXT)
-share_OBJECTS = $(am_share_OBJECTS)
-share_LDADD = $(LDADD)
 AM_V_P = $(am__v_P_$(V))
 am__v_P_ = $(am__v_P_$(AM_DEFAULT_VERBOSITY))
 am__v_P_0 = false
@@ -148,8 +157,8 @@ AM_V_CCLD = $(am__v_CCLD_$(V))
 am__v_CCLD_ = $(am__v_CCLD_$(AM_DEFAULT_VERBOSITY))
 am__v_CCLD_0 = @echo "  CCLD    " $@;
 am__v_CCLD_1 = 
-SOURCES = $(prog1_SOURCES) $(prog2_SOURCES) $(share_SOURCES)
-DIST_SOURCES = $(prog1_SOURCES) $(prog2_SOURCES) $(share_SOURCES)
+SOURCES = $(libshare_a_SOURCES) $(prog1_SOURCES) $(prog2_SOURCES)
+DIST_SOURCES = $(libshare_a_SOURCES) $(prog1_SOURCES) $(prog2_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -237,6 +246,7 @@ PACKAGE_TARNAME = w05
 PACKAGE_URL = 
 PACKAGE_VERSION = 1.0
 PATH_SEPARATOR = :
+RANLIB = ranlib
 SET_MAKE = 
 SHELL = /bin/sh
 STRIP = 
@@ -285,9 +295,10 @@ top_build_prefix =
 top_builddir = .
 top_srcdir = .
 AUTOMAKE_OPTIONS = foreign
+noinst_LIBRARIES = libshare.a
+libshare_a_SOURCES = share.c share.h
 prog1_SOURCES = prog1.c share.h
 prog2_SOURCES = prog2.c share.h
-share_SOURCES = share.c share.h
 AM_CFLAGS = -std=gnu18
 prog1_LDADD = share.o
 prog2_LDADD = share.o
@@ -387,6 +398,14 @@ uninstall-binPROGRAMS:
 clean-binPROGRAMS:
 	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
 
+clean-noinstLIBRARIES:
+	-test -z "$(noinst_LIBRARIES)" || rm -f $(noinst_LIBRARIES)
+
+libshare.a: $(libshare_a_OBJECTS) $(libshare_a_DEPENDENCIES) $(EXTRA_libshare_a_DEPENDENCIES) 
+	$(AM_V_at)-rm -f libshare.a
+	$(AM_V_AR)$(libshare_a_AR) libshare.a $(libshare_a_OBJECTS) $(libshare_a_LIBADD)
+	$(AM_V_at)$(RANLIB) libshare.a
+
 prog1$(EXEEXT): $(prog1_OBJECTS) $(prog1_DEPENDENCIES) $(EXTRA_prog1_DEPENDENCIES) 
 	@rm -f prog1$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(prog1_OBJECTS) $(prog1_LDADD) $(LIBS)
@@ -394,10 +413,6 @@ prog1$(EXEEXT): $(prog1_OBJECTS) $(prog1_DEPENDENCIES) $(EXTRA_prog1_DEPENDENCIE
 prog2$(EXEEXT): $(prog2_OBJECTS) $(prog2_DEPENDENCIES) $(EXTRA_prog2_DEPENDENCIES) 
 	@rm -f prog2$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(prog2_OBJECTS) $(prog2_LDADD) $(LIBS)
-
-share$(EXEEXT): $(share_OBJECTS) $(share_DEPENDENCIES) $(EXTRA_share_DEPENDENCIES) 
-	@rm -f share$(EXEEXT)
-	$(AM_V_CCLD)$(LINK) $(share_OBJECTS) $(share_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -661,7 +676,7 @@ distcleancheck: distclean
 	       exit 1; } >&2
 check-am: all-am
 check: check-am
-all-am: Makefile $(PROGRAMS) config.h
+all-am: Makefile $(PROGRAMS) $(LIBRARIES) config.h
 installdirs:
 	for dir in "$(DESTDIR)$(bindir)"; do \
 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
@@ -698,7 +713,8 @@ maintainer-clean-generic:
 	@echo "it deletes files that may require special tools to rebuild."
 clean: clean-am
 
-clean-am: clean-binPROGRAMS clean-generic mostlyclean-am
+clean-am: clean-binPROGRAMS clean-generic clean-noinstLIBRARIES \
+	mostlyclean-am
 
 distclean: distclean-am
 	-rm -f $(am__CONFIG_DISTCLEAN_FILES)
@@ -776,20 +792,20 @@ uninstall-am: uninstall-binPROGRAMS
 
 .PHONY: CTAGS GTAGS TAGS all all-am am--depfiles am--refresh check \
 	check-am clean clean-binPROGRAMS clean-cscope clean-generic \
-	cscope cscopelist-am ctags ctags-am dist dist-all dist-bzip2 \
-	dist-gzip dist-lzip dist-shar dist-tarZ dist-xz dist-zip \
-	dist-zstd distcheck distclean distclean-compile \
-	distclean-generic distclean-hdr distclean-tags distcleancheck \
-	distdir distuninstallcheck dvi dvi-am html html-am info \
-	info-am install install-am install-binPROGRAMS install-data \
-	install-data-am install-dvi install-dvi-am install-exec \
-	install-exec-am install-html install-html-am install-info \
-	install-info-am install-man install-pdf install-pdf-am \
-	install-ps install-ps-am install-strip installcheck \
-	installcheck-am installdirs maintainer-clean \
-	maintainer-clean-generic mostlyclean mostlyclean-compile \
-	mostlyclean-generic pdf pdf-am ps ps-am tags tags-am uninstall \
-	uninstall-am uninstall-binPROGRAMS
+	clean-noinstLIBRARIES cscope cscopelist-am ctags ctags-am dist \
+	dist-all dist-bzip2 dist-gzip dist-lzip dist-shar dist-tarZ \
+	dist-xz dist-zip dist-zstd distcheck distclean \
+	distclean-compile distclean-generic distclean-hdr \
+	distclean-tags distcleancheck distdir distuninstallcheck dvi \
+	dvi-am html html-am info info-am install install-am \
+	install-binPROGRAMS install-data install-data-am install-dvi \
+	install-dvi-am install-exec install-exec-am install-html \
+	install-html-am install-info install-info-am install-man \
+	install-pdf install-pdf-am install-ps install-ps-am \
+	install-strip installcheck installcheck-am installdirs \
+	maintainer-clean maintainer-clean-generic mostlyclean \
+	mostlyclean-compile mostlyclean-generic pdf pdf-am ps ps-am \
+	tags tags-am uninstall uninstall-am uninstall-binPROGRAMS
 
 .PRECIOUS: Makefile
 
