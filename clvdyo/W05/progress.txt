@@ -2,3 +2,4 @@
 13:08 Reading Week 05 Assignment
 13:30 Do Assignment Script
 13:40 Try Autoconf and Automake
+13:50 Write programs in my W05 folder
