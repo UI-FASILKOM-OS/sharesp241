@@ -3,7 +3,7 @@
 
 #include "share.h"
 
-main main(void) {
+int main(void) {
     dummy();
     return 0;
 }
