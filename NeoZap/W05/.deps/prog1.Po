@@ -1,0 +1,3 @@
+prog1.o: prog1.c /usr/include/stdc-predef.h share.h
+/usr/include/stdc-predef.h:
+share.h:
