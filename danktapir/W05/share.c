@@ -5,6 +5,6 @@
 #include <stdio.h>
 
 int dummy() {
-	printf("danktapir\n");
+	printf("%s\n", GITHUB_ACCOUNT);
 	return 0;
 }
