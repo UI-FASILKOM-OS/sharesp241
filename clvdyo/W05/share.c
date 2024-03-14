@@ -2,5 +2,5 @@
 #include "share.h"
 
 void dummy() {
-    printf("clvdyo");
+    printf("My GitHub account is: %s\n", GITHUB_ACCOUNT);
 }
