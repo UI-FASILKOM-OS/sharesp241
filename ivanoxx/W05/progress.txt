@@ -1,4 +1,4 @@
 START: 14/03/2024 13.03
 
-REV00: Thu 14 Mar 2024 13:16:52 WIB
-Watch how to use autotools 
+REV01: Thu 14 Mar 2024 13:32:43 WIB
+Editing share.h
