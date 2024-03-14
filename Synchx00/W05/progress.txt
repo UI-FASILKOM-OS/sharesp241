@@ -1,1 +1,2 @@
 progress.txt v1: Week 05 Assignment #1: Readings ETC
+progress.txt v2: Compiling Kernel Linux 6.8 finished
