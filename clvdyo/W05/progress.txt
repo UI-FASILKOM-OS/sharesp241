@@ -4,3 +4,4 @@
 13:40 Try Autoconf and Automake
 13:50 Write programs in my W05 folder
 14:10 Watching YouTube
+14:40 Asking CHATGPT
