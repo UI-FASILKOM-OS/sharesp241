@@ -3,6 +3,7 @@
 // Please complete this file.
 
 #include <stdio.h>
+#include <share.h>
 
 int dummy() {
 	printf("%s\n", GITHUB_ACCOUNT);
