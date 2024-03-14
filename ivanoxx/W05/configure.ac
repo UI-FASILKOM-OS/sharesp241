@@ -1,4 +1,14 @@
-dnl REV02: Wed 13 Mar 2024 10:00
+dnl REV03: Wed 14 Mar 2024 13:44
 dnl START: Sat 11 Mar 2023 22:00
 dnl Please complete this file.
+
+AC_INIT([w05], [0.1], [ivanoxx@email.id])
+
+AM_INIT_AUTOMAKE([-Wall -Werror foreign])
+
+AC_PROG_CC
+
+AC_CONFIG_FILES([Makefile])
+
+AC_OUTPUT
 
