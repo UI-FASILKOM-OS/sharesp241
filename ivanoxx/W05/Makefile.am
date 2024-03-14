@@ -6,21 +6,17 @@
 
 # Makefile.am
 
-bin_PROGRAMS = prog1 prog2
+bin_PROGRAMS = prog1 prog2 share
 
 # Source files for each target
 prog1_SOURCES = prog1.c
-prog2_SOURCES = prog2.c share.c
+prog2_SOURCES = prog2.c
+share_SOURCES = share.c
 
-# Link prog1 and prog2 with libshare.a
-prog1_LDADD = libshare.a
-prog2_LDADD = libshare.a
-
-# Specify the libraries to link against
-LDLIBS = -lm
+include_HEADERS = share.h
 
 # Additional flags for the compiler
-AM_CFLAGS = -Wall -std=gnu18
+AM_CFLAGS = -std=gnu18
 
 clean-local:
 	@rm config.status configure config.log
