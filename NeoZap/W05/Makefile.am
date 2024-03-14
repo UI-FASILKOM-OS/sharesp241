@@ -1,3 +1,4 @@
+# REV04: Thu 14 Mar 2024 13:56
 # REV03: Thu 14 Mar 2024 13:34
 # REV02: Wed 13 Mar 2024 10:00
 # START: Sat 11 Mar 2023 22:00
@@ -18,3 +19,12 @@ AM_CFLAGS = -std=gnu18
 
 prog1_LDADD = share.o
 prog2_LDADD = share.o
+
+SUPERCLEAN:
+	rm -f config.h config.log config.status libtool stamp-h1
+	rm -f aclocal.m4 compile configure depcomp install-sh missing Makefile.in Makefile
+	rm -f config.h.in configure~ prog1 prog2 share libshare.a
+	rm -f prog1.o prog2.o share.o
+	rm -rf .deps autom4te.cache
+
+.PHONY: SUPERCLEAN
