@@ -8,3 +8,6 @@ Made configure.ac
 
 REV03: Thu 14 Mar 2024 14:07
 Made Makefile.am and trying to autoconf and automake
+
+REV04: Thu 14 Mar 2024 14:22
+Fixed autoconf and automake problems

@@ -9,10 +9,11 @@ bin_PROGRAMS = prog1 prog2
 prog1_SOURCES = prog1.c share.c
 prog2_SOURCES = prog2.c share.c
 AM_CFLAGS = -std=gnu18
+AM_CPPFLAGS = -I.
 
-clean-local:
-	@rm config.status configure config.log
-	@rm Makefile
-	@rm -r autom4te.cache/
-	@rm aclocal.m4
-	@rm compile install-sh missing Makefile.in
+SUPERCLEAN:
+	rm -f config.h config.log config.status libtool stamp-h1
+	rm -f aclocal.m4 compile configure depcomp install-sh missing Makefile.in Makefile
+	rm -f config.h.in config.h.in~ configure~ prog1 prog2 share libshare.a
+	rm -f prog1.o prog2.o share.o
+	rm -rf .deps autom4te.cache

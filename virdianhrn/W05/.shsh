@@ -1,0 +1,8 @@
+touch config.h.in
+aclocal
+autoconf
+automake --add-missing
+./configure
+make
+./prog1
+./prog2
