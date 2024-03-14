@@ -11,3 +11,6 @@ Made Makefile.am and trying to autoconf and automake
 
 REV04: Thu 14 Mar 2024 14:22
 Fixed autoconf and automake problems
+
+REV05: Thu 14 Mar 2024 14:30
+Compiling kernel
