@@ -6,7 +6,7 @@
 # REV01: Mon 19 Feb 2024 16:00
 # START: Tue 06 Feb 2024 15:00
 
-WEEK="W05"
+WEEK="W04"
 
 git pull
 sleep 2
