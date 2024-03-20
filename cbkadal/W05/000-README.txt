@@ -1,3 +1,4 @@
+# REV04: Thu 14 Mar 2024 10:00
 # REV03: Wed 13 Mar 2024 12:00
 # REV02: Sun 12 Mar 2023 18:00
 # REV01: Sat 11 Mar 2023 23:00
@@ -39,4 +40,13 @@ WEEK05: Autoconf and Automake
   * prog2.c
   * share.c
   * share.h
+
+* 
+aclocal
+autoconf
+automake --add-missing
+
+./configure
+
+
 
