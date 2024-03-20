@@ -12,5 +12,5 @@ CFLAGS="-std=gnu18"
 
 clean:
 	@rm config.status configure config.log Makefile aclocal.m4 compile install-sh missing Makefile.in depcomp
-	@rm -rf autom4te.cache
+	@rm -rf autom4te.cache .deps
 	@rm prog1 prog2 prog1.o prog2.o share.o

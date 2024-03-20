@@ -1,5 +1,3 @@
-### I've added "compile.sh" to simplify things
-
 # REV03: Wed 13 Mar 2024 12:00
 # REV02: Sun 12 Mar 2023 18:00
 # REV01: Sat 11 Mar 2023 23:00
