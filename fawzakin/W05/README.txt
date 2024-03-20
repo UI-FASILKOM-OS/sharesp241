@@ -1,0 +1,3 @@
+I've added "compile.sh" to simplify the commands needed to run the automake stuff.
+
+This shouldn't be overly complicated but here we are...
