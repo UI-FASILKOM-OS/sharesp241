@@ -7,20 +7,20 @@ autoconf
 automake --add-missing
 ./configure
 make
-echo "prog1 ===="
+sleep 2; echo "prog1 ===="
 ./prog1
-echo "prog2 ===="
+sleep 2; echo "prog2 ===="
 ./prog2
-echo "touch prog1.c ===="
+sleep 2; echo "touch prog1.c ===="
 touch prog1.c
 make
-echo "touch prog2.c ===="
+sleep 2; echo "touch prog2.c ===="
 touch prog2.c
 make
-echo "touch share.c ===="
+sleep 2; echo "touch share.c ===="
 touch share.c
 make
-echo "touch share.h ===="
+sleep 2; echo "touch share.h ===="
 touch share.h
 make
 
