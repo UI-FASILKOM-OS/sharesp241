@@ -1,1 +1,2 @@
 1. Reading Instruction
+2. Add getopt stuff

@@ -1,0 +1,11 @@
+#!/bin/bash
+make
+./2006595910-getopt 
+./2006595910-getopt -b
+./2006595910-getopt -n Dodo
+./2006595910-getopt -b -n Dodo
+./2006595910-getopt -n Dodo -b
+./2006595910-getopt -n Dodo -b World
+./2006595910-getopt World -n Dodo -b 
+./2006595910-getopt -n Dodo World -b 
+
