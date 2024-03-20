@@ -1,0 +1,5 @@
+Progress 1 : Assignment #01
+Progress 2 : Compiling kernel 6.8
+Progress 3 : Assignment #4 : Autoconf and Automake
+Progress 4 : Assignment #4 : Autoconf and Automake
+Progress 5 : Assignment #4 : Autoconf and Automake Done
